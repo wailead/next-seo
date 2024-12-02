@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      padding: {
+        x: "100px",
+        top: "90px",
+        bottom: "120px",
+        mobile: {
+          x: "20px",
+          top: "32px",
+          bottom: "60px",
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -16,7 +26,6 @@ export default {
           100: "#E0F5F6",
           200: "#C3F6F6",
         },
-
         gray: {
           default: "#222222",
           100: "#BDBDBD",
