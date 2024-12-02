@@ -12,11 +12,6 @@ export default {
         x: "100px",
         top: "90px",
         bottom: "120px",
-        mobile: {
-          x: "20px",
-          top: "32px",
-          bottom: "60px",
-        },
       },
       colors: {
         background: "var(--background)",
