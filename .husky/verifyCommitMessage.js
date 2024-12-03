@@ -12,11 +12,11 @@ if (commitMessage.startsWith("Merge branch")) {
   process.exit(0); // 병합 커밋 메시지는 검증을 건너뜁니다.
 }
 
-// 이모지를 무시하고 나머지 내용을 검증하기 위한 정규 표현식
-const commitMessagePattern = /^(Feat|Fix|Style|Design|BREAKING CHANGE|HOTFIX|Refactor|Docs|Chore|Lint|Deploy|Test|Rename|Remove|Type|Comment|Struct|SEO):\s.{1,40}$ #\d+$/;
+// 정규 표현식 수정 (커밋 메시지 형식을 검증)
+const commitMessagePattern = /^(Feat|Fix|Style|Design|HOTFIX|Refactor|Docs|Chore|Lint|Deploy|Rename|Remove|Type|Comment|Struct|SEO|Setting):\s.{1,40}\s#\d+$/;
 
-// 이모지 제거: 이모지가 있다면 제거하고, 나머지 텍스트만 검증
-const sanitizedCommitMessage = commitMessage.replace(/^[^\[]*/, "").trim(); // 이모지 부분을 제거
+// 이모지 제거: 이모지가 있다면 제거하고, 나머지 텍스트만 검증 
+const sanitizedCommitMessage = commitMessage.replace(/^[^\w\s]+/, "").trim(); // 이모지 부분을 제거
 
 // 커밋 메시지 형식을 검증합니다.
 if (!commitMessagePattern.test(sanitizedCommitMessage)) {
@@ -35,7 +35,6 @@ if (!commitMessagePattern.test(sanitizedCommitMessage)) {
   Chore:          빌드 업무, 패키지 매니저 수정
   Lint:           린트 에러 수정
   Deploy:         배포 관련 작업
-  Test:           테스트 코드 추가 및 수정
   Rename:         파일 혹은 폴더명 수정
   Remove:         파일 삭제
   Type:           타입 수정
@@ -43,7 +42,7 @@ if (!commitMessagePattern.test(sanitizedCommitMessage)) {
   Struct:         폴더 구조 변경
   SEO:            웹 접근성
   ==================================================================
-  형식에 맞춰 커밋 메시지를 다시 작성해주세요. 커밋 메시지는 설명 뒤에 이슈 번호도 포함해야 합니다. 예시: [Feat] 기능 추가 설명 #123
+  형식에 맞춰 커밋 메시지를 다시 작성해주세요. 커밋 메시지는 설명 뒤에 이슈 번호도 포함해야 합니다. 예시: Feat: 기능 추가 설명 #123
   커밋 메시지는 총 80자로 제한됩니다. 가능한 간결한 커밋 메시지를 작성해 주세요.
   `);
   process.exit(1); // 검증 실패 시 프로세스를 종료합니다.
