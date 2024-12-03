@@ -7,7 +7,7 @@ function Footer() {
       <div className="flex w-full  bg-gray-600 items-center justify-center border-2 border-gray-300 ">
         <div className={`flex items-end justify-between pt-[21px] pb-[28px] px-[52px] gap-[116px]`}>
           <div className={`flex flex-col gap-1`}>
-            <div className={`flex items-center justify-start gap-3 `}>
+            <div className={`flex items-center justify-start gap-3`}>
               <Image src="/images/footerlogo.png" alt="Logo" width={styleRatio(135)} height={styleRatio(62)} />
               <span className={`font-semibold text-[${styleRatio(28)}px] text-white-default `}>(주)와이리</span>
             </div>
