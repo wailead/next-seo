@@ -47,6 +47,7 @@ export default {
       },
       fontFamily: {
         pretendard: ['Pretendard'],
+        montserrat: ['Montserrat'],
       }
     },
   },
