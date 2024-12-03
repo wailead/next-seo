@@ -15,9 +15,9 @@ export default {
         primary: "750px",
       },
       padding: {
-        x: "100px",
-        top: "90px",
-        bottom: "120px",
+        x: "52px",
+        top: "46.8px",
+        bottom: "62.4px",
       },
       colors: {
         background: "var(--background)",
