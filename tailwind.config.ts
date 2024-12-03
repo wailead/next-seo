@@ -39,6 +39,9 @@ export default {
           500: "#D9D9D9",
         }
       },
+      fontFamily:{
+        pretendard:['Pretendard'],
+      }
     },
   },
   plugins: [],
