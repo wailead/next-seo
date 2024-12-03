@@ -1,5 +1,7 @@
+import { Mainheader } from './_view'
+
 function InfluencerPage() {
-  return <div>InfluencerPage</div>;
+  return <Mainheader />
 }
 
-export default InfluencerPage;
+export default InfluencerPage
