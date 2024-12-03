@@ -7,7 +7,13 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      mobile: "500px",
+    },
     extend: {
+      width: {
+        primary: "750px",
+      },
       padding: {
         x: "100px",
         top: "90px",
@@ -39,8 +45,8 @@ export default {
           500: "#D9D9D9",
         }
       },
-      fontFamily:{
-        pretendard:['Pretendard'],
+      fontFamily: {
+        pretendard: ['Pretendard'],
       }
     },
   },
