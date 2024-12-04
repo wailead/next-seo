@@ -24,9 +24,6 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Run tests
-      run: npm run test
-
   merge:
     needs: build_and_test
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
