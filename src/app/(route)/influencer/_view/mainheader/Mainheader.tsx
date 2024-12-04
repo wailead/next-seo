@@ -5,7 +5,7 @@ function Mainheader() {
   return (
     <div className="flex w-full  justify-center items-center bg-[url('/images/web/influencer/background.png')]  bg-contain bg-center ">
       <div className="flex w-primary h-full justify-between ">
-        <div className="flex flex-col pt-[50px] pl-[51.5px] pb-[58px] gap-[63px] ">
+        <div className="flex flex-col pt-[50px] pl-[51.5px] pb-[55px] gap-[63px] ">
           <div className={`flex flex-col w-[314.5px] gap-[17px]`}>
             <span className={`font-normal text-[15.6px] leading-[19px]  text-gray-600`}>인플루언서 마케팅 NO.1</span>
             <div className="flex flex-col gap-[8.5px]">
