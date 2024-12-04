@@ -49,7 +49,7 @@ jobs:
               state: 'closed'
             })
 
-      - name: Approve PR, If test passes # 빌드 통과시, PR 머지
+      - name: Approve PR, If build test passes # 빌드 통과시, PR 머지
         uses: actions/github-script@v6
         with:
           github-token: ${{ github.TOKEN }}
@@ -57,13 +57,8 @@ jobs:
             const pull_number = ${{ github.event.pull_request.number }}
             await github.rest.pulls.createReview({
               owner: context.repo.owner,
-              repo: context.repo.repo,
+              repo: ${{ github.event.pull_request.base.repo.name }},
               pull_number: pull_number,
-              body: '테스트에 통과해 main 브랜치로 자동 머지합니다.',
-            event: 'REQUEST_CHANGES'
-            })
-            await github.rest.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pull_number,
+              body: '빌드 테스트에 통과했습니다',
+              event: 'APPROVE'
             })
