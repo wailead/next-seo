@@ -1,3 +1,3 @@
-import IntroductionBox from './introduction/introductionBox'
+import IntroductionBox from './introduction/IntroductionBox'
 
 export { IntroductionBox }
