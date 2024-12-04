@@ -1,4 +1,4 @@
-import { Introduction, Mainheader, Campaign } from './_view'
+import { Introduction, Mainheader, Campaign, Question } from './_view'
 
 function InfluencerPage() {
   return (
@@ -6,6 +6,7 @@ function InfluencerPage() {
       <Mainheader />
       <Campaign />
       <Introduction />
+      <Question />
     </div>
   )
 }
