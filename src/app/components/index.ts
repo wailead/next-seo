@@ -4,4 +4,4 @@ import Button from "./button/button";
 import MobileHeader from "./header/header_mobile";
 import TitleForm from "./titleForm/titleForm";
 
-export { PcHeader, Footer, Button, MobileHeader, TitleForm };
+export { PcHeader, Footer, Button, MobileHeader, TitleForm }
