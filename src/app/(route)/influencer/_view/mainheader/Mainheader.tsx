@@ -32,7 +32,7 @@ function Mainheader() {
         </div>
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
         <div className={`w-[234px] bg-red-400`}>
-          <iframe src="https://youtube.com/shorts/8bBoGxyY48E?si=ZqrJPQPwo4lYDYVc?autoplay=1&mute=1&loop=1" className="relative w-full h-full"></iframe>
+          <object type="text/html" data="https://youtube.com/embed/8bBoGxyY48E?si=ZqrJPQPwo4lYDYVc?autoplay=1&mute=1&loop=1" className="relative w-full h-full"></object>
         </div>
       </div>
     </div>
