@@ -60,4 +60,5 @@ jobs:
               repo: context.repo.repo,
               pull_number: pull_number,
               body: '빌드 테스트에 통과했습니다',
+              state: 'open',
             })
