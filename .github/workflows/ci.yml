@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: Run tests
-      run: npm test
+      run: npm runtest
 
   merge:
     needs: build_and_test
