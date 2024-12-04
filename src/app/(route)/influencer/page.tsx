@@ -1,7 +1,12 @@
-import { Mainheader } from './_view'
+import { Campaign, Mainheader } from './_view'
 
 function InfluencerPage() {
-  return <Mainheader />
+  return (
+    <>
+      <Mainheader />
+      <Campaign />
+    </>
+  )
 }
 
 export default InfluencerPage
