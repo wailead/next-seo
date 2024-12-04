@@ -10,13 +10,13 @@
 예시) ✨[Feat] 로그인 기능 구현 #32
 
 * 제목 태그 종류
-✨ Feature: 기능 추가
+✨ Feat: 기능 추가
 🐞 Fix: 버그 수정
 📃 Docs: 문서 수정
 🎨 Style: 코드 스타일 변경
-⚙ Setting:개발 환경 세팅
+⚙ Setting: 개발 환경 세팅
 🔨 Refactor: 코드 리팩토링
-📬 Chore: 빌드, 패키지 매니저 수정/코드 수정"
+📬 Chore: 빌드, 패키지 매니저 수정/코드 수정
 🥰 SEO: 웹 접근성
 💻 Structure: 폴더 구조 변경
 🌏 Deploy: 배포 관련

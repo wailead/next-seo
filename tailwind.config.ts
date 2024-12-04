@@ -7,11 +7,17 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      mobile: "500px",
+    },
     extend: {
+      width: {
+        primary: "750px",
+      },
       padding: {
-        x: "100px",
-        top: "90px",
-        bottom: "120px",
+        x: "52px",
+        top: "46.8px",
+        bottom: "62.4px",
       },
       colors: {
         background: "var(--background)",
@@ -39,6 +45,10 @@ export default {
           500: "#D9D9D9",
         }
       },
+      fontFamily: {
+        pretendard: ['Pretendard'],
+        montserrat: ['Montserrat'],
+      }
     },
   },
   plugins: [],

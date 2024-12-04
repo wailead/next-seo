@@ -1,5 +1,14 @@
+import { Introduction, Mainheader, Campaign, Question } from './_view'
+
 function InfluencerPage() {
-  return <div>InfluencerPage</div>;
+  return (
+    <div>
+      <Mainheader />
+      <Campaign />
+      <Introduction />
+      <Question />
+    </div>
+  )
 }
 
-export default InfluencerPage;
+export default InfluencerPage
