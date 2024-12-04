@@ -3,7 +3,7 @@ name: git push to deploy repository
 on:
   pull_request:
     types: [closed]
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container: pandoc/latex
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install mustache (to update the date)
         run: apk add ruby && gem install mustache
       - name: creates output
@@ -24,8 +24,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
         with:
           source-directory: 'output'
-          destination-github-username: lumpenop
-          destination-repository-name: next-seo
+          destination-github-username: ${{ secrets.TARGET_USER_NAME }}
+          destination-repository-name: ${{ secrets.TARGET_REPO_NAME }}
           user-email: ${{ secrets.EMAIL }}
           commit-message: ${{ github.event.pull_request.title }}
           target-branch: main

@@ -1,7 +1,7 @@
 'use client'
 
 import CampaignCard from '../components/CampaignCard'
-import { Button } from '@/components'
+import Button from '@/components/button/button'
 import { useState } from 'react'
 import CampaignModal from './CampaignModal'
 
