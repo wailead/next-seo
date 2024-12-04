@@ -17,13 +17,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: pnpm # pnpm 캐시 사용
+          cache: npm # npm 캐시 사용
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build project
-        run: pnpm run build
+        run: npm run build
 
       - name: Close PR, if build fails # 빌드 실패시 pr 닫기
         if: ${{ failure() }}
