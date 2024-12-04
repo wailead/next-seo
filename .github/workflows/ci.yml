@@ -61,4 +61,19 @@ jobs:
               pull_number: pull_number,
               body: '빌드 테스트에 통과했습니다',
               state: 'open',
+              title: context.payload.pull_request.title.replace('[BUILD FAIL] ', '')
+            })
+      - name: Approve PR, If build test passes # 빌드 통과시, PR 승인
+        uses: actions/github-script@v6
+        if: ${{ success() }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pull_number = context.payload.pull_request.number
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pull_number,
+              body: '빌드 테스트에 통과했습니다',
+              event: 'APPROVE'
             })
