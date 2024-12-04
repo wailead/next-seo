@@ -6,7 +6,7 @@ on:
       - dev
 
 jobs:
-  build_and_test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,8 +25,8 @@ jobs:
       run: npm run build
 
   merge:
-    needs: build_and_test
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+    needs: build
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
