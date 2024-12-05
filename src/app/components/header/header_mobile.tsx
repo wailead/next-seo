@@ -1,4 +1,4 @@
-import Button from '../button/button'
+import Button from '../button/LinkButton'
 import Image from 'next/image'
 
 function MobileHeader() {
