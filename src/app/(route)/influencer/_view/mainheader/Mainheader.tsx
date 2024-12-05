@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import CustomImage from '@/components/custom-image/CustomImage'
 
 function Mainheader() {
   return (
@@ -18,16 +18,16 @@ function Mainheader() {
           </div>
           <div className="flex gap-[0.875rem] pl-3">
             <div className="flex flex-col bg-white-default p-[0.869rem] justify-center items-center gap-[0.625rem] rounded-2xl shadow-[0_4px_10px_-3px_rgba(0,0,0,0.4)]">
-              <Image src="/images/qr_appstore.png" alt="appleQR" width={155} height={155}></Image>
+              <CustomImage src="/images/qr_appstore.png" alt="appleQR" w={9.6875} h={9.6875} />
               <div className="flex items-center gap-[0.313rem] ">
-                <Image src={'/icons/gray_apple.svg'} alt="applelogo" width={21.5} height={21.5} />
+                <CustomImage src={'/icons/gray_apple.svg'} alt="applelogo" w={1.34375} h={1.34375} />
                 <span className="font-normal text-[0.588rem] leading-[0.688rem]">APP Store</span>
               </div>
             </div>
             <div className="flex flex-col bg-white-default p-[0.881rem] justify-center items-center gap-[0.625rem] rounded-2xl shadow-[0_4px_10px_-3px_rgba(0,0,0,0.4)]">
-              <Image src="/images/qr_playstore.png" alt="googleQR" width={155} height={155}></Image>
+              <CustomImage src="/images/qr_playstore.png" alt="googleQR" w={9.6875} h={9.6875} />
               <div className="flex items-center gap-[0.313rem] ">
-                <Image src={'/icons/gray_google.svg'} alt="applelogo" width={22.5} height={22.5} />
+                <CustomImage src={'/icons/gray_google.svg'} alt="applelogo" w={1.40625} h={1.40625} />
                 <span className="font-normal text-[0.588rem] leading-[0.688rem]">Google Play</span>
               </div>
             </div>

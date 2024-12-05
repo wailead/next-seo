@@ -4,7 +4,7 @@ import Image from 'next/image'
 function MobileHeader() {
   return (
     <header className="flex justify-between">
-      <img src="/images/wairi_logo_mobile.svg" alt="와이리(mobile) 로고" width={69.62} height={69.62} />
+      <Image src="/images/wairi_logo_mobile.svg" alt="와이리(mobile) 로고" width={69.62} height={69.62} />
       <div className="flex items-center gap-11">
         <p className="font-pretendard font-normal text-2xl text-gray-300 ">
           여행하며

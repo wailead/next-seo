@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import CustomImage from '@/components/custom-image/CustomImage'
 
 interface Props {
   img: string
@@ -11,7 +11,7 @@ function CampaignCard({ img, title, price, sale }: Props) {
   return (
     <div className="flex flex-col w-[12.34rem] h-[16.625rem] gap-[0.73rem]">
       <div className="relative w-[12.5rem] h-[9.56rem]">
-        <Image src={img} alt={img} fill className="rounded-[1.125rem]" />
+        <CustomImage src={img} alt={img} w={16} h={1} className="rounded-[1.125rem]" />
       </div>
       <div className="flex flex-col text-start gap-[0.29rem]">
         <span className="font-bold text-[0.89rem] tracking-tighter leading-[1.31rem] text-gray-300">{title}</span>

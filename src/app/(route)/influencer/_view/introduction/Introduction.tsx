@@ -1,6 +1,6 @@
 import { TitleForm, SectionLayout } from '@/components'
-import Image from 'next/image'
 import IntroductionBox from './components/introductionBox'
+import CustomImage from '@/components/custom-image/CustomImage'
 
 function Introduction() {
   return (
@@ -12,24 +12,12 @@ function Introduction() {
             title="SNS 채널만 가지고 있다면!"
             description="와이리에서는 타 체험단 사이트와 비교하여<br/>가장 많은 SNS 종류를 승인해드리고 있어요!">
             <div className="flex justify-around bg-gradient-to-r from-white-default to-white-default/20 py-[1.3975rem] px-[2.6rem] mt-[1.5275rem] mb-[2.34rem] box-border">
-              <div className="relative w-[4.5rem] h-[4.5rem]">
-                <Image src="/images/influencer/channel_icon_0.svg" alt="네이버 로고" fill />
-              </div>
-              <div className="relative w-[4.5rem] h-[4.5rem]">
-                <Image src="/images/influencer/channel_icon_1.svg" alt="네이버 로고" fill />
-              </div>
-              <div className="relative w-[4.5rem] h-[4.5rem]">
-                <Image src="/images/influencer/channel_icon_2.svg" alt="네이버 로고" fill />
-              </div>
-              <div className="relative w-[4.5rem] h-[4.5rem]">
-                <Image src="/images/influencer/channel_icon_3.svg" alt="네이버 로고" fill />
-              </div>
-              <div className="relative w-[4.5rem] h-[4.5rem]">
-                <Image src="/images/influencer/channel_icon_4.svg" alt="네이버 로고" fill />
-              </div>
-              <div className="relative w-[4.5rem] h-[4.5rem]">
-                <Image src="/images/influencer/channel_icon_5.svg" alt="네이버 로고" fill />
-              </div>
+              <CustomImage src="/images/influencer/channel_icon_0.svg" alt="네이버 로고" w={4.5} h={4.5} />
+              <CustomImage src="/images/influencer/channel_icon_1.svg" alt="네이버 로고" w={4.5} h={4.5} />
+              <CustomImage src="/images/influencer/channel_icon_2.svg" alt="네이버 로고" w={4.5} h={4.5} />
+              <CustomImage src="/images/influencer/channel_icon_3.svg" alt="네이버 로고" w={4.5} h={4.5} />
+              <CustomImage src="/images/influencer/channel_icon_4.svg" alt="네이버 로고" w={4.5} h={4.5} />
+              <CustomImage src="/images/influencer/channel_icon_5.svg" alt="네이버 로고" w={4.5} h={4.5} />
             </div>
           </IntroductionBox>
           <IntroductionBox
@@ -37,9 +25,12 @@ function Introduction() {
             title="원하는 날짜에 신청가능"
             description="정해진 날짜가 아닌, 원하는 시기에 캠페인을 신청할 수 있습니다. <br/ >이제 본인이 원하는 시기에 체험하세요!">
             <div className="absolute bottom-0 right-0">
-              <div className="relative w-[24rem] h-[24rem]">
-                <Image src="/images/influencer/introduction_calendar.svg" alt="introduction 캘린더 아이콘" fill />
-              </div>
+              <CustomImage
+                src="/images/influencer/introduction_calendar.svg"
+                alt="introduction 캘린더 아이콘"
+                w={24}
+                h={24}
+              />
             </div>
           </IntroductionBox>
           <IntroductionBox
@@ -47,9 +38,12 @@ function Introduction() {
             title="체험 선정 여부 96시간 이내"
             description="빠른 결과 안내를 통해 여행을 차질 없이 계획해보세요.">
             <div className="absolute bottom-0 right-0">
-              <div className="relative w-[24rem] h-[24rem]">
-                <Image src="/images/influencer/introduction_check.svg" alt="introduction 체크 아이콘" fill />
-              </div>
+              <CustomImage
+                src="/images/influencer/introduction_check.svg"
+                alt="introduction 체크 아이콘"
+                w={24}
+                h={24}
+              />
             </div>
           </IntroductionBox>
           <IntroductionBox
@@ -60,19 +54,24 @@ function Introduction() {
               *채널 승급은 매월말에 신청을 받고 있습니다.{' '}
             </p>
             <div className="px-[9.23rem] flex justify-between">
-              <div className="relative w-[11.358125rem] h-[11.358125rem]">
-                <Image
-                  src="/images/influencer/introduction_grade_silver.svg"
-                  alt="introduction 실버 등급 아이콘"
-                  fill
-                />
-              </div>
-              <div className="relative w-[11.358125rem] h-[11.358125rem]">
-                <Image src="/images/influencer/introduction_grade_gold.svg" alt="introduction 골드 등급 아이콘" fill />
-              </div>
-              <div className="relative w-[11.358125rem] h-[11.358125rem]">
-                <Image src="/images/influencer/introduction_grade_black.svg" alt="introduction 블랙 등급 아이콘" fill />
-              </div>
+              <CustomImage
+                src="/images/influencer/introduction_grade_silver.svg"
+                alt="introduction 실버 등급 아이콘"
+                w={11.358125}
+                h={11.358125}
+              />
+              <CustomImage
+                src="/images/influencer/introduction_grade_gold.svg"
+                alt="introduction 골드 등급 아이콘"
+                w={11.358125}
+                h={11.358125}
+              />
+              <CustomImage
+                src="/images/influencer/introduction_grade_black.svg"
+                alt="introduction 블랙 등급 아이콘"
+                w={11.358125}
+                h={11.358125}
+              />
             </div>
           </IntroductionBox>
         </div>
