@@ -15,16 +15,34 @@ function Mainheader() {
           </div>
           <div className="flex gap-[14px] pl-3">
             <div className="flex flex-col bg-white-default p-[13.9px] justify-center items-center gap-[10px] rounded-2xl shadow-[0_4px_10px_-3px_rgba(0,0,0,0.4)]">
-              <Image src="/images/qr_appstore.png" alt="appleQR" width={styleRatio(155)} height={styleRatio(155)}></Image>
+              <Image
+                src="/images/qr_appstore.png"
+                alt="appleQR"
+                width={styleRatio(155)}
+                height={styleRatio(155)}></Image>
               <div className="flex items-center gap-[5px] ">
-                <Image src={'/images/gray_apple.svg'} alt="applelogo" width={styleRatio(21.5)} height={styleRatio(21.5)} />
+                <Image
+                  src={'/images/gray_apple.svg'}
+                  alt="applelogo"
+                  width={styleRatio(21.5)}
+                  height={styleRatio(21.5)}
+                />
                 <span className="font-normal text-[9.4px] leading-[11px]">APP Store</span>
               </div>
             </div>
             <div className="flex flex-col bg-white-default p-[14.1px] justify-center items-center gap-[10px] rounded-2xl shadow-[0_4px_10px_-3px_rgba(0,0,0,0.4)]">
-              <Image src="/images/qr_playstore.png" alt="googleQR" width={styleRatio(155)} height={styleRatio(155)}></Image>
+              <Image
+                src="/images/qr_playstore.png"
+                alt="googleQR"
+                width={styleRatio(155)}
+                height={styleRatio(155)}></Image>
               <div className="flex items-center gap-[5px] ">
-                <Image src={'/images/gray_google.svg'} alt="applelogo" width={styleRatio(22.5)} height={styleRatio(22.5)} />
+                <Image
+                  src={'/images/gray_google.svg'}
+                  alt="applelogo"
+                  width={styleRatio(22.5)}
+                  height={styleRatio(22.5)}
+                />
                 <span className="font-normal text-[9.4px] leading-[11px]">Google Play</span>
               </div>
             </div>
@@ -32,7 +50,10 @@ function Mainheader() {
         </div>
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
         <div className={`w-[234px] bg-red-400`}>
-          <object type="text/html" data="https://youtube.com/embed/8bBoGxyY48E?si=ZqrJPQPwo4lYDYVc?autoplay=1&mute=1&loop=1" className="relative w-full h-full"></object>
+          <object
+            type="text/html"
+            data="https://youtube.com/embed/8bBoGxyY48E?si=ZqrJPQPwo4lYDYVc?autoplay=1&mute=1&loop=1"
+            className="relative w-full h-full"></object>
         </div>
       </div>
     </div>
