@@ -14,9 +14,13 @@ function Footer() {
             <div className={`flex text-gray-200 font-normal text-[9.6px] leading-[8.6px]`}>
               <p className="flex flex-col gap-[6.5px] font-pretendard ">
                 <span className="block">대표자 : 김범석</span>
-                <span className="block">사업자등록번호 : 441-86-02504&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2021-서울영등포-2197</span>
+                <span className="block">
+                  사업자등록번호 : 441-86-02504&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2021-서울영등포-2197
+                </span>
                 <span className="block">주소 : 서울시 동작구 상도로 55길 6, 테크스테이션 408호</span>
-                <span className="block">이메일 : wairi_sales@naver.com&nbsp;&nbsp;|&nbsp;&nbsp;대표전화 : 070-8098-7127</span>
+                <span className="block">
+                  이메일 : wairi_sales@naver.com&nbsp;&nbsp;|&nbsp;&nbsp;대표전화 : 070-8098-7127
+                </span>
               </p>
             </div>
           </div>

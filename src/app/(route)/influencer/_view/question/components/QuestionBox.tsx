@@ -16,17 +16,17 @@ function QuestionBox({ question, answer }: QuestionBoxProps) {
   }
 
   return (
-    <div className="px-[19.76px] py-[18.2px] bg-white-200 rounded-[16.64px] flex flex-col gap-[12.48px]">
+    <div className="px-[1.235rem] py-[1.137rem] bg-white-200 rounded-[1.04rem] flex flex-col gap-[0.78rem]">
       <div className="flex justify-between items-center">
-        <p className="font-pretendard font-medium text-[14.56px] text-gray-600">Q. {question}</p>
+        <p className="font-pretendard font-medium text-[0.91rem] text-gray-600">Q. {question}</p>
         <div className="cursor-pointer" onClick={toggleOpen}>
           <Chevron rotate={isToggle ? 180 : 0} color={isToggle ? '#2EC8C8' : '#222222'} />
         </div>
       </div>
       {isToggle && (
         <>
-          <hr className="bg-white-400 h-[2.08px]" />
-          <p className="font-pretendard font-normal text-[#757575] text-[12.48px]">
+          <hr className="bg-white-400 h-[0.13rem]" />
+          <p className="font-pretendard font-normal text-[#757575] text-[0.78rem]">
             {typeof answer === 'string' ? (
               answer
             ) : (

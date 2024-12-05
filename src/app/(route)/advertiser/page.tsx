@@ -1,5 +1,5 @@
 function AdvertiserPage() {
-  return <div>AdvertiserPage</div>;
+  return <div>AdvertiserPage</div>
 }
 
-export default AdvertiserPage;
+export default AdvertiserPage
