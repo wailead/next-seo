@@ -7,10 +7,10 @@ type Props = {
   w: string
   h: string
 } & React.ComponentPropsWithoutRef<typeof Image>
-function CustomImage({ src, alt, w, h, ...props }: Props) {
+function CustomImage({ src, alt, w, h, ...ImgaeProps }: Props) {
   return (
     <div className={twMerge(`relative`, w, h)}>
-      <Image src={src} alt={alt} fill {...props} />
+      <Image src={src} alt={alt} fill {...ImgaeProps} />
     </div>
   )
 }

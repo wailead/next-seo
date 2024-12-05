@@ -5,11 +5,11 @@ function BackgroundImageBox() {
   return (
     <ul className="w-full flex items-center justify-center">
       {[...Array(2)].map((_, index) => (
-        <li key={index}>
+        <li key={index} className="w-full">
           <CustomImage
-            src={'/images/web/influencer/background.png'}
+            src={'/assets/images/background_bubble.png'}
             alt="인플루언서 가입 배너 배경 이미지"
-            w="w-[50%]"
+            w="w-full"
             h="h-[21.25rem]"
             className="transform scale-x-[-1]"
           />
