@@ -1,70 +1,54 @@
 'use client'
-import Button from '../button/button'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import CustomImage from '../custom-image/CustomImage'
+import LinkButton from '../button/button'
 
 function PcHeader() {
   const pathname = usePathname()
-  const router = useRouter()
 
   const isAdvertiserPage = pathname === '/advertiser'
   const isInfluencerPage = pathname === '/' || pathname === '/influencer'
 
   return (
     <header className="flex justify-between">
-      <CustomImage src="/images/logo.png" alt="와이리(PC) 로고" w={11.375} h={3.875} />
+      <CustomImage src="/images/logo.png" alt="와이리(PC) 로고" w="w-[11.375rem]" h="h-[3.875rem]" />
       <div className="flex items-center gap-[22.88px]">
         {isInfluencerPage && (
           <p className="font-pretendard font-normal text-[12.48px] text-gray-300">수많은 캠페인에 신청해보세요.</p>
         )}
         {isAdvertiserPage && (
           <div className="flex gap-[24.96px]">
-            <Button className="text-gray-300 font-normal text-[12.48px] px-[16.64px] py-[6.24px] hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-100 ease-out">
-              서비스 소개
-            </Button>
-            <Button className="text-gray-300 font-normal text-[12.48px] px-[16.64px] py-[6.24px] hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-100 ease-out ">
-              진행 사례
-            </Button>
-            <Button className="text-gray-300 font-normal text-[12.48px] px-[16.64px] py-[6.24px] hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-100 ease-out">
-              서비스 종류
-            </Button>
-            <Button className="text-gray-300 font-normal text-[12.48px] px-[16.64px] py-[6.24px] hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-100 ease-out">
-              FAQ
-            </Button>
+            <LinkButton name="서비스 소개" href="#" fontColor="primary" buttonColor="white-default" />
+            <LinkButton name="진행 사례" href="#" fontColor="primary" buttonColor="white-default" />
+            <LinkButton name="서비스 종류" href="#" fontColor="primary" buttonColor="white-default" />
+            <LinkButton name="FAQ" href="#" fontColor="primary" buttonColor="white-default" />
           </div>
         )}
         <div className="flex gap-[8.32px]">
           {isInfluencerPage && (
             <>
-              <Button
-                className="bg-primary-default px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[2.08px] hover:bg-[#3ecccc] hover:shadow-md active:bg-[#8fe1e1] transition-all duration-100 ease-out"
-                onClick={() => window.open('https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852')}>
-                <CustomImage src="/icons/apple.svg" alt="애플스토어 로고" w={1.5} h={1.5} />
-                <p className="font-pretendard font-normal text-white-default text-[10.4px] ">APP Store</p>
-              </Button>
-              <Button
-                className="bg-white-default border-primary-default border-2 px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[2.08px] hover:shadow-md"
-                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko')}>
-                <CustomImage src="/icons/google_play.svg" alt="구글플레이 로고" w={1.5} h={1.5} />
-                <p className="font-pretendard font-normal text-primary-default text-[10.4px]">Google Play</p>
-              </Button>
-              <Button
-                className="bg-primary-100 px-[16.64px] py-[6.24px] rounded-[29.12px] hover:bg-[#E6FBFB] hover:shadow-md"
-                onClick={() => router.push('/advertiser')}>
-                <p className="font-pretendard font-normal text-primary-default text-[10.4px]">광고주라면?</p>
-              </Button>
+              <LinkButton
+                name="APP Store"
+                href="https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852"
+                fontColor="white"
+                buttonColor="primary-default"
+                icon={<CustomImage src="/icons/apple.svg" alt="애플스토어 로고" w="w-[1.5rem]" h="h-[1.5rem]" />}
+              />
+              <LinkButton
+                name="Google Play"
+                href="https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko"
+                fontColor="primary"
+                buttonColor="white-default"
+                icon={<CustomImage src="/icons/google_play.svg" alt="구글플레이 로고" w="w-[1.5rem]" h="h-[1.5rem]" />}
+                border
+              />
+              <LinkButton name="광고주라면?" href="/advertiser" fontColor="primary" buttonColor="primary-200" />
             </>
           )}
           {isAdvertiserPage && (
             <>
-              <Button className="bg-primary-default px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[2.08px] hover:bg-[#3ecccc] hover:shadow-md active:bg-[#8fe1e1] transition-all duration-100 ease-out">
-                <p className="font-pretendard font-normal text-white-default text-[10.4px] ">제안서 받기</p>
-              </Button>
-              <Button
-                className="bg-primary-100 px-[16.64px] py-[6.24px] rounded-[29.12px] hover:bg-[#E6FBFB] hover:shadow-md"
-                onClick={() => router.push('/influencer')}>
-                <p className="font-pretendard font-normal text-primary-default text-[10.4px]">인플루언서라면?</p>
-              </Button>
+              <LinkButton name="제안서 받기" href="#" fontColor="white" buttonColor="primary-default" />
+              <LinkButton name="인플루언서라면?" href="/influencer" fontColor="primary" buttonColor="primary-200" />
             </>
           )}
         </div>

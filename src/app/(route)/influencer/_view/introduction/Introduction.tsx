@@ -12,12 +12,42 @@ function Introduction() {
             title="SNS 채널만 가지고 있다면!"
             description="와이리에서는 타 체험단 사이트와 비교하여<br/>가장 많은 SNS 종류를 승인해드리고 있어요!">
             <div className="flex justify-around bg-gradient-to-r from-white-default to-white-default/20 py-[1.3975rem] px-[2.6rem] mt-[1.5275rem] mb-[2.34rem] box-border">
-              <CustomImage src="/images/influencer/channel_icon_0.svg" alt="네이버 로고" w={4.5} h={4.5} />
-              <CustomImage src="/images/influencer/channel_icon_1.svg" alt="네이버 로고" w={4.5} h={4.5} />
-              <CustomImage src="/images/influencer/channel_icon_2.svg" alt="네이버 로고" w={4.5} h={4.5} />
-              <CustomImage src="/images/influencer/channel_icon_3.svg" alt="네이버 로고" w={4.5} h={4.5} />
-              <CustomImage src="/images/influencer/channel_icon_4.svg" alt="네이버 로고" w={4.5} h={4.5} />
-              <CustomImage src="/images/influencer/channel_icon_5.svg" alt="네이버 로고" w={4.5} h={4.5} />
+              <CustomImage
+                src="/images/influencer/channel_icon_0.svg"
+                alt="네이버 로고"
+                w="w-[4.5rem]"
+                h="h-[4.5rem]"
+              />
+              <CustomImage
+                src="/images/influencer/channel_icon_1.svg"
+                alt="네이버 로고"
+                w="w-[4.5rem]"
+                h="h-[4.5rem]"
+              />
+              <CustomImage
+                src="/images/influencer/channel_icon_2.svg"
+                alt="네이버 로고"
+                w="w-[4.5rem]"
+                h="h-[4.5rem]"
+              />
+              <CustomImage
+                src="/images/influencer/channel_icon_3.svg"
+                alt="네이버 로고"
+                w="w-[4.5rem]"
+                h="h-[4.5rem]"
+              />
+              <CustomImage
+                src="/images/influencer/channel_icon_4.svg"
+                alt="네이버 로고"
+                w="w-[4.5rem]"
+                h="h-[4.5rem]"
+              />
+              <CustomImage
+                src="/images/influencer/channel_icon_5.svg"
+                alt="네이버 로고"
+                w="w-[4.5rem]"
+                h="h-[4.5rem]"
+              />
             </div>
           </IntroductionBox>
           <IntroductionBox
@@ -28,8 +58,8 @@ function Introduction() {
               <CustomImage
                 src="/images/influencer/introduction_calendar.svg"
                 alt="introduction 캘린더 아이콘"
-                w={24}
-                h={24}
+                w="w-[2 4rem]"
+                h="h-[24rem]"
               />
             </div>
           </IntroductionBox>
@@ -41,8 +71,8 @@ function Introduction() {
               <CustomImage
                 src="/images/influencer/introduction_check.svg"
                 alt="introduction 체크 아이콘"
-                w={24}
-                h={24}
+                w="w-[24rem]"
+                h="h-[24rem]"
               />
             </div>
           </IntroductionBox>
@@ -57,20 +87,20 @@ function Introduction() {
               <CustomImage
                 src="/images/influencer/introduction_grade_silver.svg"
                 alt="introduction 실버 등급 아이콘"
-                w={11.358125}
-                h={11.358125}
+                w="w-[11.358125rem]"
+                h="h-[11.358125rem]"
               />
               <CustomImage
                 src="/images/influencer/introduction_grade_gold.svg"
                 alt="introduction 골드 등급 아이콘"
-                w={11.358125}
-                h={11.358125}
+                w="w-[11.358125rem]"
+                h="h-[11.358125rem]"
               />
               <CustomImage
                 src="/images/influencer/introduction_grade_black.svg"
                 alt="introduction 블랙 등급 아이콘"
-                w={11.358125}
-                h={11.358125}
+                w="w-[11.358125rem]"
+                h="h-[11.358125rem]"
               />
             </div>
           </IntroductionBox>

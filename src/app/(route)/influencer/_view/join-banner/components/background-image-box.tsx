@@ -9,8 +9,8 @@ function BackgroundImageBox() {
           <CustomImage
             src={'/images/web/influencer/background.png'}
             alt="인플루언서 가입 배너 배경 이미지"
-            w={'50%'}
-            h={21.25}
+            w="w-[50%]"
+            h="h-[21.25rem]"
             className="transform scale-x-[-1]"
           />
         </li>
