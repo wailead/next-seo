@@ -1,7 +1,6 @@
 'use client'
 
 import CampaignCard from './components/CampaignCard'
-import Button from '@/components/button/button'
 import { useState } from 'react'
 import CampaignModal from './CampaignModal'
 
@@ -67,13 +66,13 @@ function Campaign() {
           {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
           <div className="absolute w-primary h-[18.75rem] bg-gradient-to-t top-[72.1875rem] from-white-default from-40% z-10"></div>
           {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
-          <Button
+          <button
             className="absolute top-[86.5625rem] bg-gray-300 px-[1.9375rem] py-[0.21875rem] rounded-[1.82rem] hover:shadow-md hover:bg-[#6d6d6d] z-20"
             onClick={handleModal}>
             <span className="font-medium text-[0.975rem] leading-[1.75rem] text-white-default">
               더 많은 캠페인 보기
             </span>
-          </Button>
+          </button>
           {showModal && <CampaignModal handleModal={handleModal} />}
         </div>
       </div>

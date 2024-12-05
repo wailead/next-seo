@@ -18,16 +18,16 @@ function Mainheader() {
           </div>
           <div className="flex gap-[0.875rem] pl-3">
             <div className="flex flex-col bg-white-default p-[0.869rem] justify-center items-center gap-[0.625rem] rounded-2xl shadow-[0_4px_10px_-3px_rgba(0,0,0,0.4)]">
-              <CustomImage src="/images/qr_appstore.png" alt="appleQR" w={9.6875} h={9.6875} />
+              <CustomImage src="/images/qr_appstore.png" alt="appleQR" w="w-[9.6875rem]" h="h-[9.6875rem]" />
               <div className="flex items-center gap-[0.313rem] ">
-                <CustomImage src={'/icons/gray_apple.svg'} alt="applelogo" w={1.34375} h={1.34375} />
+                <CustomImage src={'/icons/gray_apple.svg'} alt="applelogo" w="w-[1.34375rem]" h="h-[1.34375rem]" />
                 <span className="font-normal text-[0.588rem] leading-[0.688rem]">APP Store</span>
               </div>
             </div>
             <div className="flex flex-col bg-white-default p-[0.881rem] justify-center items-center gap-[0.625rem] rounded-2xl shadow-[0_4px_10px_-3px_rgba(0,0,0,0.4)]">
-              <CustomImage src="/images/qr_playstore.png" alt="googleQR" w={9.6875} h={9.6875} />
+              <CustomImage src="/images/qr_playstore.png" alt="googleQR" w="w-[9.6875rem]" h="h-[9.6875rem]" />
               <div className="flex items-center gap-[0.313rem] ">
-                <CustomImage src={'/icons/gray_google.svg'} alt="applelogo" w={1.40625} h={1.40625} />
+                <CustomImage src={'/icons/gray_google.svg'} alt="applelogo" w="w-[1.40625rem]" h="h-[1.40625rem]" />
                 <span className="font-normal text-[0.588rem] leading-[0.688rem]">Google Play</span>
               </div>
             </div>
