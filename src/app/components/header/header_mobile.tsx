@@ -12,10 +12,10 @@ function MobileHeader() {
         </p>
         <div className="flex gap-4">
           <Button className="bg-primary-default px-[31.53px] py-[18.25px] rounded-[147.13px] hover:bg-[#3ecccc] hover:shadow-md">
-            <Image src="/images/apple.svg" alt="애플스토어 로고" width={31.53} height={31.53} />
+            <Image src="/icons/apple.svg" alt="애플스토어 로고" width={31.53} height={31.53} />
           </Button>
           <Button className="bg-white-default border-primary-default border-[5.25px] px-[31.53px] py-[18.25px] rounded-[147.13px] hover:shadow-md">
-            <Image src="/images/google_play.svg" alt="구글플레이 로고" width={31.53} height={31.53} />
+            <Image src="/icons/google_play.svg" alt="구글플레이 로고" width={31.53} height={31.53} />
           </Button>
           <Button className="bg-primary-100  px-[31.53px] py-[10.51px] rounded-[147.13px] hover:bg-[#E6FBFB] hover:shadow-md">
             <p className="font-pretendard font-normal text-primary-default text-xl">광고주라면?</p>

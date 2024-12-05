@@ -1,5 +1,5 @@
 import { TitleForm, SectionLayout } from '@/components'
-import { QuestionBox } from '../components'
+import QuestionBox from './components/QuestionBox'
 
 function Question() {
   return (

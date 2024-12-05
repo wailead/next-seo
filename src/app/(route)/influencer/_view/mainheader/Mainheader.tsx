@@ -22,7 +22,7 @@ function Mainheader() {
                 height={styleRatio(155)}></Image>
               <div className="flex items-center gap-[5px] ">
                 <Image
-                  src={'/images/gray_apple.svg'}
+                  src={'/icons/gray_apple.svg'}
                   alt="applelogo"
                   width={styleRatio(21.5)}
                   height={styleRatio(21.5)}
@@ -38,7 +38,7 @@ function Mainheader() {
                 height={styleRatio(155)}></Image>
               <div className="flex items-center gap-[5px] ">
                 <Image
-                  src={'/images/gray_google.svg'}
+                  src={'/icons/gray_google.svg'}
                   alt="applelogo"
                   width={styleRatio(22.5)}
                   height={styleRatio(22.5)}
