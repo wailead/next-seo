@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import CustomImage from '@/components/custom-image/CustomImage'
 
 interface Props {
   img: string
@@ -9,17 +9,19 @@ interface Props {
 
 function CampaignCard({ img, title, price, sale }: Props) {
   return (
-    <div className="flex flex-col w-[197.5px] h-[266px] gap-[11.7px]">
-      <Image src={img} alt={img} width={200} height={153} className="rounded-[18px]" />
-      <div className="flex flex-col text-start gap-[4.6px]">
-        <span className="font-bold text-[14.2px] tracking-tighter leading-[21px] text-gray-300">{title}</span>
-        <div className="flex  text-[16.3px] leading-[24px] gap-2">
+    <div className="flex flex-col w-[12.34rem] h-[16.625rem] gap-[0.73rem]">
+      <div className="relative w-[12.5rem] h-[9.56rem]">
+        <CustomImage src={img} alt={img} w={16} h={1} className="rounded-[1.125rem]" />
+      </div>
+      <div className="flex flex-col text-start gap-[0.29rem]">
+        <span className="font-bold text-[0.89rem] tracking-tighter leading-[1.31rem] text-gray-300">{title}</span>
+        <div className="flex text-[1.02rem] leading-[1.5rem] gap-2">
           <span className="line-through text-gray-100 tracking-tighter">{price}</span>
           <span className="text-[#FF5454] tracking-tighter">90%</span>
         </div>
-        <div className="flex gap-[5px]">
-          <span className="font-bold text-[18.3px] leading-[27.5px] text-gray-300 tracking-tighter">{sale}원</span>
-          <span className="text-[16.3px] leading-[26px] text-gray-300 tracking-tighter">1박</span>
+        <div className="flex gap-[0.31rem]">
+          <span className="font-bold text-[1.14rem] leading-[1.72rem] text-gray-300 tracking-tighter">{sale}원</span>
+          <span className="text-[1.02rem] leading-[1.625rem] text-gray-300 tracking-tighter">1박</span>
         </div>
       </div>
     </div>

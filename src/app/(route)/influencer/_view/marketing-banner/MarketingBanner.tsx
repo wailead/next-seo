@@ -1,5 +1,5 @@
+import CustomImage from '@/components/custom-image/CustomImage'
 import Link from 'next/link'
-import Image from 'next/image'
 
 function MarketingBanner() {
   return (
@@ -13,15 +13,11 @@ function MarketingBanner() {
           <Link href="/influencer/marketing">
             <h1 className="text-primary-default flex">
               무료로 하는 와이리 마케팅 알아보기
-              <div className="w-[3rem] h-[3rem] relative">
-                <Image src="/icons/icon_arrow_back.svg" alt="marketing 화살표 아이콘" fill />
-              </div>
+              <CustomImage src="/icons/icon_arrow_back.svg" alt="marketing 화살표 아이콘" w={3} h={3} />
             </h1>
           </Link>
         </div>
-        <div className="w-[23.125rem] h-[14.5rem] relative">
-          <Image src={'/assets/images/banner_influencer.png'} alt="배너 인플루언서 이미지" fill />
-        </div>
+        <CustomImage src={'/assets/images/banner_influencer.png'} alt="배너 인플루언서 이미지" w={23.125} h={14.5} />
       </div>
     </section>
   )

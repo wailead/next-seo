@@ -5,7 +5,7 @@ function Question() {
   return (
     <SectionLayout>
       <TitleForm subtitle="QUESTION" title="자주 묻는 질문">
-        <div className="flex flex-col gap-[12.48px]">
+        <div className="flex flex-col gap-[0.78rem]">
           <QuestionBox
             question="누구나 이용할 수 있나요?"
             answer="민감한 주제(정치 등)를 다루는 sns 거나, 비공개 계정이거나, 게시물이 없는 계정, 기타 사유로 와이리 활동에 적합하지 않다고 판단되는 sns가 아닌 경우 이용이 가능합니다. 다만, 이용자 선정은 업체에서 직접 이루어지며, 등급에 따라 신청 가능한 상품이 다를 수 있습니다."

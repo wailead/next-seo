@@ -1,9 +1,9 @@
 ---
-name: "✅ TEST"
+name: '✅ TEST'
 about: 테스트 케이스 작성 및 실행 결과 기록 템플릿
-title: "✅ [24.mm.dd] 기능 테스트 케이스 제목 #관련 기능 작업 이슈 번호"
-labels: ""
-assignees: ""
+title: '✅ [24.mm.dd] 기능 테스트 케이스 제목 #관련 기능 작업 이슈 번호'
+labels: ''
+assignees: ''
 ---
 
 <!--

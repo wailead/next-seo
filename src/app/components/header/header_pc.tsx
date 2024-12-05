@@ -1,9 +1,7 @@
 'use client'
-
-import Image from 'next/image'
 import Button from '../button/button'
 import { usePathname, useRouter } from 'next/navigation'
-import { styleRatio } from '@/utils/styleRatio'
+import CustomImage from '../custom-image/CustomImage'
 
 function PcHeader() {
   const pathname = usePathname()
@@ -14,7 +12,7 @@ function PcHeader() {
 
   return (
     <header className="flex justify-between">
-      <Image src="/images/logo.png" alt="와이리(PC) 로고" width={styleRatio(182)} height={styleRatio(62)} />
+      <CustomImage src="/images/logo.png" alt="와이리(PC) 로고" w={11.375} h={3.875} />
       <div className="flex items-center gap-[22.88px]">
         {isInfluencerPage && (
           <p className="font-pretendard font-normal text-[12.48px] text-gray-300">수많은 캠페인에 신청해보세요.</p>
@@ -41,18 +39,13 @@ function PcHeader() {
               <Button
                 className="bg-primary-default px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[2.08px] hover:bg-[#3ecccc] hover:shadow-md active:bg-[#8fe1e1] transition-all duration-100 ease-out"
                 onClick={() => window.open('https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852')}>
-                <Image src="/icons/apple.svg" alt="애플스토어 로고" width={styleRatio(24)} height={styleRatio(24)} />
+                <CustomImage src="/icons/apple.svg" alt="애플스토어 로고" w={1.5} h={1.5} />
                 <p className="font-pretendard font-normal text-white-default text-[10.4px] ">APP Store</p>
               </Button>
               <Button
                 className="bg-white-default border-primary-default border-2 px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[2.08px] hover:shadow-md"
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko')}>
-                <Image
-                  src="/icons/google_play.svg"
-                  alt="구글플레이 로고"
-                  width={styleRatio(24)}
-                  height={styleRatio(24)}
-                />
+                <CustomImage src="/icons/google_play.svg" alt="구글플레이 로고" w={1.5} h={1.5} />
                 <p className="font-pretendard font-normal text-primary-default text-[10.4px]">Google Play</p>
               </Button>
               <Button
