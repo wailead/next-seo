@@ -36,9 +36,9 @@ function Introduction() {
           description="와이리는 채널에 따라 예상 영향력에 따라서 등급을 부여하고 있습니다.<br/>와이리에서 인증하는 인플루언서가 되어보세요.">
           <p className="font-pretendard font-light text-gray-100 pl-[41.6px]">*채널 승급은 매월말에 신청을 받고 있습니다. </p>
           <div className="px-[147.68px] flex justify-between">
-            <Image src="/images/influencer/introduction_grade_silver.svg" alt="introduction 실버 등급 아이콘" width={styleRatio(181.73)} height={0} layout="intrinsic" />
-            <Image src="/images/influencer/introduction_grade_gold.svg" alt="introduction 골드 등급 아이콘" width={styleRatio(181.73)} height={0} layout="intrinsic" />
-            <Image src="/images/influencer/introduction_grade_black.svg" alt="introduction 블랙 등급 아이콘" width={styleRatio(181.73)} height={0} layout="intrinsic" />
+            <Image src="/images/influencer/introduction_grade_silver.svg" alt="introduction 실버 등급 아이콘" width={styleRatio(181.73)} height={0} />
+            <Image src="/images/influencer/introduction_grade_gold.svg" alt="introduction 골드 등급 아이콘" width={styleRatio(181.73)} height={0} />
+            <Image src="/images/influencer/introduction_grade_black.svg" alt="introduction 블랙 등급 아이콘" width={styleRatio(181.73)} height={0} />
           </div>
         </IntroductionBox>
       </div>
