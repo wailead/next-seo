@@ -2,7 +2,7 @@ import CustomImage from '@/components/custom-image/CustomImage'
 
 function Mainheader() {
   return (
-    <div className="flex w-full  justify-center items-center bg-[url('/images/web/influencer/background.png')]  bg-contain bg-center ">
+    <div className="flex w-full  justify-center items-center bg-[url('/images/influencer/background.png')]  bg-contain bg-center ">
       <div className="flex w-primary h-full justify-between ">
         <div className="flex flex-col pt-[3.125rem] pl-[3.219rem] pb-[3.438rem] gap-[3.938rem] ">
           <div className={`flex flex-col w-[19.656rem] gap-[1.063rem]`}>
@@ -34,10 +34,10 @@ function Mainheader() {
           </div>
         </div>
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
-        <div className={`w-[14.625rem] bg-red-400`}>
+        <div className={`w-[14.625rem] bg-red-400 pointer-events-none`}>
           <object
             type="text/html"
-            data="https://youtube.com/embed/8bBoGxyY48E?si=ZqrJPQPwo4lYDYVc?autoplay=1&mute=1&loop=1"
+            data="https://youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E"
             className="relative w-full h-full"></object>
         </div>
       </div>
