@@ -3,17 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #FFFFFF;
+  --background: #ffffff;
   --foreground: #171717;
-  --primary: #2EC8C8;
+  --primary: #2ec8c8;
+}
 
+/* 스크롤바 전체 숨기기 */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --primary: #2EC8C8;
+    --primary: #2ec8c8;
   }
 }
 
@@ -56,21 +60,21 @@ body {
   font-family: 'Pretendard';
   font-weight: 500;
   font-style: normal;
-  src:url('../fonts/Pretendard-Medium.woff') format('woff');
+  src: url('../fonts/Pretendard-Medium.woff') format('woff');
   font-display: swap;
 }
 @font-face {
   font-family: 'Pretendard';
   font-weight: 600;
   font-style: normal;
-  src:url('../fonts/Pretendard-SemiBold.woff') format('woff');
+  src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
   font-display: swap;
 }
 @font-face {
   font-family: 'Pretendard';
   font-weight: 700;
   font-style: normal;
-  src:  url('../fonts/Pretendard-Bold.woff') format('woff');
+  src: url('../fonts/Pretendard-Bold.woff') format('woff');
   font-display: swap;
 }
 @font-face {
