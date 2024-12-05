@@ -13,13 +13,13 @@ function MarketingBanner() {
           <Link href="/influencer/marketing">
             <h1 className="text-primary-default flex">
               무료로 하는 와이리 마케팅 알아보기
-              <div className="w-[3rem] h-[3rem]">
+              <div className="w-[3rem] h-[3rem] relative">
                 <Image src="/icons/icon_arrow_back.svg" alt="marketing 화살표 아이콘" fill />
               </div>
             </h1>
           </Link>
         </div>
-        <div className="w-[23.125rem] h-[14.5rem]">
+        <div className="w-[23.125rem] h-[14.5rem] relative">
           <Image src={'/assets/images/banner_influencer.png'} alt="배너 인플루언서 이미지" fill />
         </div>
       </div>

@@ -48,7 +48,7 @@ function PcHeader() {
                 className="bg-white-default border-primary-default border-2 px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[2.08px] hover:shadow-md"
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko')}>
                 <Image
-                  src="/images/google_play.svg"
+                  src="/icons/google_play.svg"
                   alt="구글플레이 로고"
                   width={styleRatio(24)}
                   height={styleRatio(24)}
