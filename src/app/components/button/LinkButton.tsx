@@ -10,17 +10,16 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<typeof Link> {
 }
 
 function LinkButton({ icon, name, fontColor, buttonColor, border, ...linkProps }: ButtonProps) {
-  const textColor = fontColor === 'white' ? 'text-white' : 'text-primary'
+  const textColor = fontColor === 'white' ? 'text-white' : 'text-primary-default'
   const linkColor = `bg-${buttonColor}`
-  const borderColor = border ? `border-primary-default` : ''
-  const hoverColor = `hover:bg-${linkColor}/90`
-  const activeColor = `active:bg-${linkColor}/75`
+  const borderColor = border ? `border-primary-default border-[2px]` : ''
+  const hoverColor = `hover:bg-${buttonColor}/70`
+  const activeColor = `active:bg-${buttonColor}/60`
   return (
     <Link
       {...linkProps}
-      target="_blank"
       className={twMerge(
-        `px-[16.64px] w-[100px] h-[30px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[4px]`,
+        `px-[16.64px] py-[6.24px] rounded-[29.12px] flex items-center justify-center gap-[4px]`,
         'hover:shadow-sm hover:shadow-gray-200 transition duration-300',
         linkColor,
         borderColor,
@@ -28,7 +27,7 @@ function LinkButton({ icon, name, fontColor, buttonColor, border, ...linkProps }
         activeColor
       )}>
       {icon ? icon : null}
-      <p className={twMerge(`font-pretendard font-normal text-[10.4px]`, textColor)}>{name}</p>
+      <p className={twMerge(`font-pretendard text-[13px] font-semibold`, textColor)}>{name}</p>
     </Link>
   )
 }
