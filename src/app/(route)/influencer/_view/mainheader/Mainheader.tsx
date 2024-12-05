@@ -1,4 +1,3 @@
-import { styleRatio } from '@/utils/styleRatio'
 import Image from 'next/image'
 
 function Mainheader() {

@@ -1,6 +1,5 @@
 import { TitleForm, SectionLayout } from '@/components'
 import Image from 'next/image'
-import { styleRatio } from '@/utils/styleRatio'
 import IntroductionBox from './components/introductionBox'
 
 function Introduction() {
