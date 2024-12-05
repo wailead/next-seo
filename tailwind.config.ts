@@ -49,6 +49,21 @@ export default {
         pretendard: ['Pretendard'],
         montserrat: ['Montserrat'],
       },
+      animation: {
+        fadein: 'fadeIn 0.15s ease-in-out forwards',
+        fadeout: 'fadeOut 0.15s ease-in-out forwards',
+      },
+
+      keyframes: {
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        fadeOut: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+      },
     },
   },
   plugins: [],
