@@ -1,7 +1,7 @@
 'use client'
 
 import CampaignCard from './components/CampaignCard'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import CampaignModal from './CampaignModal'
 
 function Campaign() {
