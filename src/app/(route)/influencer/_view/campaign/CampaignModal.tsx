@@ -20,6 +20,8 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
     }, 150)
   }
 
+  if (!animation) return null
+
   return (
     <dialog
       className={`flex w-full h-full fixed top-0 left-0 justify-center items-center bg-black/50 z-30 ${animation ? 'animate-fadein' : 'animate-fadeout pointer-events-none'}`}
