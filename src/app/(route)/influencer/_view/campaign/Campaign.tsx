@@ -1,13 +1,13 @@
 'use client'
 
 import CampaignCard from './components/CampaignCard'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CampaignModal from './CampaignModal'
 
 function Campaign() {
   const [showModal, setShowModal] = useState(false)
 
-  const handleModal = () => {
+  const handleModalOpen = () => {
     if (showModal) {
       document.body.style.overflow = 'unset'
     } else {
@@ -15,11 +15,10 @@ function Campaign() {
     }
     setShowModal(!showModal)
   }
-  console.log(showModal)
 
   return (
     <div className="flex w-full justify-center">
-      <div className="flex flex-col w-primary justify-center text-center pt-[2.9375rem] px-[3.8125rem] gap-[3.125rem] ">
+      <div className="flex flex-col w-primary justify-center text-center pt-[2.9375rem] py-[4.0625rem] px-[3.8125rem] gap-[3.125rem] ">
         <h2 className="text-[1.5625rem] font-bold leading-[2.25rem] text-gray-600">
           숙박 및 상품을 <span className="text-primary-default">90% 할인가</span>에 체험해보세요
         </h2>
@@ -64,16 +63,16 @@ function Campaign() {
           <CampaignCard img="/images/influencer/sight/con-rad.png" title="" price="" sale="" />
           <CampaignCard img="/images/influencer/sight/surf-holic.png" title="" price="" sale="" />
           {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
-          <div className="absolute w-primary h-[18.75rem] bg-gradient-to-t top-[72.1875rem] from-white-default from-40% z-10"></div>
+          <div className="absolute w-primary h-[19rem] bg-gradient-to-t top-[72.1875rem] from-white-default from-40% z-10"></div>
           {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
           <button
-            className="absolute top-[86.5625rem] bg-gray-300 px-[1.9375rem] py-[0.21875rem] rounded-[1.82rem] hover:shadow-md hover:bg-[#6d6d6d] z-20"
-            onClick={handleModal}>
+            className="absolute top-[86.875rem] bg-gray-300 px-[1.9375rem] py-[0.21875rem] rounded-[1.82rem] hover:shadow-md hover:bg-[#6d6d6d] z-20"
+            onClick={handleModalOpen}>
             <span className="font-medium text-[0.975rem] leading-[1.75rem] text-white-default">
               더 많은 캠페인 보기
             </span>
           </button>
-          {showModal && <CampaignModal handleModal={handleModal} />}
+          <CampaignModal handleModalOpen={handleModalOpen} showModal={showModal} />
         </div>
       </div>
     </div>

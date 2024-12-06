@@ -1,22 +1,37 @@
 import CustomImage from '@/components/custom-image/CustomImage'
+import { useEffect, useState } from 'react'
 
 interface Props {
-  handleModal: () => void
+  showModal: boolean
+  handleModalOpen: () => void
 }
 
-function CampaignModal({ handleModal }: Props) {
+function CampaignModal({ handleModalOpen, showModal }: Props) {
+  const [animation, setAnimation] = useState(false)
+
+  useEffect(() => {
+    setAnimation(showModal)
+  }, [showModal])
+
+  const handleModalClose = () => {
+    setAnimation(false)
+    setTimeout(() => {
+      handleModalOpen()
+    }, 150)
+  }
+
   return (
-    <div
-      className="flex w-full h-full fixed top-0 left-0 justify-center items-center bg-black/50 z-30"
-      onClick={handleModal}>
+    <dialog
+      className={`flex w-full h-full fixed top-0 left-0 justify-center items-center bg-black/50 z-30 ${animation ? 'animate-fadein' : 'animate-fadeout pointer-events-none'}`}
+      onClick={handleModalClose}>
       <div
-        className="flex flex-col w-[36.5rem] h-[26.25rem] bg-[url('/images/influencer/background.png')] bg-cover rounded-[1.875rem] justify-between items-center pt-[1.156rem] px-[1.219rem]"
+        className="flex flex-col w-[36.5rem] h-[26.25rem] bg-[url('/images/influencer/background.png')] bg-cover rounded-[1.875rem] justify-between items-center pt-[1.156rem] px-[1.219rem] "
         onClick={e => {
           e.stopPropagation()
         }}>
         <div className="flex flex-col w-full items-center">
           <div className="flex w-full justify-end">
-            <button onClick={handleModal}>
+            <button onClick={handleModalClose}>
               <CustomImage src={'/icons/influencer/close.svg'} alt="close" w="w-[1.469rem]" h="h-[1.469rem]" />
             </button>
           </div>
@@ -50,7 +65,7 @@ function CampaignModal({ handleModal }: Props) {
           <CustomImage src={'/assets/images/modal_phone.png'} alt="phone" w="w-[14.6875rem]" h="h-[18rem]" />
         </div>
       </div>
-    </div>
+    </dialog>
   )
 }
 export default CampaignModal
