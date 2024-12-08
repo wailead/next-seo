@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { twMerge } from 'tailwind-merge'
 
 type Props = {
-  src: string
+  src: string | StaticImageData
   alt: string
   w: string
   h: string
