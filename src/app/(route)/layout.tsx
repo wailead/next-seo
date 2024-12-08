@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { PcHeader, Footer } from '@/components'
+import { PcHeader, Footer, ChatBot } from '@/components'
 import '../styles/globals.css'
 
 const geistSans = localFont({
@@ -30,6 +30,7 @@ export default function RootLayout({
         <PcHeader />
         {children}
         <Footer />
+        <ChatBot />
       </body>
     </html>
   )

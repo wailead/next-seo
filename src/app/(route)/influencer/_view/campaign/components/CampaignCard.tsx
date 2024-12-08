@@ -9,12 +9,12 @@ interface Props {
 
 function CampaignCard({ img, title, price, sale }: Props) {
   return (
-    <div className="flex flex-col w-[12.34rem] h-[16.625rem] gap-[0.73rem]">
+    <div className="flex flex-col w-[12.34rem] h-[16.625rem] gap-[0.9em]">
       <div className="relative w-[12.5rem] h-[9.56rem]">
-        <CustomImage src={img} alt={img} w="w-[16rem]" h="h-[1rem]" className="rounded-[1.125rem]" />
+        <CustomImage src={img} alt={img} w="w-[12.33125rem]" h="h-[9.6875rem]" className="rounded-[1.125rem]" />
       </div>
       <div className="flex flex-col text-start gap-[0.29rem]">
-        <span className="font-bold text-[0.89rem] tracking-tighter leading-[1.31rem] text-gray-300">{title}</span>
+        <span className="font-bold text-[0.89rem] tracking-tighter leading-[1.35rem] text-gray-300">{title}</span>
         <div className="flex text-[1.02rem] leading-[1.5rem] gap-2">
           <span className="line-through text-gray-100 tracking-tighter">{price}</span>
           <span className="text-[#FF5454] tracking-tighter">90%</span>

@@ -50,6 +50,14 @@ export default {
         montserrat: ['Montserrat'],
       },
       keyframes: {
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        fadeOut: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
         'slide-left': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
@@ -60,6 +68,8 @@ export default {
         },
       },
       animation: {
+        fadein: 'fadeIn 0.15s ease-in-out forwards',
+        fadeout: 'fadeOut 0.15s ease-in-out forwards',
         'slide-right': 'slide-right 60s linear infinite',
         'slide-left': 'slide-left 60s linear infinite',
       },
