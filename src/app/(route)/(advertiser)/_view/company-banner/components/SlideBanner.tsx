@@ -12,7 +12,7 @@ function SlideBanner({ logos, direction }: Props) {
   return (
     <div className="flex w-screen items-center justify-center">
       <div className="flex w-fit overflow-hidden">
-        <div className={twMerge('flex gap-4', slideDirection)}>
+        <div className={twMerge('flex gap-4 hover:pause-animation', slideDirection)}>
           <ul className="flex gap-4">
             {logos.map((image, index) => (
               <li

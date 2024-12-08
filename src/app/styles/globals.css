@@ -106,8 +106,7 @@ body {
   font-display: swap;
 }
 
-@layer utilities {
-  .hover\\:animation-pause:hover {
-    animation-play-state: paused;
-  }
+/* hover 시 애니메이션 일시 정지 */
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
 }
