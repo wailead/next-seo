@@ -7,8 +7,8 @@ import Link from 'next/link'
 function PcHeader() {
   const pathname = usePathname()
 
-  const isAdvertiserPage = pathname === '/advertiser'
-  const isInfluencerPage = pathname === '/' || pathname === '/influencer'
+  const isAdvertiserPage = pathname === '/'
+  const isInfluencerPage = pathname === '/influencer'
 
   return (
     <header className="flex justify-between">
