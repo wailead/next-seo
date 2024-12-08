@@ -49,6 +49,20 @@ export default {
         pretendard: ['Pretendard'],
         montserrat: ['Montserrat'],
       },
+      keyframes: {
+        'slide-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'slide-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'slide-right': 'slide-right 60s linear infinite',
+        'slide-left': 'slide-left 60s linear infinite',
+      },
     },
   },
   plugins: [],
