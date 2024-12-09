@@ -1,4 +1,4 @@
-import PcHeader from './header/header_pc'
+import PcHeader from './header/Header'
 import Footer from './footer/footer'
 import Button from './button/LinkButton'
 import MobileHeader from './header/header_mobile'
