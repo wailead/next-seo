@@ -1,5 +1,11 @@
+import { MoreService } from './_view'
+
 function AdvertiserPage() {
-  return <div>AdvertiserPage</div>
+  return (
+    <div>
+      <MoreService />
+    </div>
+  )
 }
 
 export default AdvertiserPage
