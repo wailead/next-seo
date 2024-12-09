@@ -1,5 +1,5 @@
 import BackgroundImageBox from './components/background-image-box'
-import JoinBox from './components/join-box'
+import JoinBox from './components/JoinBox'
 import PhoneImageBox from './components/phone-image-box'
 
 function JoinBanner() {

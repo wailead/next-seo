@@ -49,11 +49,6 @@ export default {
         pretendard: ['Pretendard'],
         montserrat: ['Montserrat'],
       },
-      animation: {
-        fadein: 'fadeIn 0.15s ease-in-out forwards',
-        fadeout: 'fadeOut 0.15s ease-in-out forwards',
-      },
-
       keyframes: {
         fadeIn: {
           from: { opacity: '0' },
@@ -63,6 +58,20 @@ export default {
           from: { opacity: '1' },
           to: { opacity: '0' },
         },
+        'slide-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'slide-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        fadein: 'fadeIn 0.15s ease-in-out forwards',
+        fadeout: 'fadeOut 0.15s ease-in-out forwards',
+        'slide-right': 'slide-right 60s linear infinite',
+        'slide-left': 'slide-left 60s linear infinite',
       },
     },
   },

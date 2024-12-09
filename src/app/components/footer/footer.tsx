@@ -7,7 +7,7 @@ function Footer() {
         <div className={`flex w-primary items-end justify-center pt-[27px] pb-[24px] px-[120px] gap-[42px]`}>
           <div className={`flex flex-col gap-[3px]`}>
             <div className={`flex items-center justify-start gap-3`}>
-              <CustomImage src="/images/footerlogo.png" alt="Logo" w={6.875} h={2.375} />
+              <CustomImage src="/images/footerlogo.png" alt="Logo" w={'w-[6.875rem]'} h={'h-[2.375rem]'} />
               <span className={`font-medium text-[11.5px] text-white-default `}>(주) 와이리</span>
             </div>
             <div className={`flex text-gray-200 font-normal text-[9.6px] leading-[8.6px]`}>

@@ -105,3 +105,8 @@ body {
   src: url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('ttf');
   font-display: swap;
 }
+
+/* hover 시 애니메이션 일시 정지 */
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
+}
