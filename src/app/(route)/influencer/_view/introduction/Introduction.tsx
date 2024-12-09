@@ -1,5 +1,5 @@
 import { TitleForm, SectionLayout } from '@/components'
-import IntroductionBox from './components/introductionBox'
+import IntroductionBox from './components/IntroductionBox'
 import CustomImage from '@/components/custom-image/CustomImage'
 
 function Introduction() {
