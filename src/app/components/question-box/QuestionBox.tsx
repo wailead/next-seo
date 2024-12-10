@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
-import { Chevron } from '../../../../../../../public/icons'
+import { Chevron } from '../../../../public/icons'
 
 interface QuestionBoxProps {
   question: string

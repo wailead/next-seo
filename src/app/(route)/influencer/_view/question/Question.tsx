@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { TitleForm, SectionLayout } from '@/components'
-import QuestionBox from './components/QuestionBox'
+import QuestionBox from '@/components/question-box/QuestionBox'
 
 interface QuestionData {
   question: string
