@@ -14,7 +14,7 @@ function PcHeader() {
 
   return (
     <SectionLayout>
-      <header className="flex justify-between px-[2.77vw] bg-white-default py-[1.39vw] fixed top-0 left-0 right-0 z-100">
+      <header className="flex justify-between px-[2.77vw] bg-white-default py-[1.39vw] fixed top-0 left-0 right-0 mx-auto z-100 max-w-[750px]">
         <CustomImage src="/images/logo.png" alt="와이리(PC) 로고" w="w-[5rem]" h="h-[2.2rem]" />
         <div className="flex items-center gap-[3.05vw]">
           {isInfluencerPage && (
@@ -25,24 +25,24 @@ function PcHeader() {
           {isAdvertiserPage && (
             <div className="flex gap-[3.33vw]">
               {isAdvertiserPage && (
-                <div className="flex gap-[1.56rem]">
+                <div className="flex justify-between">
                   <Link
-                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[1.04rem] py-[0.39rem] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                     href="#">
                     서비스 소개
                   </Link>
                   <Link
-                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[1.04rem] py-[0.39rem] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                     href="#">
                     진행사례
                   </Link>
                   <Link
-                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[1.04rem] py-[0.39rem] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                     href="#">
                     서비스 종류
                   </Link>
                   <Link
-                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[1.04rem] py-[0.39rem] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                    className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                     href="#">
                     FAQ
                   </Link>
