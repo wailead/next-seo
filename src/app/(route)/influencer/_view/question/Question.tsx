@@ -7,6 +7,7 @@ import QuestionBox from '@/components/question-box/QuestionBox'
 interface QuestionData {
   question: string
   answer: string | { text: string; link?: string }
+  isLinkFirst?: boolean
 }
 
 const questions: QuestionData[] = [
@@ -26,6 +27,7 @@ const questions: QuestionData[] = [
       text: ' 에 명시된 기준을 참고해 주세요. 해당 기준은 최소 기준이며, 와이리 자체 내부 기준(프로그램 사용 여부, 진성 팔로워 비율 등)에 따라 등급 산정이 결정됩니다.',
       link: 'https://www.wairi.co.kr/influencer/board/view/notice/108/',
     },
+    isLinkFirst: true,
   },
   {
     question: '원하는 날짜에 신청이 가능한가요?',
@@ -62,6 +64,7 @@ function Question() {
               answer={q.answer}
               isOpen={activeIndex === index}
               onToggle={() => handleToggle(index)}
+              isLinkFirst={q.isLinkFirst}
             />
           ))}
         </div>

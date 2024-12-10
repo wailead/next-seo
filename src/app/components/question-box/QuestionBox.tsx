@@ -8,9 +8,10 @@ interface QuestionBoxProps {
   answer: string | { text: string; link?: string }
   isOpen: boolean
   onToggle: () => void
+  isLinkFirst?: boolean
 }
 
-function QuestionBox({ question, answer, isOpen, onToggle }: QuestionBoxProps) {
+function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }: QuestionBoxProps) {
   const contentRef = useRef<HTMLDivElement>(null)
   const [height, setHeight] = useState(0)
 
@@ -34,15 +35,27 @@ function QuestionBox({ question, answer, isOpen, onToggle }: QuestionBoxProps) {
           <hr className="bg-white-400 h-[0.13rem]" />
           <p className="font-pretendard font-normal text-[#757575] text-[0.78rem]">
             {typeof answer === 'string' ? (
-              answer
+              <span dangerouslySetInnerHTML={{ __html: answer }} />
             ) : (
               <>
-                {answer.link && (
+                {isLinkFirst && answer.link && (
                   <a href={answer.link} target="_blank" rel="noopener noreferrer" className="text-[#2EC8C8] underline">
                     {answer.link}
                   </a>
                 )}
-                {answer.text}
+                <span dangerouslySetInnerHTML={{ __html: answer.text }} />
+                {!isLinkFirst && answer.link && (
+                  <>
+                    <br />
+                    <a
+                      href={answer.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#2EC8C8] underline">
+                      {answer.link}
+                    </a>
+                  </>
+                )}
               </>
             )}
           </p>
