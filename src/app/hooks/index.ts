@@ -1,3 +1,5 @@
-import { useScrollButton } from './scroll-button/useScrollButton'
+import useScrollButton from './use-scroll-button/use-scroll-button'
+import useEmailCheck from './use-email/use-email'
+import usePhoneCheck from './use-phone/use-phone'
 
-export { useScrollButton }
+export { useScrollButton, useEmailCheck, usePhoneCheck }
