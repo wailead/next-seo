@@ -31,7 +31,7 @@ function LinkButton({ icon, name, fontColor, buttonColor, border, ...linkProps }
     <Link
       {...linkProps}
       className={twMerge(
-        `px-[16.64px] py-[7px] rounded-[29.12px] flex items-center justify-center gap-[4px]`,
+        `px-[1.04rem] py-[0.39rem] rounded-[1.82rem] flex items-center justify-center gap-[0.25rem]`,
         'hover:shadow-sm hover:shadow-gray-200 transition duration-300',
         linkColor,
         borderColor,
@@ -39,7 +39,7 @@ function LinkButton({ icon, name, fontColor, buttonColor, border, ...linkProps }
         activeColor
       )}>
       {icon ? icon : null}
-      <p className={twMerge(`font-pretendard text-[13px] font-semibold`, textColor)}>{name}</p>
+      <p className={twMerge(`font-pretendard text-[0.65rem] font-semibold`, textColor)}>{name}</p>
     </Link>
   )
 }
