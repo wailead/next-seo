@@ -14,8 +14,8 @@ function Advertiser() {
       <CompanyBanner />
       <GovermentBanner />
       <MoreService />
-      <Inquiry />
       <Question />
+      <Inquiry />
     </div>
   )
 }
