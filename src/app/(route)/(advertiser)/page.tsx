@@ -1,5 +1,6 @@
 import CompanyBanner from './_view/company-banner/CompanyBanner'
 import GovermentBanner from './_view/goverment-banner/GovermentBanner'
+import Inquiry from './_view/inquiry/Inquiry'
 import MoreService from './_view/more-service/MoreService'
 import Performance from './_view/performance/Performance'
 import Question from './_view/question/Question'
@@ -14,6 +15,7 @@ function Advertiser() {
       <GovermentBanner />
       <MoreService />
       <Question />
+      <Inquiry />
     </div>
   )
 }
