@@ -66,12 +66,18 @@ export default {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0)' },
         },
+        'slide-bottom': {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
       animation: {
         fadein: 'fadeIn 0.15s ease-in-out forwards',
         fadeout: 'fadeOut 0.15s ease-in-out forwards',
         'slide-right': 'slide-right 60s linear infinite',
         'slide-left': 'slide-left 60s linear infinite',
+        'slide-bottom': 'slide-bottom 60s linear infinite',
+        'slide-bottom-more': 'slide-bottom 120s linear infinite',
       },
     },
   },

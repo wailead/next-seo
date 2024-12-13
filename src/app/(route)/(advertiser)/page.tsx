@@ -4,6 +4,7 @@ import Inquiry from './_view/inquiry/Inquiry'
 import MoreService from './_view/more-service/MoreService'
 import Performance from './_view/performance/Performance'
 import Question from './_view/question/Question'
+import Reference from './_view/reference/Reference'
 import ServiceIntroduction from './_view/service-introduction/ServiceIntroduction'
 
 function Advertiser() {
@@ -11,6 +12,7 @@ function Advertiser() {
     <div>
       <ServiceIntroduction />
       <Performance />
+      <Reference />
       <CompanyBanner />
       <GovermentBanner />
       <MoreService />
