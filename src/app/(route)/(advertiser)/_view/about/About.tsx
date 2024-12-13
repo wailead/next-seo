@@ -1,5 +1,9 @@
+'use client'
+
 import { SectionLayout, TitleForm } from '@/components'
 import AboutBox from './components/AboutBox'
+import ItemCarousel from './components/ItemCarousel'
+import { useState } from 'react'
 
 interface AboutData {
   pageNum: string
@@ -47,13 +51,27 @@ const abouts: AboutData[] = [
 ]
 
 function About() {
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
+
+  const handleTouch = (direction: 'left' | 'right') => {
+    if (direction === 'left' && currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1)
+    } else if (direction === 'right' && currentIndex < abouts.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+    }
+  }
+
   return (
     <SectionLayout>
       <TitleForm title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?" subtitle="ABOUT" className="bg-white-100">
-        <div>
-          {abouts.map((a, index) => (
-            <AboutBox key={index} pageNum={a.pageNum} title={a.title} description={a.description} />
-          ))}
+        <div className="relative">
+          <ItemCarousel
+            totalItems={abouts.length}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+            className="absolute right-0 top-0"
+          />
+          <AboutBox about={abouts[currentIndex]} onTouchMove={handleTouch} />
         </div>
       </TitleForm>
     </SectionLayout>
