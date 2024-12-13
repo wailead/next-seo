@@ -1,3 +1,4 @@
+import About from './_view/about/About'
 import CompanyBanner from './_view/company-banner/CompanyBanner'
 import GovermentBanner from './_view/goverment-banner/GovermentBanner'
 import Inquiry from './_view/inquiry/Inquiry'
@@ -13,6 +14,7 @@ function Advertiser() {
       <ServiceIntroduction />
       <Performance />
       <Reference />
+      <About />
       <CompanyBanner />
       <GovermentBanner />
       <MoreService />

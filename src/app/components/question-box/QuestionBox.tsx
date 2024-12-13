@@ -17,12 +17,14 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
 
   useEffect(() => {
     if (contentRef.current) {
-      setHeight(isOpen ? contentRef.current.scrollHeight : 0)
+      const contentHeight = contentRef.current.scrollHeight
+      const paddingTop = parseFloat(window.getComputedStyle(contentRef.current).paddingTop) || 0
+      setHeight(isOpen ? contentHeight + paddingTop : 0)
     }
   }, [isOpen])
 
   return (
-    <div className="px-[1.235rem] py-[1.137rem] bg-white-200 rounded-[1.04rem] flex flex-col gap-[0.78rem]">
+    <div className="px-[1.235rem] py-[1.137rem] bg-white-200 rounded-[1.04rem] flex flex-col">
       <div className="flex justify-between items-center">
         <p className="font-pretendard font-medium text-[0.91rem] leading-[1.365rem] text-gray-600">Q. {question}</p>
         <div className="cursor-pointer" onClick={onToggle}>
@@ -31,7 +33,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
       </div>
 
       <div className="transition-[max-height] duration-500 linear overflow-hidden" style={{ maxHeight: `${height}px` }}>
-        <div ref={contentRef} className="flex flex-col gap-[0.78rem]">
+        <div ref={contentRef} className="flex flex-col gap-[0.78rem] pt-[0.78rem]">
           <hr className="bg-white-400 h-[0.13rem]" />
           <p className="font-pretendard font-normal text-[#757575] text-[0.78rem]">
             {typeof answer === 'string' ? (
