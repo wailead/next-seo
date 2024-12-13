@@ -82,7 +82,7 @@ function Reference() {
                     src={`/images/advertiser/peference/${selectTitle}/${selectTitle}_main.png`}
                     alt={`${selectTitle}`}
                     width={380}
-                    height={100}
+                    height={264}
                     className="absolute left-[-1.125rem]"
                   />
                 )}
