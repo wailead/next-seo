@@ -36,7 +36,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
             stroke={isOpen ? '#2EC8C8' : '#222222'}
             width="0.9rem"
             height="0.9rem"
-            stroke-width="3.5"
+            strokeWidth="3.5"
           />
         </div>
       </div>
