@@ -13,8 +13,8 @@ function Advertiser() {
     <div>
       <ServiceIntroduction />
       <Performance />
-      <Reference />
       <About />
+      <Reference />
       <CompanyBanner />
       <GovermentBanner />
       <MoreService />
