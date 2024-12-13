@@ -37,16 +37,16 @@ function Reference() {
     <div className="w-full  bg-primary-default ">
       <SectionLayout>
         <div
-          className={`flex h-[626px] overflow-hidden justify-between ${selectTitle === 'more' ? 'pr-0' : 'pr-[20px]'} `}>
+          className={`flex h-[39.125rem] overflow-hidden justify-between ${selectTitle === 'more' ? 'pr-0' : 'pr-[1.25rem]'} `}>
           <TitleForm
             title={`와이리 인플루언서 마케팅\n 사례들을 확인해보세요`}
             subtitle="REFERENCE"
             titleColor="text-white-default"
             subTitleColor="text-white-default"
             pb="0"
-            pr="pl-[52px] pr-0">
+            pr="pl-[3.25rem] pr-0">
             <div className="flex flex-col justify-between gap-[1.82rem]">
-              <div className="flex flex-col  gap-[20px] ">
+              <div className="flex flex-col  gap-[1.25rem] ">
                 <ReferenceCard
                   title="와이리 X 평창 휘닉스파크"
                   id="pyeongchang"
@@ -76,14 +76,14 @@ function Reference() {
                   descNum=""
                 />
               </div>
-              <div className="relative w-[380px] h-[265px] items-end">
+              <div className="relative w-[23.75rem] h-[16.563rem] items-end">
                 {selectTitle !== 'more' && (
                   <Image
                     src={`/images/advertiser/peference/${selectTitle}/${selectTitle}_main.png`}
                     alt={`${selectTitle}`}
                     width={380}
                     height={100}
-                    className="absolute left-[-18px]"
+                    className="absolute left-[-1.125rem]"
                   />
                 )}
               </div>
