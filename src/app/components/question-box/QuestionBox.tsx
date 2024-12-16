@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
-import { Chevron } from '../../../../public/icons'
+import Chevron from '@/public/assets/icons/chevron.svg'
 
 interface QuestionBoxProps {
   question: string
@@ -28,7 +28,16 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
       <div className="flex justify-between items-center">
         <p className="font-pretendard font-medium text-[0.91rem] leading-[1.365rem] text-gray-600">Q. {question}</p>
         <div className="cursor-pointer" onClick={onToggle}>
-          <Chevron rotate={isOpen ? 180 : 0} color={isOpen ? '#2EC8C8' : '#222222'} />
+          <Chevron
+            style={{
+              transform: `rotate(${isOpen ? 180 : 0}deg)`,
+              transition: 'transform 0.3s linear',
+            }}
+            stroke={isOpen ? '#2EC8C8' : '#222222'}
+            width="0.9rem"
+            height="0.9rem"
+            strokeWidth="3.5"
+          />
         </div>
       </div>
 
