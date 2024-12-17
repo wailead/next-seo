@@ -67,7 +67,7 @@ function AgencyService() {
                 <p className="font-semibold text-[0.91rem] leading-[1.365rem] text-white-default">무료</p>
                 <p className="font-normal text-[0.78rem] leading-[1.17rem] text-[#B1E7E8]">직접진행</p>
               </div>
-              <Link href="#" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
+              <Link href="#inquiry" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
                 <p className="font-pretendard font-semibold text-[0.78rem] leading-[1.17rem] text-white-default">
                   이용하기
                 </p>
@@ -78,7 +78,7 @@ function AgencyService() {
                 <p className="font-semibold text-[0.91rem] leading-[1.365rem]">기본 멤버십</p>
                 <p className="font-normal text-[0.78rem] leading-[1.17rem]">월 39,000원</p>
               </div>
-              <Link href="#" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
+              <Link href="#inquiry" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
                 <p className="font-pretendard font-semibold text-[0.78rem] leading-[1.17rem] text-white-default">
                   이용하기
                 </p>
@@ -89,7 +89,7 @@ function AgencyService() {
                 <p className="font-semibold text-[0.91rem] leading-[1.365rem]">플러스 멤버십</p>
                 <p className="font-normal text-[0.78rem] leading-[1.17rem]">월 49,000원</p>
               </div>
-              <Link href="#" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
+              <Link href="#inquiry" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
                 <p className="font-pretendard font-semibold text-[0.78rem] leading-[1.17rem] text-white-default">
                   이용하기
                 </p>
