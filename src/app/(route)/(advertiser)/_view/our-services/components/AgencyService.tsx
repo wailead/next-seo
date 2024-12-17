@@ -1,3 +1,4 @@
+import { SectionLayout } from '@/components'
 import CustomImage from '@/components/custom-image/CustomImage'
 import Link from 'next/link'
 
@@ -47,8 +48,8 @@ const services: AgencyServiceData[] = [
 
 function AgencyService() {
   return (
-    <div className="bg-gray-600 w-full flex justify-center">
-      <div className="w-primary">
+    <div className="bg-gray-600">
+      <SectionLayout>
         <div className="p-[3.3rem] tracking-[-0.005rem]">
           <div className="flex flex-col gap-[0.78rem] text-center">
             <h4 className="font-pretendard font-bold text-[1.17rem] leading-[1.82rem] text-white-default">
@@ -132,7 +133,7 @@ function AgencyService() {
             </p>
           </div>
         </div>
-      </div>
+      </SectionLayout>
     </div>
   )
 }

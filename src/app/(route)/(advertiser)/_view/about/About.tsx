@@ -62,19 +62,21 @@ function About() {
   }
 
   return (
-    <SectionLayout>
-      <TitleForm title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?" subtitle="ABOUT" className="bg-white-100">
-        <div className="relative">
-          <ItemCarousel
-            totalItems={abouts.length}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-            className="absolute right-0 top-0"
-          />
-          <AboutBox about={abouts[currentIndex]} onTouchMove={handleTouch} />
-        </div>
-      </TitleForm>
-    </SectionLayout>
+    <div className="bg-white-100">
+      <SectionLayout>
+        <TitleForm title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?" subtitle="ABOUT">
+          <div className="relative">
+            <ItemCarousel
+              totalItems={abouts.length}
+              currentIndex={currentIndex}
+              setCurrentIndex={setCurrentIndex}
+              className="absolute right-0 top-0"
+            />
+            <AboutBox about={abouts[currentIndex]} onTouchMove={handleTouch} />
+          </div>
+        </TitleForm>
+      </SectionLayout>
+    </div>
   )
 }
 
