@@ -11,7 +11,7 @@ import ServiceIntroduction from './_view/service-introduction/ServiceIntroductio
 
 function Advertiser() {
   return (
-    <div>
+    <div className="mt-[3.315rem]">
       <ServiceIntroduction />
       <Performance />
       <About />
