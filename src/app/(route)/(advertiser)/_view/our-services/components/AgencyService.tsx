@@ -66,7 +66,7 @@ function AgencyService() {
               <div className="w-[6.24rem] rounded-[0.65rem] border-[1px] py-[0.52rem] font-pretendard text-center border-[#B1E7E8]">
                 <p className="font-semibold text-[0.91rem] leading-[1.365rem] text-white-default">무료</p>
                 <p className="font-normal text-[0.78rem] leading-[1.17rem] text-[#B1E7E8]">직접진행</p>
-              </div>{' '}
+              </div>
               <Link href="#" className="rounded-[1.82rem] py-[0.5rem] px-[0.938rem] bg-black w-fit">
                 <p className="font-pretendard font-semibold text-[0.78rem] leading-[1.17rem] text-white-default">
                   이용하기
