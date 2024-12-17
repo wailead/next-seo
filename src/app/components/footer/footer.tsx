@@ -1,5 +1,4 @@
-import { styleRatio } from '@/utils/styleRatio'
-import Image from 'next/image'
+import CustomImage from '../custom-image/CustomImage'
 
 function Footer() {
   return (
@@ -8,15 +7,19 @@ function Footer() {
         <div className={`flex w-primary items-end justify-center pt-[27px] pb-[24px] px-[120px] gap-[42px]`}>
           <div className={`flex flex-col gap-[3px]`}>
             <div className={`flex items-center justify-start gap-3`}>
-              <Image src="/images/footerlogo.png" alt="Logo" width={styleRatio(110)} height={styleRatio(38)} />
+              <CustomImage src="/images/footerlogo.png" alt="Logo" w={'w-[6.875rem]'} h={'h-[2.375rem]'} />
               <span className={`font-medium text-[11.5px] text-white-default `}>(주) 와이리</span>
             </div>
             <div className={`flex text-gray-200 font-normal text-[9.6px] leading-[8.6px]`}>
               <p className="flex flex-col gap-[6.5px] font-pretendard ">
                 <span className="block">대표자 : 김범석</span>
-                <span className="block">사업자등록번호 : 441-86-02504&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2021-서울영등포-2197</span>
+                <span className="block">
+                  사업자등록번호 : 441-86-02504&nbsp;&nbsp;|&nbsp;&nbsp;통신판매업신고 : 2021-서울영등포-2197
+                </span>
                 <span className="block">주소 : 서울시 동작구 상도로 55길 6, 테크스테이션 408호</span>
-                <span className="block">이메일 : wairi_sales@naver.com&nbsp;&nbsp;|&nbsp;&nbsp;대표전화 : 070-8098-7127</span>
+                <span className="block">
+                  이메일 : wairi_sales@naver.com&nbsp;&nbsp;|&nbsp;&nbsp;대표전화 : 070-8098-7127
+                </span>
               </p>
             </div>
           </div>

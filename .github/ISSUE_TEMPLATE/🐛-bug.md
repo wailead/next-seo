@@ -1,9 +1,9 @@
 ---
-name: "🐛 BUG"
+name: '🐛 BUG'
 about: 버그 발생/해결 템플릿
-title: "🐛 [24.mm.dd] 제목 작성 #이슈번호"
-labels: ""
-assignees: ""
+title: '🐛 [24.mm.dd] 제목 작성 #이슈번호'
+labels: ''
+assignees: ''
 ---
 
 <!--
