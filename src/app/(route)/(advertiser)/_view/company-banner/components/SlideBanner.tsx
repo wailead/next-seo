@@ -1,5 +1,7 @@
-import CustomImage from '@/components/custom-image/CustomImage'
-import { StaticImageData } from 'next/image'
+'use client'
+
+import Image, { StaticImageData } from 'next/image'
+import { useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface Props {
@@ -7,20 +9,69 @@ interface Props {
   direction: 'left' | 'right'
 }
 
+interface Position {
+  x: number
+  y: number
+}
+
 function SlideBanner({ logos, direction }: Props) {
+  const [position, setPosition] = useState<Position>({ x: 0, y: 0 })
+  const [dragging, setDragging] = useState<boolean>(false)
+  const lastMousePosition = useRef<Position>({ x: 0, y: 0 })
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!containerRef.current) return
+
+    setDragging(true)
+    lastMousePosition.current = { x: e.clientX, y: e.clientY }
+    const computedStyle = window.getComputedStyle(containerRef.current.children[0])
+    const matrix = new WebKitCSSMatrix(computedStyle.transform)
+    setPosition({ x: matrix.m41, y: 0 })
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!dragging) return
+    const deltaX = e.clientX - lastMousePosition.current.x
+    setPosition(prev => ({ ...prev, x: prev.x + deltaX }))
+    lastMousePosition.current = { x: e.clientX, y: e.clientY }
+  }
+
+  const handleMouseUp = () => {
+    setDragging(false)
+  }
+
   const slideDirection = direction === 'left' ? 'animate-slide-left' : 'animate-slide-right'
+
   return (
     <div className="flex w-screen items-center justify-center">
-      <div className="flex w-fit overflow-hidden">
-        <div className={twMerge('flex gap-4 hover:pause-animation', slideDirection)}>
+      <div
+        className="flex w-fit overflow-hidden"
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}>
+        <div
+          className={twMerge('flex gap-4 hover:pause-animation', !dragging && slideDirection)}
+          style={{
+            transform: `translateX(${position.x}px)`,
+            cursor: dragging ? 'grabbing' : 'grab',
+          }}>
           <ul className="flex gap-4">
             {logos.map((image, index) => (
               <li
                 key={index}
                 className={
-                  'px-8 py-1 bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
+                  'px-8 py-2 w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
                 }>
-                <CustomImage src={image} alt={`Logo ${index + 1}`} w="w-[60px]" h="h-[30px]" />
+                <Image
+                  className="select-none pointer-events-none"
+                  src={image}
+                  alt={`Logo ${index + 1}`}
+                  width={144}
+                  height={48}
+                />
               </li>
             ))}
           </ul>
@@ -29,9 +80,15 @@ function SlideBanner({ logos, direction }: Props) {
               <li
                 key={`clone-${index}`}
                 className={
-                  'px-8 py-1 bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
+                  'px-8 py-2 w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
                 }>
-                <CustomImage src={image} alt={`Logo ${index + 1}`} w="w-[60px]" h="h-[30px]" />
+                <Image
+                  className="select-none pointer-events-none"
+                  src={image}
+                  alt={`Logo ${index + 1}`}
+                  width={144}
+                  height={48}
+                />
               </li>
             ))}
           </ul>
