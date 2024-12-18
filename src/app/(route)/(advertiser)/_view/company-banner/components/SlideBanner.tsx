@@ -1,7 +1,6 @@
 'use client'
 
-import CustomImage from '@/components/custom-image/CustomImage'
-import { StaticImageData } from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -64,15 +63,9 @@ function SlideBanner({ logos, direction }: Props) {
               <li
                 key={index}
                 className={
-                  'px-8 py-1 bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
+                  'px-8 py-2 w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
                 }>
-                <CustomImage
-                  src={image}
-                  alt={`Logo ${index + 1}`}
-                  w="w-[60px]"
-                  h="h-[30px]"
-                  className="pointer-events-none select-none"
-                />
+                <Image src={image} alt={`Logo ${index + 1}`} width={144} height={48} />
               </li>
             ))}
           </ul>
@@ -81,15 +74,9 @@ function SlideBanner({ logos, direction }: Props) {
               <li
                 key={`clone-${index}`}
                 className={
-                  'px-8 py-1 bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
+                  'px-8 py-2 w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
                 }>
-                <CustomImage
-                  src={image}
-                  alt={`Logo ${index + 1}`}
-                  w="w-[60px]"
-                  h="h-[30px]"
-                  className="pointer-events-none select-none"
-                />
+                <Image src={image} alt={`Logo ${index + 1}`} width={144} height={48} />
               </li>
             ))}
           </ul>
