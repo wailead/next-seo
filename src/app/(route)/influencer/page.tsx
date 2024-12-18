@@ -1,4 +1,4 @@
-import { Campaign, Introduction, Mainheader, Question } from './_view'
+import { Campaign, Introduction, Mainheader, Question, Review } from './_view'
 import JoinBanner from './_view/join-banner/JoinBanner'
 import MarketingBanner from './_view/marketing-banner/MarketingBanner'
 
@@ -9,6 +9,7 @@ function InfluencerPage() {
       <Campaign />
       <Introduction />
       <MarketingBanner />
+      <Review />
       <Question />
       <JoinBanner />
     </div>
