@@ -9,24 +9,29 @@ interface AboutBoxProps {
     title: string
     description: string
   }
-  onTouchMove: (direction: 'left' | 'right') => void
+  currentIndex: number
+  boxIndex: number
+  onTouchMove: (direction: 'left' | 'right' | null) => void
 }
 
-function AboutBox({ about, onTouchMove }: AboutBoxProps) {
+function AboutBox({ about, currentIndex, boxIndex, onTouchMove }: AboutBoxProps) {
   const [touchStart, setTouchStart] = useState<number>(0)
-  const [touchEnd, setTouchEnd] = useState<number>(0)
+  const distance = 160
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.touches[0].clientX)
   }
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    setTouchEnd(e.changedTouches[0].clientX)
+    const touchEnd = e.changedTouches[0].clientX
+    const difference = touchStart - touchEnd
 
-    if (touchStart - touchEnd > 50) {
+    if (difference > distance && currentIndex === boxIndex) {
       onTouchMove('right')
-    } else if (touchEnd - touchStart > 50) {
+    } else if (difference < -distance && currentIndex === boxIndex) {
       onTouchMove('left')
+    } else {
+      onTouchMove(null)
     }
   }
 
@@ -34,7 +39,9 @@ function AboutBox({ about, onTouchMove }: AboutBoxProps) {
     <div
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="flex gap-[4.583rem] pl-[2.503rem] h-[12.074rem]">
+      className={`w-[41rem] flex gap-[4.583rem] pl-[2.503rem] h-[12.074rem] transition-transform duration-300 ${
+        currentIndex === boxIndex ? 'visible' : 'invisible'
+      }`}>
       <CustomImage
         src={`/assets/icons/about_image_${about.pageNum}.svg`}
         alt={`about 아이콘 ${about.pageNum}`}
