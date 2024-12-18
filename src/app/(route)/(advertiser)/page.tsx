@@ -12,18 +12,34 @@ import ServiceIntroduction from './_view/service-introduction/ServiceIntroductio
 
 function Advertiser() {
   return (
-    <div>
+    <div className="mt-[3.315rem]">
       <PromotionVideo />
-      <ServiceIntroduction />
-      <Performance />
-      <About />
-      <OurServices />
-      <Reference />
+      <div id="serviceIntroduction" className="scroll-mt-[3.315rem]">
+        <ServiceIntroduction />
+      </div>
+      <div id="performance">
+        <Performance />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="ourServices">
+        <OurServices />
+      </div>
+      <div id="reference" className="scroll-mt-[3.315rem]">
+        <Reference />
+      </div>
       <CompanyBanner />
       <GovermentBanner />
-      <MoreService />
-      <Question />
-      <Inquiry />
+      <div id="moreService" className="scroll-mt-[3.315rem]">
+        <MoreService />
+      </div>
+      <div id="question" className="scroll-mt-[3.315rem]">
+        <Question />
+      </div>
+      <div id="inquiry" className="scroll-mt-[3.315rem]">
+        <Inquiry />
+      </div>
     </div>
   )
 }

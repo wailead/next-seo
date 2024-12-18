@@ -27,6 +27,10 @@ body {
   font-family: 'Pretendard', Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 폰트 */
 @font-face {
   font-family: 'Pretendard';
