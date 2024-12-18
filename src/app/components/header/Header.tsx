@@ -28,22 +28,22 @@ function PcHeader() {
                 <div className="flex justify-between">
                   <Link
                     className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                    href="#">
+                    href="#serviceIntroduction">
                     서비스 소개
                   </Link>
                   <Link
                     className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                    href="#">
+                    href="#reference">
                     진행사례
                   </Link>
                   <Link
                     className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                    href="#">
+                    href="#moreService">
                     서비스 종류
                   </Link>
                   <Link
                     className="font-pretendard font-normal text-[0.78rem] text-gray-300 px-[2.22vw] py-[0.83vw] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                    href="#">
+                    href="#question">
                     FAQ
                   </Link>
                 </div>
@@ -75,7 +75,7 @@ function PcHeader() {
             )}
             {isAdvertiserPage && (
               <>
-                <LinkButton name="제안서 받기" href="#" fontColor="white" buttonColor="primary-default" />
+                <LinkButton name="제안서 받기" href="#inquiry" fontColor="white" buttonColor="primary-default" />
                 <LinkButton name="인플루언서라면?" href="/influencer" fontColor="primary" buttonColor="primary-200" />
               </>
             )}
