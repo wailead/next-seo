@@ -14,7 +14,7 @@ function PcHeader() {
 
   return (
     <SectionLayout>
-      <header className="flex justify-between px-[2.77vw] bg-white-default py-[1.39vw] h-[3.315rem] fixed top-0 left-0 right-0 mx-auto z-50">
+      <header className="flex justify-between px-[2.77vw] bg-white-default py-[1.39vw] h-[3.315rem] fixed top-0 left-0 right-0 mx-auto z-30">
         <CustomImage src="/images/logo.png" alt="와이리(PC) 로고" w="w-[5rem]" h="h-[2.2rem]" />
         <div className="flex items-center gap-[3.05vw]">
           {isInfluencerPage && (
