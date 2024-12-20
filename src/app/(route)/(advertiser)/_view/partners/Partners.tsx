@@ -42,7 +42,7 @@ function Partners() {
           <div>
               <object
                 type="text/html"
-                 data="https://youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E"
+                 data="https://youtu.be/mL5BoE_2Q5A?si=ajFejRNu94CGsMNj"
                  className="relative w-[41.1rem] h-[23.27rem] rounded-[1rem]"></object>
            </div>  
            </div>
