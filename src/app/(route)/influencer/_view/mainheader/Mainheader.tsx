@@ -34,7 +34,7 @@ function Mainheader() {
           </div>
         </div>
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
-        <div className={`w-[14.7rem] bg-red-400 pointer-events-none`}>
+        <div className={`w-[14.7rem] bg-black pointer-events-none`}>
           <object
             type="text/html"
             data="https://youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E"

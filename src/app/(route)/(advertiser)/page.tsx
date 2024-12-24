@@ -9,6 +9,7 @@ import PromotionVideo from './_view/promotion-video/PromotionVideo'
 import Question from './_view/question/Question'
 import Reference from './_view/reference/Reference'
 import ServiceIntroduction from './_view/service-introduction/ServiceIntroduction'
+import Partners from './_view/partners/Partners'
 
 function Advertiser() {
   return (
@@ -25,6 +26,9 @@ function Advertiser() {
       </div>
       <div id="ourServices">
         <OurServices />
+      </div>
+      <div id="partners">
+        <Partners />
       </div>
       <div id="reference" className="scroll-mt-[3.315rem]">
         <Reference />
