@@ -63,14 +63,14 @@ function SlideBanner({ logos, direction }: Props) {
               <li
                 key={index}
                 className={
-                  'px-8 py-2 w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
+                  'w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-white-300 border-[1px]'
                 }>
                 <Image
-                  className="select-none pointer-events-none"
+                  className="select-none pointer-events-none px-8 py-2 "
                   src={image}
                   alt={`Logo ${index + 1}`}
-                  width={144}
-                  height={48}
+                  width={136}
+                  height={40}
                 />
               </li>
             ))}
@@ -80,14 +80,14 @@ function SlideBanner({ logos, direction }: Props) {
               <li
                 key={`clone-${index}`}
                 className={
-                  'px-8 py-2 w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-1 border-gray-200'
+                  'w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-white-300 border-[1px]'
                 }>
                 <Image
-                  className="select-none pointer-events-none"
+                  className="select-none pointer-events-none px-8 py-2"
                   src={image}
                   alt={`Logo ${index + 1}`}
-                  width={144}
-                  height={48}
+                  width={136}
+                  height={40}
                 />
               </li>
             ))}
