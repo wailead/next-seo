@@ -9,7 +9,7 @@ function BannerLayout({ white, children }: Props) {
   return (
     <section
       className={twMerge(
-        'w-full h-[7.5625rem] bg-white-300 text-gray-600 text-[1.2rem] font-[500] flex items-center justify-center',
+        'w-full py-[4vw] primary:py-[2rem] bg-white-200 text-gray-600 text-[1.2rem] font-[500] flex items-center justify-center',
         white && 'bg-white-default'
       )}>
       {!white && <div className="w-primary flex items-center gap-[2rem] justify-center">{children}</div>}
