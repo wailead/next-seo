@@ -10,7 +10,7 @@ type Props = {
 function CustomImage({ src, alt, w, h, ...ImgaeProps }: Props) {
   return (
     <div className={twMerge(`relative`, w, h)}>
-      <Image src={src} alt={alt} fill {...ImgaeProps} />
+      <Image src={src} alt={alt} fill {...ImgaeProps} className="object-contain" />
     </div>
   )
 }
