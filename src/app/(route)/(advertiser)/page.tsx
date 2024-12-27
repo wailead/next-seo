@@ -27,11 +27,11 @@ function Advertiser() {
       <div id="ourServices">
         <OurServices />
       </div>
-      <div id="partners">
-        <Partners />
-      </div>
       <div id="reference" className="scroll-mt-[3.315rem]">
         <Reference />
+      </div>
+      <div id="partners">
+        <Partners />
       </div>
       <CompanyBanner />
       <GovermentBanner />
