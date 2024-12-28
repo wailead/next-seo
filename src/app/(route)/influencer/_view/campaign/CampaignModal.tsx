@@ -24,7 +24,7 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
 
   return (
     <dialog
-      className={`flex w-full h-full fixed top-0 left-0 justify-center items-center bg-black/50 z-30 ${animation ? 'animate-fadein' : 'animate-fadeout pointer-events-none'}`}
+      className={`flex w-full h-full fixed top-0 left-0 justify-center items-center bg-black/50 z-50 ${animation ? 'animate-fadein' : 'animate-fadeout pointer-events-none'}`}
       onClick={handleModalClose}>
       <div
         className="flex flex-col w-[36.5rem] h-[26.25rem] bg-[url('/images/influencer/background.png')] bg-cover rounded-[1.875rem] justify-between items-center pt-[1.156rem] px-[1.219rem] "
