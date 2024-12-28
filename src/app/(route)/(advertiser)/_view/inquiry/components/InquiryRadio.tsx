@@ -1,5 +1,4 @@
 import CustomImage from '@/components/custom-image/CustomImage'
-
 interface Props {
   title: string
   name: string
@@ -9,27 +8,30 @@ interface Props {
 
 function InquiryRadio({ title, name, radioChecked, handleRadioChange }: Props) {
   return (
-    <div className="flex gap-1.5 cursor-pointer " onClick={() => handleRadioChange(name)}>
+    <div className="flex primary:gap-1.5 gap-[0.8vw] cursor-pointer " onClick={() => handleRadioChange(name)}>
       <input
         type="radio"
         id={name}
         name="howfind"
         value={name}
-        className=" appearance-none w-[0.875rem] h-[0.875rem] bg-gray-300 rounded-[0.125rem] cursor-pointer   "
+        className=" appearance-none primary:w-[0.875rem] w-[1.87vw] primary:h-[0.875rem] h-[1.87vw] bg-gray-300 rounded-[0.125rem] cursor-pointer   "
       />
       {radioChecked && (
         <div className="absolute ">
           <CustomImage
             src="/icons/plan_true_gray.svg"
-            w="w-[0.875rem]"
-            h="h-[0.875rem]"
+            w="primary:w-[0.875rem] w-[1.87vw]"
+            h="primary:h-[0.875rem] h-[1.87vw]"
             alt="checked"
-            className="bg-white-default rounded-[0.125rem]"
+            rounded="rounded-[0.125rem]"
+            bgColor="bg-white-default"
           />
         </div>
       )}
 
-      <label htmlFor={name} className="text-white-default leading-[0.9375rem] cursor-pointer text-[0.875rem] ">
+      <label
+        htmlFor={name}
+        className="text-white-default primary:leading-[0.9375rem] leading-[2vw] cursor-pointer primary:text-[0.875rem] text-[1.87vw]">
         {title}
       </label>
     </div>
