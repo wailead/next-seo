@@ -6,7 +6,7 @@ function MoreService() {
   return (
     <SectionLayout>
       <TitleForm title="더 많은 서비스들이 있어요" subtitle="MORE SERVICE">
-        <div className="flex flex-col gap-[2.813rem] justify-center items-center pt-[1.125rem]">
+        <div className="flex flex-col primary:gap-[2.813rem] gap-[6vw] justify-center items-center primary:pt-[1.125rem] pt-[2.4vw]">
           <div className="flex gap-2">
             <ServiceCard
               img="/images/advertiser/more-service/more_service_0.png"
