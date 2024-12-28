@@ -7,11 +7,12 @@ type Props = {
   w: string
   h: string
   rounded?: string
+  bgColor?: string
 } & React.ComponentPropsWithoutRef<typeof Image>
-function CustomImage({ src, alt, w, h, rounded, ...ImgaeProps }: Props) {
+function CustomImage({ src, alt, w, h, rounded, bgColor, ...ImgaeProps }: Props) {
   return (
     <div className={twMerge(`relative`, w, h)}>
-      <Image src={src} alt={alt} fill {...ImgaeProps} className={(twMerge(`object-contain`), rounded)} />
+      <Image src={src} alt={alt} fill {...ImgaeProps} className={twMerge(`object-contain ${bgColor} ${rounded}`)} />
     </div>
   )
 }
