@@ -16,21 +16,29 @@ function TitleForm({
   subtitle,
   title,
   children,
-  pb = 'pb-bottom',
+  pb = 'primary:pb-bottom pb-[8.32vw]',
   pr,
   titleColor,
   subTitleColor,
   className,
 }: titleFormProps) {
   return (
-    <div className={twMerge(`px-x pt-top ${pb} flex flex-col gap-[1.82rem] ${className}`, pr)}>
-      <div className="flex flex-col gap-[0.39rem]">
-        <p className={twMerge(`font-montserrat font-normal text-[0.91rem] text-primary-default`, titleColor)}>
+    <div
+      className={twMerge(
+        `primary:px-x px-[6.93vw] primary:pt-top pt-[6.24vw] ${pb} flex flex-col primary:gap-[1.82rem] gap-[3.87vw] ${className}`,
+        pr
+      )}>
+      <div className="flex flex-col primary:gap-[0.39rem] gap-[0.83vw]">
+        <p
+          className={twMerge(
+            `font-montserrat font-normal primary:text-[0.91rem] text-[1.94vw] text-primary-default`,
+            titleColor
+          )}>
           {subtitle}
         </p>
         <p
           className={twMerge(
-            `font-pretendard font-bold text-[1.56rem] text-gray-600 whitespace-pre-line `,
+            `font-pretendard font-bold primary:text-[1.56rem] text-[3.33vw] text-gray-600 whitespace-pre-line `,
             subTitleColor
           )}
           dangerouslySetInnerHTML={{ __html: title }}

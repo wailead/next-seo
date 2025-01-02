@@ -9,6 +9,7 @@ export default {
   theme: {
     screens: {
       mobile: '500px',
+      primary: '750px',
     },
     extend: {
       width: {
