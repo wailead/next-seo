@@ -25,7 +25,7 @@ function LinkButton({
 }: ButtonProps) {
   const textColor = fontColor === 'white' ? 'text-white-default' : 'text-primary-default'
   const linkColor = `bg-${buttonColor}`
-  const borderColor = border ? `border-primary-default border-[3px]` : ''
+  const borderColor = border ? `border-primary-default border-[0.098rem]` : ''
   const hoverColor = ((color: string) => {
     return {
       'primary-200': 'hover:bg-primary-200/80',
@@ -44,7 +44,7 @@ function LinkButton({
     <Link
       {...linkProps}
       className={twMerge(
-        `${px} ${py} rounded-[1.82rem] flex items-center justify-center gap-[0.25rem]`,
+        `${px} ${py} rounded-[1.82rem] flex items-center justify-center gap-[0.25rem] box-border`,
         'hover:shadow-sm hover:shadow-gray-200 transition duration-300',
         linkColor,
         borderColor,
