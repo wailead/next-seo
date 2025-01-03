@@ -1,7 +1,6 @@
 'use client'
 
 import CustomImage from '@/components/custom-image/CustomImage'
-import { useState } from 'react'
 
 interface AboutBoxProps {
   about: {
@@ -9,39 +8,11 @@ interface AboutBoxProps {
     title: string
     description: string
   }
-  currentIndex: number
-  boxIndex: number
-  onTouchMove: (direction: 'left' | 'right' | null) => void
 }
 
-function AboutBox({ about, currentIndex, boxIndex, onTouchMove }: AboutBoxProps) {
-  const [touchStart, setTouchStart] = useState<number>(0)
-  const distance = 160
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.touches[0].clientX)
-  }
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    const touchEnd = e.changedTouches[0].clientX
-    const difference = touchStart - touchEnd
-
-    if (difference > distance && currentIndex === boxIndex) {
-      onTouchMove('right')
-    } else if (difference < -distance && currentIndex === boxIndex) {
-      onTouchMove('left')
-    } else {
-      onTouchMove(null)
-    }
-  }
-
+function AboutBox({ about }: AboutBoxProps) {
   return (
-    <div
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      className={`w-[41rem] flex gap-[4.583rem] pl-[2.503rem] h-[12.074rem] transition-transform duration-300 ${
-        currentIndex === boxIndex ? 'visible' : 'invisible'
-      }`}>
+    <div className="w-[41rem] flex gap-[4.583rem] pl-[2.503rem] h-[12.074rem] flex-shrink-0">
       <CustomImage
         src={`/assets/icons/about_image_${about.pageNum}.svg`}
         alt={`about 아이콘 ${about.pageNum}`}
