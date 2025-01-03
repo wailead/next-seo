@@ -14,7 +14,7 @@ function PcHeader() {
 
   return (
     <SectionLayout>
-      <header className="w-screen flex justify-between px-[0.65rem] bg-white-default h-[2.6rem] fixed top-0 left-0 right-0 z-30 items-center border-b-[1px]">
+      <header className="w-screen flex justify-between px-[0.65rem] bg-white-default h-[3.315rem] fixed top-0 left-0 right-0 z-30 items-center border-b-[1px]">
         <CustomImage
           src="/images/logo.png"
           alt="와이리(PC) 로고"
@@ -30,22 +30,22 @@ function PcHeader() {
           {isAdvertiserPage && (
             <div className="flex justify-between items-center">
               <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[2.58rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[3.2rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                 href="#serviceIntroduction">
                 서비스 소개
               </Link>
               <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[2.58rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[3.2rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                 href="#reference">
                 진행사례
               </Link>
               <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[2.58rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[3.2rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                 href="#moreService">
                 서비스 종류
               </Link>
               <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[2.58rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:px-[1.063rem] px-[2.4vw] h-[3.2rem] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
                 href="#question">
                 FAQ
               </Link>
