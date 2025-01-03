@@ -4,7 +4,7 @@ import CustomImage from '@/components/custom-image/CustomImage'
 function ServiceIntroduction() {
   return (
     <div className="bg-[#FFF9ED]">
-      <div className="bg-white-default rounded-bl-[3.9rem]">
+      <div className="bg-white-default primary:rounded-bl-[3.9rem] rounded-bl-[8.33vw]">
         <SectionLayout>
           <div className="flex flex-col items-center gap-[2.6rem] px-x pt-top pb-bottom">
             <div className="flex flex-col items-center">
