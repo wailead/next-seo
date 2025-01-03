@@ -26,7 +26,9 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
   return (
     <div className="px-[1.235rem] py-[1.137rem] bg-white-200 rounded-[1.04rem] flex flex-col">
       <div className="flex justify-between items-center">
-        <p className="font-pretendard font-medium text-[0.91rem] leading-[1.365rem] text-gray-600">Q. {question}</p>
+        <p className="font-pretendard font-medium primary:text-[0.91rem] text-[1.94vw] leading-[1.365rem] text-gray-600">
+          Q. {question}
+        </p>
         <div className="cursor-pointer" onClick={onToggle}>
           <Chevron
             style={{
@@ -44,7 +46,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
       <div className="transition-[max-height] duration-500 linear overflow-hidden" style={{ maxHeight: `${height}px` }}>
         <div ref={contentRef} className="flex flex-col gap-[0.78rem] pt-[0.78rem]">
           <hr className="bg-white-400 h-[0.13rem]" />
-          <p className="font-pretendard font-normal text-[#757575] text-[0.78rem]">
+          <p className="font-pretendard font-medium text-[#757575] primary:text-[0.748rem] text-[1.63vw] tracking-[-0.005rem]">
             {typeof answer === 'string' ? (
               <span dangerouslySetInnerHTML={{ __html: answer }} />
             ) : (

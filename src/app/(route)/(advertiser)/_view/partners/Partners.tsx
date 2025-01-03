@@ -4,7 +4,7 @@ function Partners() {
   return (
     <SectionLayout>
       <div className="flex justify-center items-center ">
-        <TitleForm subtitle="REVIEW" title={`400개의 업체와 마케팅을\n함께하고 있습니다`}>
+        <TitleForm subtitle="REVIEW" title={`400개의 업체와 마케팅을\n함께하고 있습니다`} pb="pb-0">
           <div className="flex gap-[1.5rem]  flex-col">
             <div className="flex gap-[1.5rem]">
               {/* 첫 번째 카드 레이아웃 */}

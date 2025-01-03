@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 interface Props {
   images: StaticImageData[]
@@ -35,7 +36,10 @@ function ReferenceSlide({ images, selectTitle }: Props) {
   }, [selectTitle])
   return (
     <div
-      className="relative select-none"
+      className={twMerge(
+        `relative select-none`,
+        selectTitle === 'more' ? 'primary:w-[15rem] w-[32vw]' : 'primary:w-[13.125rem] w-[28vw]'
+      )}
       ref={containerRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}

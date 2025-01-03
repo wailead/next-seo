@@ -53,43 +53,22 @@ const abouts: AboutData[] = [
 function About() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
-  const handleTouch = (direction: 'left' | 'right' | null) => {
-    if (direction === 'left' && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1)
-    } else if (direction === 'right' && currentIndex < abouts.length - 1) {
-      setCurrentIndex(currentIndex + 1)
-    }
-  }
-
+  console.log(currentIndex)
   return (
     <div className="bg-white-100">
       <SectionLayout>
         <TitleForm title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?" subtitle="ABOUT">
-          <div className="relative">
-            <div className="w-[41rem] flex overflow-hidden">
-              <ItemCarousel
-                totalItems={abouts.length}
-                currentIndex={currentIndex}
-                setCurrentIndex={setCurrentIndex}
-                className="absolute right-0 top-0 z-10"
-              />
-              <div
-                className="flex transition-transform duration-300"
-                style={{
-                  transform: `translateX(-${currentIndex * 41}rem)`,
-                }}>
-                {abouts.map((about, index) => (
-                  <AboutBox
-                    key={about.pageNum}
-                    about={about}
-                    currentIndex={currentIndex}
-                    boxIndex={index}
-                    onTouchMove={handleTouch}
-                  />
-                ))}
+          <ItemCarousel
+            totalItems={abouts.length}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
+            className="absolute right-0 top-0 z-10">
+            {abouts.map(about => (
+              <div key={about.pageNum} className="snap-center">
+                <AboutBox about={about} />
               </div>
-            </div>
-          </div>
+            ))}
+          </ItemCarousel>
         </TitleForm>
       </SectionLayout>
     </div>
