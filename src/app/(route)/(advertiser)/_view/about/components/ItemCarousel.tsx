@@ -32,9 +32,10 @@ function ItemCarousel({ totalItems, currentIndex, setCurrentIndex, children, cla
   const handleScroll = () => {
     if (!scrollContainerRef.current) return
 
-    const newIndex = Math.floor(
-      scrollContainerRef.current.scrollLeft / (scrollContainerRef.current.scrollWidth / totalItems)
-    )
+    const scrollLeft = scrollContainerRef.current.scrollLeft
+    const scrollWidth = scrollContainerRef.current.scrollWidth
+
+    const newIndex = Math.round(scrollLeft / (scrollWidth / totalItems))
 
     if (newIndex !== currentIndex) {
       setCurrentIndex(newIndex)
@@ -42,16 +43,18 @@ function ItemCarousel({ totalItems, currentIndex, setCurrentIndex, children, cla
   }
 
   return (
-    <div>
+    <div className="primary:pl-[2.503rem] pl-[5.35vw]">
       <div className="relative">
         <div className={`flex gap-[0.26rem] ${className}`}>
           <button onClick={handlePrev} disabled={currentIndex === 0}>
-            <ArrowIcon width="1.365rem" height="1.365rem" fill={currentIndex === 0 ? '#D9D9D9' : '#2EC8C8'} />
+            <ArrowIcon
+              className="primary:w-[1.365rem] w-[2.92vw] primary:h-[1.365rem] h-[2.92vw]"
+              fill={currentIndex === 0 ? '#D9D9D9' : '#2EC8C8'}
+            />
           </button>
           <button onClick={handleNext} disabled={currentIndex === totalItems - 1}>
             <ArrowIcon
-              width="1.365rem"
-              height="1.365rem"
+              className="primary:w-[1.365rem] w-[2.92vw] primary:h-[1.365rem] h-[2.92vw]"
               transform="rotate(180)"
               fill={currentIndex === totalItems - 1 ? '#D9D9D9' : '#2EC8C8'}
             />

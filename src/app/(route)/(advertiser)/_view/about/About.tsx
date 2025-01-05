@@ -53,16 +53,18 @@ const abouts: AboutData[] = [
 function About() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
-  console.log(currentIndex)
   return (
     <div className="bg-white-100">
       <SectionLayout>
-        <TitleForm title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?" subtitle="ABOUT">
+        <TitleForm
+          title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?"
+          subtitle="ABOUT"
+          gap="primary:gap-[3.023rem] gap-[6.46vw]">
           <ItemCarousel
             totalItems={abouts.length}
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}
-            className="absolute right-0 top-0 z-10">
+            className="absolute right-0 top-5 z-10">
             {abouts.map(about => (
               <div key={about.pageNum} className="snap-center">
                 <AboutBox about={about} />
