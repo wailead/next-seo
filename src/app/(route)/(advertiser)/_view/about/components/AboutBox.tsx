@@ -12,7 +12,7 @@ interface AboutBoxProps {
 
 function AboutBox({ about }: AboutBoxProps) {
   return (
-    <div className="primary:w-[37.797rem] w-[80.79vw] flex items-center primary:gap-[4.583rem] gap-[9.79vw] flex-shrink-0">
+    <div className="primary:w-[37.92rem] w-[80.79vw] flex items-center primary:gap-[4.583rem] gap-[9.79vw] flex-shrink-0">
       <CustomImage
         src={`/assets/icons/about_image_${about.pageNum}.svg`}
         alt={`about 아이콘 ${about.pageNum}`}
