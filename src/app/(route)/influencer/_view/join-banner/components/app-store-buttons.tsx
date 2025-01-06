@@ -3,12 +3,15 @@ import Image from 'next/image'
 
 type Flex = {
   flexCol: string
+  width?: string
+  py?: string
+  iconSize?: number
 }
 
-function AppStoreButtons({ flexCol }: Flex) {
+function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[41.67vw]', py, iconSize = 24 }: Flex) {
   const appStores = [
     {
-      name: 'App Store',
+      name: 'APP Store',
       href: 'https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852',
       icon: '/icons/apple.svg',
     },
@@ -26,11 +29,12 @@ function AppStoreButtons({ flexCol }: Flex) {
             <LinkButton
               name={item.name}
               href={item.href}
-              icon={<Image src={item.icon} alt={'store icon'} width={24} height={24} />}
+              icon={<Image src={item.icon} alt={'store icon'} width={iconSize} height={iconSize} />}
               fontColor="white"
               buttonColor="primary-default"
-              width="mobile:w-fit w-[41.67vw]"
+              width={width}
               height="mobile:h-fit h-[8.89vw]"
+              py={py}
             />
           </li>
         )
