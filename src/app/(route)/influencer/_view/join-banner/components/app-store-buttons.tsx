@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import LinkButton from '@/components/button/LinkButton'
+import Image from 'next/image'
 
 function AppStoreButtons() {
   const appStores = [
@@ -15,7 +15,7 @@ function AppStoreButtons() {
     },
   ]
   return (
-    <ul className="flex gap-[8px]">
+    <ul className="flex flex-col mobile:flex-row gap-[8px]">
       {appStores.map((item, index) => {
         return (
           <li key={index}>
