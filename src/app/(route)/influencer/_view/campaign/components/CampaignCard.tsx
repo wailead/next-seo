@@ -1,6 +1,5 @@
 'use client'
 import CustomImage from '@/components/custom-image/CustomImage'
-import { useEffect, useState } from 'react'
 
 interface Props {
   img: string
