@@ -8,20 +8,22 @@ interface Props {
 
 function InquiryRadio({ title, name, radioChecked, handleRadioChange }: Props) {
   return (
-    <div className="flex primary:gap-1.5 gap-[0.8vw] cursor-pointer " onClick={() => handleRadioChange(name)}>
+    <div
+      className="flex primary:gap-1.5 mobile:gap-[0.8vw] gap-[1.11vw] cursor-pointer "
+      onClick={() => handleRadioChange(name)}>
       <input
         type="radio"
         id={name}
         name="howfind"
         value={name}
-        className=" appearance-none primary:w-[0.875rem] w-[1.87vw] primary:h-[0.875rem] h-[1.87vw] bg-gray-300 rounded-[0.125rem] cursor-pointer   "
+        className=" appearance-none primary:w-[0.875rem] mobile:w-[1.87vw] w-[3.89vw] primary:h-[0.875rem] mobile:h-[1.87vw] h-[3.89vw] bg-gray-300 rounded-[0.125rem] cursor-pointer   "
       />
       {radioChecked && (
         <div className="absolute ">
           <CustomImage
             src="/icons/plan_true_gray.svg"
-            w="primary:w-[0.875rem] w-[1.87vw]"
-            h="primary:h-[0.875rem] h-[1.87vw]"
+            w="primary:w-[0.875rem] mobile:w-[1.87vw] w-[3.89vw]"
+            h="primary:h-[0.875rem] mobile:h-[1.87vw] h-[3.89vw]"
             alt="checked"
             rounded="rounded-[0.125rem]"
             bgColor="bg-white-default"
@@ -31,7 +33,7 @@ function InquiryRadio({ title, name, radioChecked, handleRadioChange }: Props) {
 
       <label
         htmlFor={name}
-        className="text-white-default primary:leading-[0.9375rem] leading-[2vw] cursor-pointer primary:text-[0.875rem] text-[1.87vw]">
+        className="text-white-default primary:leading-[0.9375rem] mobile:leading-[2vw] leading-[3.89vw] cursor-pointer primary:text-[0.875rem] mobile:text-[1.87vw] text-[3.89vw]">
         {title}
       </label>
     </div>
