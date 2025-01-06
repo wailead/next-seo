@@ -14,7 +14,6 @@ function Mainheader() {
   useEffect(() => {
     window.addEventListener('resize', handleResize)
     return () => {
-      // cleanup
       window.removeEventListener('resize', handleResize)
     }
   }, [])
@@ -38,7 +37,7 @@ function Mainheader() {
               </span>
             </div>
           </div>
-          {screenWidth < 500 ? <AppStoreButtons /> : <QrCode />}
+          {screenWidth < 500 ? <AppStoreButtons flexCol="flex-row" /> : <QrCode />}
         </div>
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
         <div
