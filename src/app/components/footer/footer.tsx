@@ -3,7 +3,7 @@ import CustomImage from '../custom-image/CustomImage'
 function Footer() {
   return (
     <>
-      <div className="flex w-full h-[8.375rem]  bg-gray-600 items-end justify-center border-t-2 border-gray-300 ">
+      <div className="flex w-full primary:h-[8.375rem] h-[17.87vw] bg-gray-600 items-end justify-center border-t-2 border-gray-300 ">
         <div
           className={`flex w-primary items-end justify-center primary:pt-[1.688rem] pt-[3.6vw] primary:pb-[1.5rem] pb-[3.2vw] primary:px-[7.5rem] px-[16vw] primary:gap-[3rem] gap-[6.4vw]`}>
           <div className={`flex flex-col primary:gap-[0.188rem] gap-[0.4vw]`}>
