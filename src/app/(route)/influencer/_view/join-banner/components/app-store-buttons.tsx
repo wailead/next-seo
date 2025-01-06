@@ -25,6 +25,8 @@ function AppStoreButtons() {
               icon={<Image src={item.icon} alt={'store icon'} width={24} height={24} />}
               fontColor="white"
               buttonColor="primary-default"
+              width="mobile:w-fit w-[41.67vw]"
+              height="mobile:h-fit h-[8.89vw]"
             />
           </li>
         )

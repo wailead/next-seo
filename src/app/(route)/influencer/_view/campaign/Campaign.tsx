@@ -63,7 +63,7 @@ function Campaign() {
           <CampaignCard img="/images/influencer/sight/con-rad.png" title="" price="" sale="" />
           <CampaignCard img="/images/influencer/sight/surf-holic.png" title="" price="" sale="" />
           {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
-          <div className="absolute w-primary primary:h-[19rem] h-[40.53vw] bg-gradient-to-t primary:top-[72.1875rem] top-[154vw] from-white-default from-40% z-10"></div>
+          <div className="absolute primary:w-primary w-[100vw] primary:h-[19rem] h-[40.53vw] bg-gradient-to-t primary:top-[72.1875rem] top-[154vw] from-white-default from-40% z-10"></div>
           {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
           <button
             className="absolute primary:top-[86.875rem] top-[185.33vw] bg-gray-300 primary:px-[1.9375rem] px-[4.13vw] primary:py-[0.21rem] py-[0.45vw] rounded-[1.82rem] hover:shadow-md hover:bg-[#6d6d6d] z-20"
