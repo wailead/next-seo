@@ -1,6 +1,7 @@
+import { ChatBot, Footer, PcHeader } from '@/components'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { PcHeader, Footer, ChatBot } from '@/components'
+import Head from 'next/head'
 import '../styles/globals.css'
 
 const geistSans = localFont({
@@ -26,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="naver-site-verification" content="228274ae7b7be03ce5edf28d63d13d8e979750f5" />
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <PcHeader />
         {children}
