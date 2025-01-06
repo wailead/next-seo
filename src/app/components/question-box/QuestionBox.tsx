@@ -24,7 +24,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
   }, [isOpen])
 
   return (
-    <div className="px-[1.235rem] py-[1.137rem] bg-white-200 rounded-[1.04rem] flex flex-col">
+    <div className="primary:py-[1.235rem] py-[2.22vw] primary:px-[1.137rem] px-[2.64vw] bg-white-200 rounded-[1.04rem] flex flex-col">
       <div className="flex justify-between items-center">
         <p className="font-pretendard font-medium primary:text-[0.91rem] text-[1.94vw] leading-[1.365rem] text-gray-600">
           Q. {question}
@@ -44,8 +44,10 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
       </div>
 
       <div className="transition-[max-height] duration-500 linear overflow-hidden" style={{ maxHeight: `${height}px` }}>
-        <div ref={contentRef} className="flex flex-col gap-[0.78rem] pt-[0.78rem]">
-          <hr className="bg-white-400 h-[0.13rem]" />
+        <div
+          ref={contentRef}
+          className="flex flex-col praimary:gap-[0.78rem] gap-[1.67vw] primary:pt-[0.78rem] pt-[1.67vw]">
+          <hr className="bg-white-400 primary:h-[0.13rem] h-[0.14vw]" />
           <p className="font-pretendard font-medium text-[#757575] primary:text-[0.748rem] text-[1.63vw] tracking-[-0.005rem]">
             {typeof answer === 'string' ? (
               <span dangerouslySetInnerHTML={{ __html: answer }} />
