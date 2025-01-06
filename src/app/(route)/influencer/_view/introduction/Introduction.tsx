@@ -12,42 +12,42 @@ function Introduction() {
             className="bg-[#FFF9ED]"
             title="SNS 채널만 가지고 있다면!"
             description="와이리에서는 타 체험단 사이트와 비교하여<br/>가장 많은 SNS 종류를 승인해드리고 있어요!">
-            <div className="flex justify-between bg-gradient-to-r from-white-default to-white-default/20 primary:py-[1.3975rem] primary:px-[2.6rem] primary:mt-[1.5275rem] primary:mb-[2.34rem] py-[2.99vw] px-[5.56vw] mt-[3.26vw] mb-[5vw] box-border">
+            <div className="flex items-center justify-between bg-gradient-to-r from-white-default to-white-default/0 primary:py-[1.2rem] primary:px-[2.6rem] primary:mt-[1.5275rem] primary:mb-[2.34rem] py-[2.56vw] px-[5.56vw] mt-[3.26vw] mb-[5vw] box-border">
               <CustomImage
                 src="/assets/icons/channel_icon_0.svg"
                 alt="네이버 로고"
-                w="primary:w-[4.5rem] w-[4.02vw]"
-                h="primary:h-[4.5rem] h-[4.02vw]"
+                w="primary:w-[2rem] w-[4.02vw]"
+                h="primary:h-[2rem] h-[4.02vw]"
               />
               <CustomImage
                 src="/assets/icons/channel_icon_1.svg"
                 alt="인스타그램 로고"
-                w="primary:w-[4.5rem] w-[4.02vw]"
-                h="primary:h-[4.5rem] h-[4.02vw]"
+                w="primary:w-[2rem] w-[4.02vw]"
+                h="primary:h-[2rem] h-[4.02vw]"
               />
               <CustomImage
                 src="/assets/icons/channel_icon_2.svg"
                 alt="유튜브 로고"
-                w="primary:w-[4.5rem] w-[4.02vw]"
-                h="primary:h-[4.5rem] h-[4.02vw]"
+                w="primary:w-[2rem] w-[4.02vw]"
+                h="primary:h-[2rem] h-[4.02vw]"
               />
               <CustomImage
                 src="/assets/icons/channel_icon_3.svg"
                 alt="틱톡 로고"
-                w="primary:w-[4.5rem] w-[4.02vw]"
-                h="primary:h-[4.5rem] h-[4.02vw]"
+                w="primary:w-[2rem] w-[4.02vw]"
+                h="primary:h-[2rem] h-[4.02vw]"
               />
               <CustomImage
                 src="/assets/icons/channel_icon_4.svg"
                 alt="티스토리 로고"
-                w="primary:w-[4.5rem] w-[4.02vw]"
-                h="primary:h-[4.5rem] h-[4.02vw]"
+                w="primary:w-[2rem] w-[4.02vw]"
+                h="primary:h-[2rem] h-[4.02vw]"
               />
               <CustomImage
                 src="/assets/icons/channel_icon_5.svg"
                 alt="Spring Global 로고"
-                w="primary:w-[4.5rem] w-[4.02vw]"
-                h="primary:h-[4.5rem] h-[4.02vw]"
+                w="primary:w-[2rem] w-[4.02vw]"
+                h="primary:h-[2rem] h-[4.02vw]"
               />
             </div>
           </IntroductionBox>
