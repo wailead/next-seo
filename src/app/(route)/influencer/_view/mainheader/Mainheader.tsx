@@ -5,16 +5,20 @@ import AppStoreButtons from '../join-banner/components/app-store-buttons'
 import QrCode from './components/qr-code'
 
 function Mainheader() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-  const handleResize = () => {
-    setScreenWidth(window.innerWidth)
-  }
+  const [screenWidth, setScreenWidth] = useState<number | null>(null)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setScreenWidth(window.innerWidth)
+        setIsLoaded(true)
+      }
+      handleResize()
+      window.addEventListener('resize', handleResize)
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
     }
   }, [])
 
@@ -37,7 +41,15 @@ function Mainheader() {
               </span>
             </div>
           </div>
-          {screenWidth < 500 ? <AppStoreButtons flexCol="flex-row" /> : <QrCode />}
+          {isLoaded ? (
+            screenWidth! < 500 ? (
+              <AppStoreButtons flexCol="flex-row" />
+            ) : (
+              <QrCode />
+            )
+          ) : (
+            <div className="primary:h-[8.125rem] mobile:h-[17.33vw] h-[8.89vw]"></div>
+          )}
         </div>
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
         <div
