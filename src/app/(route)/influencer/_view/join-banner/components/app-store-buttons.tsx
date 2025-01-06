@@ -1,7 +1,11 @@
 import LinkButton from '@/components/button/LinkButton'
 import Image from 'next/image'
 
-function AppStoreButtons() {
+type Flex = {
+  flexCol: string
+}
+
+function AppStoreButtons({ flexCol }: Flex) {
   const appStores = [
     {
       name: 'App Store',
@@ -15,7 +19,7 @@ function AppStoreButtons() {
     },
   ]
   return (
-    <ul className="flex flex-col mobile:flex-row gap-[8px]">
+    <ul className={`flex ${flexCol} mobile:flex-row gap-[8px]`}>
       {appStores.map((item, index) => {
         return (
           <li key={index}>
