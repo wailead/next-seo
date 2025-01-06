@@ -43,7 +43,7 @@ function Mainheader() {
           </div>
           {isLoaded ? (
             screenWidth! < 500 ? (
-              <AppStoreButtons flexCol="flex-row" />
+              <AppStoreButtons flexCol="flex-row" iconSize={30} />
             ) : (
               <QrCode />
             )
