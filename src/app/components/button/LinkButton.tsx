@@ -10,8 +10,6 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<typeof Link> {
   textSize?: string
   px?: string
   py?: string
-  width?: string
-  height?: string
 }
 
 function LinkButton({
@@ -20,16 +18,14 @@ function LinkButton({
   fontColor,
   buttonColor,
   border,
-  textSize = 'text-[0.75rem]',
-  px = 'primary:px-[1.04rem] mobile:px-[2.33vw] ',
-  py = 'primary:py-[0.39rem] mobile:py-[0.83vw] ',
-  width,
-  height,
+  textSize = 'text-[0.65rem]',
+  px = 'px-[1.04rem]',
+  py = 'py-[0.39rem]',
   ...linkProps
 }: ButtonProps) {
   const textColor = fontColor === 'white' ? 'text-white-default' : 'text-primary-default'
   const linkColor = `bg-${buttonColor}`
-  const borderColor = border ? `border-primary-default border-[0.098rem]` : ''
+  const borderColor = border ? `border-primary-default border-[3px]` : 'border-[3px] border-transparent'
   const hoverColor = ((color: string) => {
     return {
       'primary-200': 'hover:bg-primary-200/80',
@@ -48,7 +44,7 @@ function LinkButton({
     <Link
       {...linkProps}
       className={twMerge(
-        `${px} ${py} ${width} ${height} rounded-[1.82rem] flex items-center justify-center gap-[0.25rem] box-border`,
+        `${px} ${py} rounded-[1.82rem] flex items-center justify-center gap-[0.25rem] box-border`,
         'hover:shadow-sm hover:shadow-gray-200 transition duration-300',
         linkColor,
         borderColor,
