@@ -17,13 +17,13 @@ function ServiceIntroduction() {
                 마케팅을 진행해보세요
               </h1>
             </div>
-            <div className="flex items-center justify-center mobile:gap-[1.95rem] gap-[3.33vw]">
-              <div className="flex flex-col items-center gap-[0.78rem] w-[31.11vw]">
+            <div className="flex items-center mobile:gap-[1.95rem] gap-[3.33vw]">
+              <div className="flex flex-col items-center gap-[0.78rem] mobile:w-auto w-[31.11vw]">
                 <CustomImage
                   src="/assets/images/coins.png"
                   alt="코인들 사진"
                   w="primary:w-[5.33rem] mobile:w-[11.39vw] w-[22.22vw]"
-                  h="primaey:h-[6.793rem] mobile:h-[14.51vw] h-[22.22vw]"
+                  h="primary:h-[6.793rem] mobile:h-[14.51vw] h-[22.22vw]"
                 />
                 <div className="flex flex-col items-center primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[3.33vw] text-center">
                   <div className="hidden mobile:block text-center">
@@ -51,14 +51,14 @@ function ServiceIntroduction() {
                 w="primary:w-[3.25rem] mobile:w-[6.94vw] w-[12.22vw]"
                 h="primary:h-[2.015rem] mobile:h-[4.31vw] h-[7.78vw]"
               />
-              <div className="flex flex-col items-center gap-[1.3rem] w-[33.33vw]">
+              <div className="flex flex-col items-center gap-[1.3rem] mobile:w-auto w-[33.33vw]">
                 <CustomImage
                   src="/assets/images/coin.png"
                   alt="코인 사진"
                   w="primary:w-[4.615rem] mobile:w-[9.86vw] w-[14.72vw]"
                   h="primary:h-[4.615rem] mobile:h-[9.86vw] h-[14.72vw]"
                 />
-                <div className="flex flex-col items-center gap-[3.33vw]">
+                <div className="flex flex-col items-center mobile:gap-0 gap-[3.33vw]">
                   <h2 className="font-montserrat font-semibold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.67vw] primary:leading-[2.34rem] leading-[5vw] tracking-[-0.005rem] text-primary-default">
                     0원
                   </h2>
