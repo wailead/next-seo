@@ -25,7 +25,7 @@ const questions: QuestionData[] = [
     question: '등급은 어떤 기준으로 부여되나요?',
     answer: {
       text: ' 에 명시된 기준을 참고해 주세요. 해당 기준은 최소 기준이며, 와이리 자체 내부 기준(프로그램 사용 여부, 진성 팔로워 비율 등)에 따라 등급 산정이 결정됩니다.',
-      link: 'https://www.wairi.co.kr/influencer/board/view/notice/108/',
+      link: 'www.wairi.co.kr/influencer/board/view/notice/108/',
     },
     isLinkFirst: true,
   },
