@@ -10,6 +10,7 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<typeof Link> {
   textSize?: string
   px?: string
   py?: string
+  width?: string
 }
 
 function LinkButton({
@@ -21,6 +22,7 @@ function LinkButton({
   textSize = 'text-[0.65rem]',
   px = 'px-[1.04rem]',
   py = 'py-[0.39rem]',
+  width,
   ...linkProps
 }: ButtonProps) {
   const textColor = fontColor === 'white' ? 'text-white-default' : 'text-primary-default'
@@ -44,7 +46,7 @@ function LinkButton({
     <Link
       {...linkProps}
       className={twMerge(
-        `${px} ${py} rounded-[1.82rem] flex items-center justify-center gap-[0.25rem] box-border`,
+        `${px} ${py} ${width} mobile:h-fit h-[8.89vw] rounded-[1.82rem] flex items-center justify-center gap-[0.25rem] box-border`,
         'hover:shadow-sm hover:shadow-gray-200 transition duration-300',
         linkColor,
         borderColor,

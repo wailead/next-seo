@@ -33,7 +33,6 @@ function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[41.67vw]', py, icon
               fontColor="white"
               buttonColor="primary-default"
               width={width}
-              height="mobile:h-fit h-[8.89vw]"
               py={py}
             />
           </li>
