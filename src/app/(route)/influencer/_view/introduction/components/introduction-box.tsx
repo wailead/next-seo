@@ -11,14 +11,14 @@ interface childrenProps {
 function IntroductionBox({ className, title, description, children, text }: childrenProps) {
   return (
     <div className={`${className} primary:rounded-[1.04rem] rounded-[2.22vw] -z-10`}>
-      <div className="flex flex-col primary:gap-[1.14rem] gap-[1.74vw] primary:pl-[2.6rem] pl-[5.56vw] primary:pt-[2.795rem] pt-[5.97vw]">
+      <div className="flex flex-col primary:gap-[1.14rem] gap-[1.74vw] primary:px-[2.6rem] px-[5.56vw] primary:pt-[2.795rem] pt-[5.97vw]">
         <h1
-          className="font-pretendard font-bold text-gray-600 primary:text-[1.56rem] text-[3.33vw]"
+          className="font-pretendard font-bold text-gray-600 primary:text-[1.56rem] mobile:text-[3.33vw] text-[5.56vw]"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <div className="flex flex-col">
           <p
-            className="font-pretendard font-normal text-gray-600 primary:text-[1.17rem] text-[2.5vw]"
+            className="font-pretendard font-normal text-gray-600 primary:text-[1.17rem] mobile:text-[2.5vw] text-[4.44vw]"
             dangerouslySetInnerHTML={{ __html: description }}
           />
           {text}

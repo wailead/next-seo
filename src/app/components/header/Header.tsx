@@ -154,7 +154,7 @@ function PcHeader() {
           </div>
         </div>
       </header>
-      {isMenuOpen && (
+      {isAdvertiserPage && isMenuOpen && (
         <div className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default">
           <Link
             className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
