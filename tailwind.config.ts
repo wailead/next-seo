@@ -63,6 +63,10 @@ export default {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        'reference-slide-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-200%)' },
+        },
         'slide-right': {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0)' },
@@ -77,6 +81,7 @@ export default {
         fadeout: 'fadeOut 0.15s ease-in-out forwards',
         'slide-right': 'slide-right 60s linear infinite',
         'slide-left': 'slide-left 60s linear infinite',
+        'reference-slide-left': 'reference-slide-left 30s linear infinite',
         'slide-bottom': 'slide-bottom 60s linear infinite',
         'slide-bottom-more': 'slide-bottom 120s linear infinite',
       },
