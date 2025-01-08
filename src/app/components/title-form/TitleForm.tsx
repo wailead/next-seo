@@ -11,6 +11,7 @@ interface titleFormProps {
   subTitleColor?: string
   className?: string
   gap?: string
+  px?: string
 }
 
 function TitleForm({
@@ -23,11 +24,12 @@ function TitleForm({
   subTitleColor,
   className,
   gap = 'primary:gap-[1.82rem] mobile:gap-[3.87vw] gap-[6.67vw]',
+  px = 'px-[8.33vw]',
 }: titleFormProps) {
   return (
     <div
       className={twMerge(
-        `primary:px-x mobile:px-[6.93vw] px-[8.33vw] primary:pt-top mobile:pt-[6.24vw] pt-[12.22vw] ${pb} flex flex-col ${gap} ${className}`,
+        `primary:px-x mobile:px-[6.93vw] ${px} primary:pt-top mobile:pt-[6.24vw] pt-[12.22vw] ${pb} flex flex-col ${gap} ${className}`,
         pr
       )}>
       <div className="flex flex-col primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[1.67vw]">
