@@ -1,12 +1,15 @@
 # 와이리드 (Wailead)
 
+
 ## 배포
 https://next-seo-ebon.vercel.app/
+
 
 ## 소개
 기존 서비스 되고 있는 와이리의 플러터 웹앱을
 
 Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니다.
+
 
 ## 기술 스택
 - **Frontend Framework**: Next.js 15.0.3
@@ -14,6 +17,7 @@ Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니�
 - **Styling**: TailwindCSS
 - **Language**: TypeScript
 - **Package Manager**: pnpm 9.14.3
+
 
 ## 주요 기능
 - 인플루언서 페이지
@@ -23,14 +27,15 @@ Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니�
 - Node.js
 - pnpm 9.14.3
 
+
 ## 설치 및 실행
 ### 의존성 설치
 `pnpm install`
 ### 실행
 `pnpm run dev`
 
-### 팀원 소개
 
+## 팀원 소개
 <div align="center">
   <table>
     <tr>
@@ -47,6 +52,7 @@ Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니�
     </tr>
   </table>
 </div>
+
 
 ## 프로젝트 구조
 <img width="225" alt="image" src="https://github.com/user-attachments/assets/e24042e4-28fc-4a2f-940a-934793301dac" />
