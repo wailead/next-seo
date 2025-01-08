@@ -1,5 +1,8 @@
 # 와이리드 (Wailead)
 
+## 배포
+https://next-seo-ebon.vercel.app/
+
 ## 소개
 기존 서비스 되고 있는 와이리의 플러터 웹앱을
 
@@ -23,10 +26,29 @@ Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니�
 ## 설치 및 실행
 ### 의존성 설치
 `pnpm install`
-### 개발 서버 실행
+### 실행
 `pnpm run dev`
 
-## 패키지 구조
+### 팀원 소개
+
+<div align="center">
+  <table>
+    <tr>
+      <th><a href="https://github.com/lumpenop">김승원</a></th>
+      <th><a href="https://github.com/hyeji17">양혜지</a></th>
+      <th><a href="https://github.com/BomJin2">김범진</a></th>
+      <th><a href="https://github.com/moonchanju">문찬주</a></th>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/lumpenop.png" width="100" height="100" alt="김승원"></td>
+      <td><img src="https://github.com/hyeji17.png" width="100" height="100" alt="양혜지"></td>
+      <td><img src="https://github.com/BomJin2.png" width="100" height="100" alt="김범진"></td>
+      <td><img src="https://github.com/moonchanju.png" width="100" height="100" alt="문찬주"></td>
+    </tr>
+  </table>
+</div>
+
+## 프로젝트 구조
 📦(route)
 
  ┣ 📂(advertiser)
