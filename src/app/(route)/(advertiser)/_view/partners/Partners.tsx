@@ -39,7 +39,7 @@ function Partners() {
                 </div>
 
                 {/* 세 번째 카드 레이아웃 */}
-                <div className="flex flex-col primary:gap-[0.25rem] gap-[0.525vw] primary:w-[15.6rem] w-[32.76vw] primary:h-[11rem] h-[23.1vw] bg-[url('/assets/images/review_img_1.png')] bg-cover rounded-[1rem] primary:pb-[1.04rem] pb-[2.18vw] primary:px-[1.04rem] px-[2.18vw]  justify-end">
+                <div className="flex flex-col primary:gap-[0.25rem] gap-[0.525vw] primary:w-[15.6rem] w-[32.76vw] primary:h-[11rem] h-[23.1vw] bg-[url('/assets/images/review_img_2.png')] bg-cover rounded-[1rem] primary:pb-[1.04rem] pb-[2.18vw] primary:px-[1.04rem] px-[2.18vw]  justify-end">
                   <p className="font-pretendard font-bold primary:text-[0.875rem] text-[1.9vw] text-white-default">
                     그랩디오션
                   </p>
