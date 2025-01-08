@@ -5,7 +5,7 @@ function Review() {
   return (
     <SectionLayout>
       <div className="flex justify-center items-center">
-        <TitleForm subtitle="REVIEW" title="400개의 업체와 마케팅을 함께하고 있습니다">
+        <TitleForm subtitle="REVIEW" title="이용후기">
           <div className="flex mobile:flex-row flex-col  primary:gap-[1.5rem] mobile:gap-[3.15vw] gap-[4vw]">
             {/* 첫 번째 카드 레이아웃 */}
             <div className="relative primary:w-[24rem] mobile:w-[50.4vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[52.2vw] bg-[url('/images/influencer/blog4.png')] bg-cover mobile:rounded-[1rem] rounded-[7vw] primary:pb-[2.1rem] mobile:pb-[3.822vw] pb-[3vw]  primary:px-[1.82rem] mobile:px-[3.822vw] px-[5vw] flex justify-center items-end">
