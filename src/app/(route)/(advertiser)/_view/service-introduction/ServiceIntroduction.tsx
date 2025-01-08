@@ -20,7 +20,7 @@ function ServiceIntroduction() {
             <div className="flex items-center mobile:gap-[1.95rem] gap-[3.33vw]">
               <div className="flex flex-col items-center gap-[0.78rem] mobile:w-auto w-[31.11vw]">
                 <CustomImage
-                  src="/assets/images/coins.png"
+                  src={'/assets/images/coins.png'}
                   alt="코인들 사진"
                   w="primary:w-[5.33rem] mobile:w-[11.39vw] w-[22.22vw]"
                   h="primary:h-[6.793rem] mobile:h-[14.51vw] h-[22.22vw]"
@@ -53,7 +53,7 @@ function ServiceIntroduction() {
               />
               <div className="flex flex-col items-center gap-[1.3rem] mobile:w-auto w-[33.33vw]">
                 <CustomImage
-                  src="/assets/images/coin.png"
+                  src={'/assets/images/coin.png'}
                   alt="코인 사진"
                   w="primary:w-[4.615rem] mobile:w-[9.86vw] w-[14.72vw]"
                   h="primary:h-[4.615rem] mobile:h-[9.86vw] h-[14.72vw]"

@@ -59,12 +59,13 @@ function About() {
         <TitleForm
           title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?"
           subtitle="ABOUT"
-          gap="primary:gap-[3.023rem] gap-[6.46vw]">
+          gap="primary:gap-[3.023rem] gap-[6.46vw]"
+          px="px-[6.67vw]">
           <ItemCarousel
             totalItems={abouts.length}
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}
-            className="absolute right-0 top-5 z-10">
+            className="absolute right-0 mobile:top-5 top-[71vw] z-10">
             {abouts.map(about => (
               <div key={about.pageNum} className="snap-center">
                 <AboutBox about={about} />
