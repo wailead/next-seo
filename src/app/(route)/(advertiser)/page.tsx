@@ -4,12 +4,12 @@ import GovermentBanner from './_view/goverment-banner/GovermentBanner'
 import Inquiry from './_view/inquiry/Inquiry'
 import MoreService from './_view/more-service/MoreService'
 import OurServices from './_view/our-services/OurServices'
+import Partners from './_view/partners/Partners'
 import Performance from './_view/performance/Performance'
 import PromotionVideo from './_view/promotion-video/PromotionVideo'
 import Question from './_view/question/Question'
 import Reference from './_view/reference/Reference'
 import ServiceIntroduction from './_view/service-introduction/ServiceIntroduction'
-import Partners from './_view/partners/Partners'
 
 function Advertiser() {
   return (

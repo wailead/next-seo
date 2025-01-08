@@ -75,7 +75,7 @@ function Campaign() {
           <button
             className="absolute primary:top-[86.875rem] mobile:top-[185.33vw] top-[541.67vw] bg-gray-300 primary:px-[1.9375rem] mobile:px-[4.13vw] px-[8.33vw] primary:py-[0.21rem] mobile:py-[0.45vw] py-[1.11vw] rounded-[1.82rem] hover:shadow-md hover:bg-[#6d6d6d] z-20"
             onClick={handleModalOpen}>
-            <span className="font-medium primary:text-[0.975rem] mobile:text-[2.08vw] text-[4.17vw] primary:leading-[1.75rem] leading-[3.73vw] text-white-default z-30">
+            <span className="mobile:font-medium primary:text-[0.975rem] mobile:text-[2.08vw] text-[4.17vw] primary:leading-[1.75rem] mobile:leading-[3.73vw] text-white-default z-30">
               더 많은 캠페인 보기
             </span>
           </button>

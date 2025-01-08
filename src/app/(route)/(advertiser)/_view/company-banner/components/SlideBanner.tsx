@@ -63,14 +63,14 @@ function SlideBanner({ logos, direction }: Props) {
               <li
                 key={index}
                 className={
-                  'w-[144px] h-[48px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-white-300 border-[1px]'
+                  'w-[136px] h-[44px] bg-white-default flex-shrink-0 rounded-lg flex items-center justify-center border-white-300 border-[1px]'
                 }>
                 <Image
                   className="select-none pointer-events-none px-8 py-2 "
                   src={image}
                   alt={`Logo ${index + 1}`}
-                  width={136}
-                  height={40}
+                  width={130}
+                  height={38}
                 />
               </li>
             ))}
@@ -86,8 +86,8 @@ function SlideBanner({ logos, direction }: Props) {
                   className="select-none pointer-events-none px-8 py-2"
                   src={image}
                   alt={`Logo ${index + 1}`}
-                  width={136}
-                  height={40}
+                  width={130}
+                  height={38}
                 />
               </li>
             ))}

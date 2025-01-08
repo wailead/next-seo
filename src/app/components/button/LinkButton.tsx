@@ -19,7 +19,8 @@ function LinkButton({
   fontColor,
   buttonColor,
   border,
-  textSize = 'text-[0.65rem]',
+  textSize = 'mobile:text-[0.85rem] text-[3.33vw]',
+
   px = 'px-[1.04rem]',
   py = 'py-[0.39rem]',
   width,

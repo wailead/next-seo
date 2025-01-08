@@ -24,8 +24,8 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
   }, [isOpen])
 
   return (
-    <div className="primary:py-[1.235rem] py-[2.22vw] primary:px-[1.137rem] mobile:px-[2.64vw] px-[5.56vw] bg-white-200 rounded-[1.04rem] flex flex-col">
-      <div className="flex justify-between gap-[4.44vw] items-center">
+    <div className="primary:py-[1.04rem] mobile:py-[2.22vw] primary:px-[1.137rem] mobile:px-[2.64vw] px-[5.56vw] bg-white-200 rounded-[1.04rem] flex flex-col">
+      <div className="flex justify-between gap-[4.44vw] items-center mobile:h-auto h-[11.10vw]">
         <p className="font-pretendard font-semibold primary:text-[0.91rem] mobile:text-[1.94vw] text-[3.89vw] leading-[1.365rem] text-gray-600">
           Q. {question}
         </p>

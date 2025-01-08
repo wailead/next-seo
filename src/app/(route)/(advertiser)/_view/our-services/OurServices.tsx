@@ -16,42 +16,18 @@ function OurServices() {
   return (
     <>
       <SectionLayout>
-        <TitleForm title="OUR SERVICES" subtitle="와이리를 사용하신다면!" pb="primary:pb-[2.925rem] pb-[6.25vw]">
+        <TitleForm title="와이리를 사용하신다면!" subtitle="OUR SERVICES" pb="primary:pb-[2.925rem] pb-[6.25vw]">
           <div className="flex flex-col primary:gap-[4.68rem] gap-[10.07vw]">
             <div className="primary:h-[23.433rem] mobile:h-[50.07vw]">
               <div className="mobile:relative w-full h-full">
                 <div className="block mobile:hidden pb-[13.61vw]">
-                  <div className="grid grid-cols-2 grids-rows-3">
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_computer.svg"
-                        alt="컴퓨터 아이콘"
-                        w="primary:w-[3.218rem] mobile:w-[6.73vw] w-[16.67vw]"
-                        h="primary:h-[3.218rem] mobile:h-[6.73vw] h-[16.67vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        편리한 파트너 <br />
-                        전용 관리 페이지
-                      </p>
-                    </div>
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_search.svg"
-                        alt="검색 아이콘"
-                        w="primary:w-[3.218rem] mobile:w-[6.73vw] w-[16.67vw]"
-                        h="primary:h-[3.218rem] mobile:h-[6.73vw] h-[16.67vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        콘텐츠 실시간 보고
-                        <br />및 초안 검수
-                      </p>
-                    </div>
+                  <div className="grid grid-cols-2 grids-rows-3 gap-y-[6.67vw]">
                     <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
                       <CustomImage
                         src="/assets/icons/our_service_calendar.svg"
                         alt="캘린더 아이콘"
-                        w="primary:w-[3.218rem] mobile:w-[6.73vw] w-[16.67vw]"
-                        h="primary:h-[3.218rem] mobile:h-[6.73vw] h-[16.67vw]"
+                        w="w-[21.11vw]"
+                        h="h-[21.11vw]"
                       />
                       <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
                         원하는 날짜 / 재고 설정
@@ -63,8 +39,8 @@ function OurServices() {
                       <CustomImage
                         src="/assets/icons/our_service_medal.svg"
                         alt="메달 아이콘"
-                        w="primary:w-[3.218rem] mobile:w-[6.73vw] w-[16.67vw]"
-                        h="primary:h-[3.218rem] mobile:h-[6.73vw] h-[16.67vw]"
+                        w="w-[21.11vw]"
+                        h="h-[21.11vw]"
                       />
                       <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
                         콘텐츠 2차 활용
@@ -72,10 +48,22 @@ function OurServices() {
                     </div>
                     <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
                       <CustomImage
+                        src="/assets/icons/our_service_search.svg"
+                        alt="검색 아이콘"
+                        w="w-[21.11vw]"
+                        h="h-[21.11vw]"
+                      />
+                      <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
+                        콘텐츠 실시간 보고
+                        <br />및 초안 검수
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
+                      <CustomImage
                         src="/assets/icons/our_service_doc.svg"
                         alt="문서 아이콘"
-                        w="primary:w-[3.218rem] mobile:w-[6.73vw] w-[16.67vw]"
-                        h="primary:h-[3.218rem] mobile:h-[6.73vw] h-[16.67vw]"
+                        w="w-[21.11vw]"
+                        h="h-[21.11vw]"
                       />
                       <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
                         횟수 제한 없는
@@ -85,10 +73,22 @@ function OurServices() {
                     </div>
                     <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
                       <CustomImage
+                        src="/assets/icons/our_service_computer.svg"
+                        alt="컴퓨터 아이콘"
+                        w="w-[21.11vw]"
+                        h="h-[21.11vw]"
+                      />
+                      <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
+                        편리한 파트너 <br />
+                        전용 관리 페이지
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-center primary:gap-[0.52rem] mobile:gap-[1.11vw] gap-[3.33vw]">
+                      <CustomImage
                         src="/assets/icons/our_service_humans.svg"
                         alt="사람 아이콘"
-                        w="primary:w-[3.218rem] mobile:w-[6.73vw] w-[16.67vw]"
-                        h="primary:h-[3.218rem] mobile:h-[6.73vw] h-[16.67vw]"
+                        w="w-[21.11vw]"
+                        h="h-[21.11vw]"
                       />
                       <p className="font-pretendard font-normal primary:text-[0.78rem] mobile:text-[1.67vw] text-[4.44vw] primary:leading-[1.17rem] mobile:leading-[2.50vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300 text-center">
                         인플루언서 무제한
