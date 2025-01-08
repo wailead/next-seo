@@ -1,10 +1,10 @@
-import { TitleForm, SectionLayout } from '@/components'
+import { SectionLayout, TitleForm } from '@/components'
 import CustomImage from '@/components/custom-image/CustomImage'
 
 function Review() {
   return (
     <SectionLayout>
-      <div className="flex justify-center items-center">s
+      <div className="flex justify-center items-center">
         <TitleForm subtitle="REVIEW" title="이용후기">
           <div className="flex mobile:flex-row flex-col  primary:gap-[1.5rem] mobile:gap-[3.15vw] gap-[4vw]">
             {/* 첫 번째 카드 레이아웃 */}

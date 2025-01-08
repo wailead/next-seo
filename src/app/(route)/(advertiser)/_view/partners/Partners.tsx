@@ -1,5 +1,4 @@
-
-import { TitleForm, SectionLayout } from '@/components'
+import { SectionLayout, TitleForm } from '@/components'
 
 function Partners() {
   return (
@@ -31,7 +30,7 @@ function Partners() {
                   <p className="font-pretendard font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                     이비스 스타일 앰배서더
                   </p>
-                  <p className="font-normal font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
+                  <p className="primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                     호텔 홍보 진행
                   </p>
                   <p className="font-pretendard font-normal primary:text-[0.875rem] mobile:text-[1.9vw] text-[3.8vw] text-white-default  tracking-[-0.05em] primary:w-[17.7rem] mobile:w-[37.17vw] w-[56.1vw]">
@@ -43,7 +42,7 @@ function Partners() {
                   <p className="font-pretendard font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                     그랩디오션
                   </p>
-                  <p className="font-normal font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
+                  <p className="primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                     호텔 홍보 진행
                   </p>
                   <p className="font-pretendard font-normal primary:text-[0.875rem] mobile:text-[1.9vw] text-[3.8vw] text-white-default  tracking-[-0.05em] primary:w-[17.7rem] mobile:w-[37.17vw] w-[56.1vw]">
