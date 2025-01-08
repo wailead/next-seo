@@ -1,10 +1,17 @@
-import Image from 'next/image'
 import LinkButton from '@/components/button/LinkButton'
+import Image from 'next/image'
 
-function AppStoreButtons() {
+type Flex = {
+  flexCol: string
+  width?: string
+  py?: string
+  iconSize?: number
+}
+
+function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[41.67vw]', py, iconSize = 24 }: Flex) {
   const appStores = [
     {
-      name: 'App Store',
+      name: 'APP Store',
       href: 'https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852',
       icon: '/icons/apple.svg',
     },
@@ -15,16 +22,18 @@ function AppStoreButtons() {
     },
   ]
   return (
-    <ul className="flex gap-[8px]">
+    <ul className={`flex ${flexCol} mobile:flex-row gap-[8px]`}>
       {appStores.map((item, index) => {
         return (
           <li key={index}>
             <LinkButton
               name={item.name}
               href={item.href}
-              icon={<Image src={item.icon} alt={'store icon'} width={24} height={24} />}
+              icon={<Image src={item.icon} alt={'store icon'} width={iconSize} height={iconSize} />}
               fontColor="white"
               buttonColor="primary-default"
+              width={width}
+              py={py}
             />
           </li>
         )

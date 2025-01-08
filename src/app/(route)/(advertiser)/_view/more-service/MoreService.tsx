@@ -6,8 +6,8 @@ function MoreService() {
   return (
     <SectionLayout>
       <TitleForm title="더 많은 서비스들이 있어요" subtitle="MORE SERVICE">
-        <div className="flex flex-col primary:gap-[2.813rem] gap-[6vw] justify-center items-center primary:pt-[1.125rem] pt-[2.4vw]">
-          <div className="flex gap-2">
+        <div className="flex flex-col primary:gap-[2.813rem] mobile:gap-[6vw] gap-[5vw] justify-center items-center primary:pt-[1.125rem] mobile:pt-[2.4vw] pt-[5.56vw]">
+          <div className="flex mobile:flex-row flex-col primary:gap-2 mobile:gap-[1.07vw] gap-[5vw]">
             <ServiceCard
               img="/images/advertiser/more-service/more_service_0.png"
               title="매크로 유튜버 서비스"
@@ -19,7 +19,7 @@ function MoreService() {
               desc={`객실 혹은 상품 제공 없이 저렴한 금액으로\n빠르게 마케팅을 진행해보세요.`}
             />
           </div>
-          <div className="flex gap-2">
+          <div className="flex mobile:flex-row flex-col primary:gap-2 mobile:gap-[1.07vw] gap-[5vw]">
             <ServiceCard
               img="/images/advertiser/more-service/more_service_2.png"
               title="세일즈 마케팅 (구매제)"

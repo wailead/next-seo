@@ -7,7 +7,7 @@ interface Props {
   selectTitle: string
 }
 
-function ReferenceSlide({ images, selectTitle }: Props) {
+function ReferenceSlideX({ images, selectTitle }: Props) {
   const [dragging, setDragging] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [startPosition, setStartPosition] = useState({ x: 0, y: 0 })
@@ -16,15 +16,15 @@ function ReferenceSlide({ images, selectTitle }: Props) {
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setDragging(true)
-    setStartPosition({ x: position.x, y: e.clientY - position.y })
+    setStartPosition({ x: e.clientX - position.x, y: position.y })
   }
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!dragging) return
 
-    const newY = e.clientY - startPosition.y
-    const newPositionY = Math.max(newY)
-    setPosition({ x: position.x, y: newPositionY })
+    const newX = e.clientX - startPosition.x
+    const newPositionX = Math.max(newX)
+    setPosition({ x: newPositionX, y: position.x })
   }
 
   const handleMouseUp = () => {
@@ -36,24 +36,21 @@ function ReferenceSlide({ images, selectTitle }: Props) {
   }, [selectTitle])
   return (
     <div
-      className={twMerge(
-        `relative select-none`,
-        selectTitle === 'more' ? 'primary:w-[15rem] w-[32vw]' : 'primary:w-[13.125rem] w-[28vw]'
-      )}
+      className={twMerge(`relative left-[-12.22vw] justify-center mobile:hidden   select-none`)}
       ref={containerRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      style={{ transform: `translateY(${position.y}px)` }}>
+      style={{ transform: `translateX(${position.x}px)` }}>
       {selectTitle === 'more' ? (
-        <div className="flex flex-col-reverse gap-0 hover:pause-animation animate-slide-bottom-more">
+        <div className="flex gap-0 hover:pause-animation animate-reference-slide-left">
           {images.map((image, index) => (
             <Image
               src={image}
               key={index}
               alt={`Logo ${index + 1}`}
-              width={240}
+              height={240}
               className="select-none pointer-events-none"
             />
           ))}
@@ -62,19 +59,19 @@ function ReferenceSlide({ images, selectTitle }: Props) {
               src={image}
               key={index}
               alt={`Logo ${index + 1}`}
-              width={240}
+              height={240}
               className="select-none pointer-events-none"
             />
           ))}
         </div>
       ) : (
-        <div className="flex flex-col-reverse gap-0  hover:pause-animation animate-slide-bottom">
+        <div className="flex  gap-0  hover:pause-animation animate-reference-slide-left">
           {images.map((image, index) => (
             <Image
               src={image}
               key={index}
               alt={`Logo ${index + 1}`}
-              width={210}
+              height={210}
               className="select-none-reverse pointer-events-none"
             />
           ))}
@@ -83,7 +80,7 @@ function ReferenceSlide({ images, selectTitle }: Props) {
               src={image}
               key={index}
               alt={`Logo ${index + 1}`}
-              width={210}
+              height={210}
               className="select-none-reverse pointer-events-none"
             />
           ))}
@@ -92,4 +89,4 @@ function ReferenceSlide({ images, selectTitle }: Props) {
     </div>
   )
 }
-export default ReferenceSlide
+export default ReferenceSlideX
