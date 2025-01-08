@@ -53,7 +53,7 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
           <div className="flex w-full justify-end">
             <button onClick={handleModalClose}>
               {/* svg파일은 반응형 작업 안해도 되는듯 합니다.*/}
-              <CustomImage src={'/icons/influencer/close.svg'} alt="close" w="w-[1.469rem]" h="h-[1.469rem]" />
+              <CustomImage src={'/assets/icons/close.svg'} alt="close" w="w-[1.469rem]" h="h-[1.469rem]" />
             </button>
           </div>
           <div className="flex flex-col primary:w-[16.25rem] mobile:w-[34.67vw] top-0 items-center primary:gap-2.5 mobile:gap-[1.33vw] gap-[3.33vw]">

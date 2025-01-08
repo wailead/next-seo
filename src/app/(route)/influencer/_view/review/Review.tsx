@@ -29,7 +29,7 @@ function Review() {
             {/* 추가 레이아웃 */}
             <div className="flex flex-col primary:gap-[1.5rem] gap-[3.15vw]">
               {/* 두 번째 카드 레이아웃 */}
-              <div className="flex flex-col primary:gap-[0.25rem] gap-[0.5325vw] primary:w-[15.6rem] w-[32.76vw] primary:h-[11rem] h-[23.1vw] bg-[#4D4D4D] rounded-[1rem] primary:pb-[1.82rem] pb-[3.822vw] primary:px-[1.04rem] px-[2.12vw] flex justify-end">
+              <div className="flex flex-col primary:gap-[0.25rem] gap-[0.5325vw] primary:w-[15.6rem] w-[32.76vw] primary:h-[11rem] h-[23.1vw] bg-[#4D4D4D] rounded-[1rem] primary:pb-[1.82rem] pb-[3.822vw] primary:px-[1.04rem] px-[2.12vw] justify-end">
                 <CustomImage
                   src="./assets/icons/quote.svg"
                   w="primary:w-[1.25rem] w-[2.625vw]"
@@ -46,7 +46,7 @@ function Review() {
               </div>
 
               {/* 세 번째 카드 레이아웃 */}
-              <div className="flex flex-col primary:gap-[0.25rem] gap-[0.5325vw] primary:w-[15.6rem] w-[32.76vw] primary:h-[11rem] h-[23.1vw] bg-[#4D4D4D] rounded-[1rem] primary:pb-[1.82rem] pb-[3.822vw] primary:px-[1.04rem] px-[2.12vw] flex justify-end">
+              <div className="flex flex-col primary:gap-[0.25rem] gap-[0.5325vw] primary:w-[15.6rem] w-[32.76vw] primary:h-[11rem] h-[23.1vw] bg-[#4D4D4D] rounded-[1rem] primary:pb-[1.82rem] pb-[3.822vw] primary:px-[1.04rem] px-[2.12vw] justify-end">
                 <CustomImage
                   src="./assets/icons/quote.svg"
                   w="primary:w-[1.25rem] w-[2.625vw]"
