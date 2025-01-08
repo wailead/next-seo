@@ -5,7 +5,7 @@ import Link from 'next/link'
 function MarketingBanner() {
   return (
     <BannerLayout>
-      <div>
+      <div className="py-[4vw] mobile:py-none">
         <p className="mobile:text-[2.65vw] text-[16px] primary:text-[20px]">인플루언서 광고가 필요하신가요?</p>
         <Link href="/influencer/marketing">
           <h1 className="text-primary-default mobile:text-[2.65vw] text-[16px] primary:text-[20px] font-semibold flex items-center">
