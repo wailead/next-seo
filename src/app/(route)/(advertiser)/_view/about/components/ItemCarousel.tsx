@@ -1,8 +1,8 @@
 'use client'
 
-import { useRef } from 'react'
 import ArrowIcon from '@/public/assets/icons/about_arrow.svg'
 import CircleIcon from '@/public/assets/icons/circle.svg'
+import { useEffect, useRef } from 'react'
 
 interface ItemCarouselProps {
   totalItems: number
@@ -14,6 +14,10 @@ interface ItemCarouselProps {
 
 function ItemCarousel({ totalItems, currentIndex, setCurrentIndex, children, className }: ItemCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    console.log(currentIndex)
+  }, [currentIndex])
 
   const handleNext = () => {
     if (currentIndex < totalItems - 1 && scrollContainerRef.current) {
