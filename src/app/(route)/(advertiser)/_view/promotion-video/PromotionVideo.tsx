@@ -6,7 +6,7 @@ function PromotionVideo() {
   return (
     <SectionLayout>
       <div className="flex flex-col gap-2 bg-white-default w-full">
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+        <div className="relative w-full" style={{ paddingBottom: '56.3%' }}>
           <object
             data="https://www.youtube.com/embed/ipYckn3E_lY?autoplay=1&loop=1&controls=0&mute=1&playlist=ipYckn3E_lY"
             className="absolute top-0 left-0 w-full h-full border-[1px] border-gray-100"></object>

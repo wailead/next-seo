@@ -8,7 +8,7 @@ type Flex = {
   iconSize?: number
 }
 
-function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[41.67vw]', py, iconSize = 24 }: Flex) {
+function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, iconSize = 24 }: Flex) {
   const appStores = [
     {
       name: 'APP Store',

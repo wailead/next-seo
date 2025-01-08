@@ -19,7 +19,7 @@ function LinkButton({
   fontColor,
   buttonColor,
   border,
-  textSize = 'text-[0.65rem]',
+  textSize = 'text-[0.85rem]',
   px = 'px-[1.04rem]',
   py = 'py-[0.39rem]',
   width,
