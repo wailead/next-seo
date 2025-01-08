@@ -32,9 +32,11 @@ export default function RootLayout({
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <PcHeader />
-        {children}
+        <div>
+          {children}
+          <ChatBot />
+        </div>
         <Footer />
-        <ChatBot />
       </body>
     </html>
   )
