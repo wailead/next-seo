@@ -46,8 +46,8 @@ function Reference() {
             subTitleColor="text-white-default"
             pb="0"
             pr="primary:pl-[3.25rem] mobile:pl-[6.93vw] mobile:pr-0">
-            <div className="flex flex-col justify-between primary:gap-[1.82rem] mobile:gap-[3.88vw] gap-[14px]">
-              <div className="flex flex-col primary:gap-[1.25rem] mobile:gap-[2.67vw] gap-[3.89vw]  primary:h-[10.438rem] mobile:h-[22.27vw] h-[41.67vw] mobile:pb-0 pb-[10px]">
+            <div className="flex flex-col justify-between primary:gap-[1.82rem] mobile:gap-[3.88vw] gap-[3.89vw]">
+              <div className="flex flex-col primary:gap-[1.25rem] mobile:gap-[2.67vw] gap-[3.89vw]  primary:h-[10.438rem] mobile:h-[22.27vw] h-[41.67vw] mobile:pb-0 pb-[2.78vw]">
                 <ReferenceCard
                   title="와이리 X 평창 휘닉스파크"
                   id="pyeongchang"

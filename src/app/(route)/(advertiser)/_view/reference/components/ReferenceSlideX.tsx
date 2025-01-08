@@ -36,7 +36,7 @@ function ReferenceSlideX({ images, selectTitle }: Props) {
   }, [selectTitle])
   return (
     <div
-      className={twMerge(`relative left-[-44px] justify-center mobile:hidden   select-none`)}
+      className={twMerge(`relative left-[-12.22vw] justify-center mobile:hidden   select-none`)}
       ref={containerRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
