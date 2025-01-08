@@ -62,7 +62,7 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
             </span>
             {/* svg파일은 반응형 작업 안해도 되는듯 합니다.*/}
             <CustomImage
-              src={'/assets/images/polygon.png'}
+              src={'/assets/images/Polygon.png'}
               alt="polygon"
               w="mobile:w-[0.6rem] w-[2.78vw]"
               h="mobile:h-[0.35rem] h-[1.67vw]"
