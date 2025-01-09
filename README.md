@@ -45,7 +45,8 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 
 - 모바일 반응형 디자인
 
-<img width="280" alt="image" src="https://github.com/user-attachments/assets/923455d0-9d58-42f2-90cb-600df09c26ed" />
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/f3af5905-5ac4-4639-aae8-9b5655625ce6" />
+
 
 
 
