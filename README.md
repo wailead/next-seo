@@ -25,13 +25,13 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 
 ### SEO 작업 계획 및 현재 상황
 
-- [] 시맨틱 태그
-- [] 네이버 웹마스터 도구
-- [] 모바일 반응형 디자인
-- [] 코드 최적화
-- [] 메타 데이터
-- [] sitemap.xml
-- [] robots.txt
+- [ ] 시맨틱 태그
+- [ ] 네이버 웹마스터 도구
+- [ ] 모바일 반응형 디자인
+- [ ] 코드 최적화
+- [ ] 메타 데이터
+- [ ] sitemap.xml
+- [ ] robots.txt
 
 - 시맨틱 태그
   <img width="280" alt="image" src="https://github.com/user-attachments/assets/c5156a78-69fd-4a6f-9bbe-2eceb6458cca" />
