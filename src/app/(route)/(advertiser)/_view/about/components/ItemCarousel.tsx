@@ -2,46 +2,64 @@
 
 import ArrowIcon from '@/public/assets/icons/about_arrow.svg'
 import CircleIcon from '@/public/assets/icons/circle.svg'
-import { useEffect, useRef } from 'react'
+import { useRef, useState } from 'react'
 
 interface ItemCarouselProps {
   totalItems: number
-  currentIndex: number
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>
   children: React.ReactNode
   className?: string
 }
 
-function ItemCarousel({ totalItems, currentIndex, setCurrentIndex, children, className }: ItemCarouselProps) {
+function ItemCarousel({ totalItems, children, className }: ItemCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState<number>(0)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    console.log(currentIndex)
-  }, [currentIndex])
+  const calculateCurrentIndex = () => {
+    const container = scrollContainerRef.current
+    if (!container) return currentIndex
+
+    const scrollLeft = container.scrollLeft
+    const totalScrollWidth = container.scrollWidth
+    const itemWidth = totalScrollWidth / totalItems
+
+    return Math.round(scrollLeft / itemWidth)
+  }
 
   const handleNext = () => {
-    if (currentIndex < totalItems - 1 && scrollContainerRef.current) {
-      setCurrentIndex(currentIndex + 1)
-      scrollContainerRef.current.scrollLeft += scrollContainerRef.current.scrollWidth / totalItems
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    if (currentIndex >= totalItems - 1) return
+
+    const itemWidth = container.scrollWidth / totalItems
+    container.scrollLeft += itemWidth
+
+    const newIndex = calculateCurrentIndex()
+    if (newIndex !== currentIndex) {
+      setCurrentIndex(newIndex)
     }
   }
 
   const handlePrev = () => {
-    if (currentIndex > 0 && scrollContainerRef.current) {
-      const newIndex = currentIndex - 1
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    if (currentIndex <= 0) return
+
+    const itemWidth = container.scrollWidth / totalItems
+    container.scrollLeft -= itemWidth
+
+    const newIndex = calculateCurrentIndex()
+    if (newIndex !== currentIndex) {
       setCurrentIndex(newIndex)
-      scrollContainerRef.current.scrollLeft = (scrollContainerRef.current.scrollWidth / totalItems) * newIndex
     }
   }
 
   const handleScroll = () => {
-    if (!scrollContainerRef.current) return
+    const container = scrollContainerRef.current
+    if (!container) return
 
-    const scrollLeft = scrollContainerRef.current.scrollLeft
-    const scrollWidth = scrollContainerRef.current.scrollWidth
-
-    const newIndex = Math.round(scrollLeft / (scrollWidth / totalItems))
-
+    const newIndex = calculateCurrentIndex()
     if (newIndex !== currentIndex) {
       setCurrentIndex(newIndex)
     }

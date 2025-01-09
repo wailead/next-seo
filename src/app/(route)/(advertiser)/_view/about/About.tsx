@@ -3,7 +3,6 @@
 import { SectionLayout, TitleForm } from '@/components'
 import AboutBox from './components/AboutBox'
 import ItemCarousel from './components/ItemCarousel'
-import { useState } from 'react'
 
 interface AboutData {
   pageNum: string
@@ -51,8 +50,6 @@ const abouts: AboutData[] = [
 ]
 
 function About() {
-  const [currentIndex, setCurrentIndex] = useState<number>(0)
-
   return (
     <div className="bg-white-100">
       <SectionLayout>
@@ -61,11 +58,7 @@ function About() {
           subtitle="ABOUT"
           gap="primary:gap-[3.023rem] gap-[6.46vw]"
           px="px-[6.67vw]">
-          <ItemCarousel
-            totalItems={abouts.length}
-            currentIndex={currentIndex}
-            setCurrentIndex={setCurrentIndex}
-            className="absolute right-0 mobile:top-5 top-[71vw] z-10">
+          <ItemCarousel totalItems={abouts.length} className="absolute right-0 mobile:top-5 top-[71vw] z-10">
             {abouts.map(about => (
               <div key={about.pageNum} className="snap-center">
                 <AboutBox about={about} />
