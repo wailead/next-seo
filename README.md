@@ -1,8 +1,9 @@
-# 와이리드 (Wailead)
+<img width="746" alt="image" src="https://github.com/user-attachments/assets/d425d646-ce13-4914-a6bc-87ad925d0cc4" /># 와이리드 (Wailead)
 
 
 ## 배포
 https://next-seo-ebon.vercel.app/
+<img width="240" alt="image" src="https://github.com/user-attachments/assets/9ed4a8b4-b4fc-423a-911e-afc91bfc5150" />
 
 
 ## 소개
@@ -17,6 +18,14 @@ Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니�
 - **Styling**: TailwindCSS
 - **Language**: TypeScript
 - **Package Manager**: pnpm 9.14.3
+
+## 협업 툴
+- Github
+- Discord
+
+<img width="240" alt="image" src="https://github.com/user-attachments/assets/bfa98370-f842-4432-a11b-10be7bbde117" />
+
+<img width="240" alt="image" src="https://github.com/user-attachments/assets/9c265fb7-a1d5-4b56-bc67-d7d350278893" />
 
 
 ## 주요 기능
