@@ -43,7 +43,9 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 <img width="280" alt="image" src="https://github.com/user-attachments/assets/b1baf82e-1174-45c5-ad7b-1ce5b1dbfde5" />
 <img width="280" alt="image" src="https://github.com/user-attachments/assets/08a341dc-2df0-48c6-8b5a-ccc88c9f3885" />
 
+- 모바일 반응형 디자인
 
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/923455d0-9d58-42f2-90cb-600df09c26ed" />
 
 
 
