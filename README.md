@@ -12,6 +12,38 @@ https://next-seo-ebon.vercel.app/
 
 Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니다.
 
+### 개발 배경
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/2b3947f9-5ff2-4d6d-9135-8f1dfa16f33f" />
+
+![image](https://github.com/user-attachments/assets/80a396e1-9627-48b8-bf2e-240621e8b2bb)
+
+플러터 웹앱의 경우 브라우저의 DOM 에 flutter-view 외의 정보가 생성되지 않아,
+SEO 가 불가능 합니다. 
+
+Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
+
+### SEO 작업 계획 및 현재 상황
+
+- [] 시맨틱 태그
+- [] 네이버 웹마스터 도구
+- [] 모바일 반응형 디자인
+- [] 코드 최적화
+- [] 메타 데이터
+- [] sitemap.xml
+- [] robots.txt
+
+- 시맨틱 태그
+  <img width="280" alt="image" src="https://github.com/user-attachments/assets/c5156a78-69fd-4a6f-9bbe-2eceb6458cca" />
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/8fb9a166-a5a7-4bf8-82cb-cef99346a39b" />
+
+- 네이버 웹 마스터 도구
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/b1baf82e-1174-45c5-ad7b-1ce5b1dbfde5" />
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/08a341dc-2df0-48c6-8b5a-ccc88c9f3885" />
+
+
+
+
 
 ## 기술 스택
 - **Frontend Framework**: Next.js 15.0.3
