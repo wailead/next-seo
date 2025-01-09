@@ -6,7 +6,7 @@ https://next-seo-ebon.vercel.app/
 
 
 ## 소개
-기존 서비스 되고 있는 와이리의 플러터 웹앱을
+기존 서비스 되고 있는 [와이리의 플러터 웹앱](https://www.wairi.co.kr/webapp)을
 
 Next.js 로 마이그레이션 하여 SEO 를 적용하는 프로젝트 입니다.
 
