@@ -60,6 +60,7 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 ## 협업 툴
 - Github
 - Discord
+- Slack
 
 
 <img width="260" alt="image" src="https://github.com/user-attachments/assets/bfa98370-f842-4432-a11b-10be7bbde117" />
