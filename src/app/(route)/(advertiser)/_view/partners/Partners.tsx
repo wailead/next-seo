@@ -51,7 +51,7 @@ function Partners() {
               </div>
             </div>
           </div>
-          <div className="primary:w-[40.375rem] mobile:w-[86.13vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[52.2vw] ">
+          <div className="primary:w-[40.375rem] mobile:w-[86.13vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[47.5vw] ">
             <object
               type="text/html"
               data="https://www.youtube.com/embed/mL5BoE_2Q5A?si=rx6o8I3mXyx-7jYT"
