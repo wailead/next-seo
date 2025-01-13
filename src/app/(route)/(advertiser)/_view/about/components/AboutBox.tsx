@@ -12,7 +12,7 @@ interface AboutBoxProps {
 
 function AboutBox({ about }: AboutBoxProps) {
   return (
-    <div className="primary:w-[37.92rem] mobile:w-[80.79vw] w-[86.73vw] flex mobile:flex-row flex-col items-center primary:gap-[4.583rem] mobile:gap-[9.79vw] gap-[6.67vw] flex-shrink-0">
+    <article className="primary:w-[37.92rem] mobile:w-[80.79vw] w-[86.73vw] flex mobile:flex-row flex-col items-center primary:gap-[4.583rem] mobile:gap-[9.79vw] gap-[6.67vw] flex-shrink-0">
       <CustomImage
         src={`/assets/icons/about_image_${about.pageNum}.svg`}
         alt={`about 아이콘 ${about.pageNum}`}
@@ -31,7 +31,7 @@ function AboutBox({ about }: AboutBoxProps) {
           dangerouslySetInnerHTML={{ __html: about.description }}
         />
       </div>
-    </div>
+    </article>
   )
 }
 
