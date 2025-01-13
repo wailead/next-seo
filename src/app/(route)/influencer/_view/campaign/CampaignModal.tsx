@@ -45,7 +45,7 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
       className={`flex w-full h-full fixed top-0 left-0 justify-center items-center bg-black/50 z-40 ${animation ? 'animate-fadein' : 'animate-fadeout pointer-events-none'}`}
       onClick={handleModalClose}>
       <div
-        className="flex flex-col primary:w-[36.5rem] w-[77.87vw] primary:h-[26.25rem] mobile:h-[56vw] bg-[url('/images/influencer/background.png')] bg-cover rounded-[1.875rem] justify-between items-center primary:pt-[1.15rem] mobile:pt-[2.45vw] pt-[5.56vw] mobile:pb-0 pb-[6.67vw] primary:px-[1.22rem] mobile:px-[2.6vw] px-[5.56vw] mobile:gap-0 gap-[6.67vw]"
+        className="flex flex-col primary:w-[36.5rem] w-[77.87vw] primary:h-[26.25rem] mobile:h-[56vw] bg-[url('/assets/images/background.png')] bg-cover rounded-[1.875rem] justify-between items-center primary:pt-[1.15rem] mobile:pt-[2.45vw] pt-[5.56vw] mobile:pb-0 pb-[6.67vw] primary:px-[1.22rem] mobile:px-[2.6vw] px-[5.56vw] mobile:gap-0 gap-[6.67vw]"
         onClick={e => {
           e.stopPropagation()
         }}>

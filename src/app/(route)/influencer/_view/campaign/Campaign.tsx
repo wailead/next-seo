@@ -25,45 +25,45 @@ function Campaign() {
         </h2>
         <div className="grid mobile:grid-cols-3 grid-cols-2 primary:gap-x-[1.125rem] mobile:gap-x-[2.4vw] gap-x-[2.5vw] primary:gap-y-[2.15rem] mobile:gap-y-[4.59vw] gap-y-[4.44vw] justify-items-center">
           <CampaignCard
-            img="/images/influencer/sight/we-hotel.png"
+            img="/assets/images/sight/we-hotel.png"
             title="[제주 서귀포] WE호텔 메디컬 스파 센터 테라피"
             price="300,000"
             sale="30,000"
           />
           <CampaignCard
-            img="/images/influencer/sight/eden-paradise.png"
+            img="/assets/images/sight/eden-paradise.png"
             title="[경기도 이천] 에덴파라다이스호텔"
             price="100,000"
             sale="19,000"
           />
           <CampaignCard
-            img="/images/influencer/sight/grab-the-ocean.png"
+            img="/assets/images/sight/grab-the-ocean.png"
             title="[부산 송도] 그랩디오션 송도"
             price="100,000"
             sale="10,000"
           />
           <CampaignCard
-            img="/images/influencer/sight/sr-hotel.png"
+            img="/assets/images/sight/sr-hotel.png"
             title="[서울 강서구] SR호텔 마곡 "
             price="162,000"
             sale="16,200"
           />
           <CampaignCard
-            img="/images/influencer/sight/hey-seogwipo.png"
+            img="/assets/images/sight/hey-seogwipo.png"
             title="[제주 서귀포] 헤이, 서귀포"
             price="150,000"
             sale="15,000"
           />
           <CampaignCard
-            img="/images/influencer/sight/barns-hill.png"
+            img="/assets/images/sight/barns-hill.png"
             title="[강원도 홍천] 반스힐리조트 "
             price="454,000"
             sale="45,400"
           />
-          <CampaignCard img="/images/influencer/sight/dpart.png" title="" price="" sale="" />
-          <CampaignCard img="/images/influencer/sight/con-rad.png" title="" price="" sale="" />
+          <CampaignCard img="/assets/images/sight/dpart.png" title="" price="" sale="" />
+          <CampaignCard img="/assets/images/sight/con-rad.png" title="" price="" sale="" />
           <CampaignCard
-            img="/images/influencer/sight/surf-holic.png"
+            img="/assets/images/sight/surf-holic.png"
             title=""
             price=""
             sale=""

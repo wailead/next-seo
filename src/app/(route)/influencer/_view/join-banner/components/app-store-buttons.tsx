@@ -13,12 +13,12 @@ function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, iconSiz
     {
       name: 'APP Store',
       href: 'https://apps.apple.com/kr/app/%EC%99%80%EC%9D%B4%EB%A6%AC/id6471933852',
-      icon: '/icons/apple.svg',
+      icon: '/assets/icons/apple.svg',
     },
     {
       name: 'Google Play',
       href: 'https://play.google.com/store/apps/details?id=com.wairiInc.wairi&hl=ko',
-      icon: '/icons/google.svg',
+      icon: '/assets/icons/google.svg',
     },
   ]
   return (
