@@ -6,7 +6,7 @@ function ServiceIntroduction() {
     <div className="bg-[#FFF9ED]">
       <div className="bg-white-default primary:rounded-bl-[3.9rem] mobile:rounded-bl-[8.33vw] rounded-bl-[16.67vw]">
         <SectionLayout>
-          <div className="flex flex-col items-center gap-[2.6rem] mobile:px-x px-[5.56vw] mobile:pt-top pt-[8.89vw] mobile:pb-bottom pb-[16.67vw]">
+          <div className="flex flex-col items-center gap-[2.6rem] primary:px-x mobile:px-[6.93vw] px-[5.56vw] primary:pt-top mobile:pt-[6.24vw] pt-[8.89vw] mobile:pb-bottom pb-[16.67vw]">
             <div className="flex flex-col items-center">
               <h3 className="font-pretendard font-medium text-gray-300 primary:text-[1.56rem] mobile:text-[3.33vw] text-[3.89vw] mobile:leading-[1.755rem] leading-[5.83vw] tracking-[-0.005rem]">
                 언제까지 인플루언서 마케팅에 많은 비용을 쓰실건가요?

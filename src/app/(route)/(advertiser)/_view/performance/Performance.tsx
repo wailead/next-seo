@@ -5,7 +5,7 @@ function Performance() {
   return (
     <div className="bg-[#FFF9ED]">
       <SectionLayout>
-        <div className="mobile:px-x px-[6.67vw] mobile:pt-top pt-[8.89vw] mobile:pb-bottom pb-[16.67vw] flex flex-col gap-[0.39rem]">
+        <div className="primary:px-x mobile:px-[6.93vw] px-[6.67vw] primary:pt-top mobile:pt-[6.24vw] pt-[8.89vw] mobile:pb-bottom pb-[16.67vw] flex flex-col gap-[0.39rem]">
           <p className="font-montserrat font-normal primary:text-[0.91rem] mobile:text-[1.94vw] text-[4.17vw] text-primary-default">
             PERFORMANCE
           </p>
