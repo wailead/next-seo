@@ -56,18 +56,21 @@ function Question() {
   return (
     <SectionLayout>
       <TitleForm subtitle="QUESTION" title="자주 묻는 질문">
-        <div className="flex flex-col gap-[0.78rem]">
-          {questions.map((q, index) => (
-            <QuestionBox
-              key={index}
-              question={q.question}
-              answer={q.answer}
-              isOpen={activeIndex === index}
-              onToggle={() => handleToggle(index)}
-              isLinkFirst={q.isLinkFirst}
-            />
-          ))}
-        </div>
+        <section>
+          <ul className="flex flex-col gap-[0.78rem]">
+            {questions.map((q, index) => (
+              <li key={index} className="list-none">
+                <QuestionBox
+                  question={q.question}
+                  answer={q.answer}
+                  isOpen={activeIndex === index}
+                  onToggle={() => handleToggle(index)}
+                  isLinkFirst={q.isLinkFirst}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
       </TitleForm>
     </SectionLayout>
   )
