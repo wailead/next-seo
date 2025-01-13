@@ -32,22 +32,22 @@ function TitleForm({
         `primary:px-x mobile:px-[6.93vw] ${px} primary:pt-top mobile:pt-[6.24vw] pt-[12.22vw] ${pb} flex flex-col ${gap} ${className}`,
         pr
       )}>
-      <div className="flex flex-col primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[1.67vw]">
-        <p
+      <header className="flex flex-col primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[1.67vw]">
+        <h4
           className={twMerge(
             `font-montserrat font-normal primary:text-[0.91rem] mobile:text-[1.94vw] text-[4.17vw] text-primary-default`,
             titleColor
           )}>
           {subtitle}
-        </p>
-        <p
+        </h4>
+        <h1
           className={twMerge(
             `font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.67vw] text-gray-600 whitespace-pre-line `,
             subTitleColor
           )}
           dangerouslySetInnerHTML={{ __html: title }}
         />
-      </div>
+      </header>
       {children}
     </div>
   )
