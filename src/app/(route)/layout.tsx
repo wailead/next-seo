@@ -1,4 +1,4 @@
-import { ChatBot, Footer, PcHeader } from '@/components'
+import { ChatBot, Footer, Header } from '@/components'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Head from 'next/head'
@@ -31,7 +31,7 @@ export default function RootLayout({
         <meta name="naver-site-verification" content="228274ae7b7be03ce5edf28d63d13d8e979750f5" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <PcHeader />
+        <Header />
         <div>
           {children}
           <ChatBot />

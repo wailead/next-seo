@@ -9,7 +9,7 @@ import SectionLayout from '../section-layout/SectionLayout'
 import ListIcon from '@/public/assets/icons/list.svg'
 import CloseIcon from '@/public/assets/icons/close.svg'
 
-function PcHeader() {
+function Header() {
   const pathname = usePathname()
 
   const isAdvertiserPage = pathname === '/' || pathname === '/advertiser'
@@ -182,4 +182,4 @@ function PcHeader() {
   )
 }
 
-export default PcHeader
+export default Header
