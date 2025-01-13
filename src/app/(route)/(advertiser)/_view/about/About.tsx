@@ -60,9 +60,9 @@ function About() {
           px="px-[6.67vw]">
           <ItemCarousel totalItems={abouts.length} className="absolute right-0 mobile:top-5 top-[71vw] z-10">
             {abouts.map(about => (
-              <div key={about.pageNum} className="snap-center">
+              <li key={about.pageNum} className="snap-center list-none">
                 <AboutBox about={about} />
-              </div>
+              </li>
             ))}
           </ItemCarousel>
         </TitleForm>

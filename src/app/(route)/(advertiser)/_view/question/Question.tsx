@@ -51,7 +51,7 @@ function Question() {
   return (
     <SectionLayout>
       <TitleForm subtitle="QUESTION" title="자주 묻는 질문">
-        <div className="flex flex-col gap-[0.78rem]">
+        <section className="flex flex-col gap-[0.78rem]">
           {questions.map((q, index) => (
             <QuestionBox
               key={index}
@@ -62,7 +62,7 @@ function Question() {
               isLinkFirst={q.isLinkFirst}
             />
           ))}
-        </div>
+        </section>
       </TitleForm>
     </SectionLayout>
   )

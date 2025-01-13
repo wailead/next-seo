@@ -11,7 +11,7 @@ function ServiceIntroduction() {
               <h3 className="font-pretendard font-medium text-gray-300 primary:text-[1.56rem] mobile:text-[3.33vw] text-[3.89vw] mobile:leading-[1.755rem] leading-[5.83vw] tracking-[-0.005rem]">
                 언제까지 인플루언서 마케팅에 많은 비용을 쓰실건가요?
               </h3>
-              <h1 className="font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.11vw] primary:leading-[2.34rem] mobile:leading:[5vw] leading-[9.17vw] tracking-[-0.005rem] text-gray-default text-center">
+              <h1 className="font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.11vw] primary:leading-[2.34rem] mobile:leading-[5vw] leading-[9.17vw] tracking-[-0.005rem] text-gray-default text-center">
                 <span className="text-primary-default">무료로 검증된 인플루언서</span>를 통해
                 <br />
                 마케팅을 진행해보세요
