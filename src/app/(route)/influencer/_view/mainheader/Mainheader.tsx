@@ -23,7 +23,7 @@ function Mainheader() {
   }, [])
 
   return (
-    <div className="flex w-full  justify-center items-center bg-[url('/images/influencer/background.png')]  mobile:bg-contain bg-cover bg-center ">
+    <div className="flex w-full  justify-center items-center bg-[url('/assets/images/background.png')]  mobile:bg-contain bg-cover bg-center ">
       <div className="flex mobile:flex-row flex-col w-primary h-full justify-between ">
         <div className="flex flex-col primary:pt-[3.125rem] mobile:pt-[6.66vw] pt-[14.44vw] primary:pl-[3.219rem] mobile:pl-[6.86vw] primary:pb-[3.438rem] mobile:pb-[7.33vw] pb-[11.11vw]  primary:gap-[3.938rem] mobile:gap-[8.4vw] gap-[16.67vw] items-center mobile:items-start">
           <div

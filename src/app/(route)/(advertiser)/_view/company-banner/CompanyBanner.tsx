@@ -1,5 +1,5 @@
-import logo1 from '@/public/images/advertiser/logo1'
-import logo2 from '@/public/images/advertiser/logo2'
+import logo1 from '@/public/assets/images/logo1'
+import logo2 from '@/public/assets/images/logo2'
 import { StaticImageData } from 'next/image'
 
 import SlideBanner from './components/SlideBanner'

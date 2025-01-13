@@ -24,9 +24,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
   }, [isOpen])
 
   return (
-    <article
-      aria-expanded={isOpen}
-      className="primary:py-[1.04rem] mobile:py-[2.22vw] primary:px-[1.137rem] mobile:px-[2.64vw] px-[5.56vw] bg-white-200 rounded-[1.04rem] flex flex-col">
+    <article className="primary:py-[1.04rem] mobile:py-[2.22vw] primary:px-[1.137rem] mobile:px-[2.64vw] px-[5.56vw] bg-white-200 rounded-[1.04rem] flex flex-col">
       <header className="flex justify-between gap-[4.44vw] items-center mobile:h-auto h-[11.10vw]">
         <h3 className="font-pretendard font-semibold primary:text-[0.91rem] mobile:text-[1.94vw] text-[3.89vw] leading-[1.365rem] text-gray-600">
           Q. {question}

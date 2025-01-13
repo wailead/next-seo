@@ -104,7 +104,7 @@ function Header() {
                   buttonColor="primary-default"
                   icon={
                     <CustomImage
-                      src="/icons/apple.svg"
+                      src="/assets/icons/apple.svg"
                       alt="애플스토어 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
@@ -122,7 +122,7 @@ function Header() {
                   buttonColor="white-default"
                   icon={
                     <CustomImage
-                      src="/icons/google_play.svg"
+                      src="/assets/icons/google_play.svg"
                       alt="구글플레이 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"

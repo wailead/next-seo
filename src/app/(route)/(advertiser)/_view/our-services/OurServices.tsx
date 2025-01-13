@@ -65,7 +65,7 @@ function OurServices() {
                 </div>
                 <div className="mobile:absolute mobile:bottom-0 flex mobile:left-1/2 mobile:transform mobile:-translate-x-1/2 primary:w-[24.213rem] mobile:w-[51.74vw] w-[88.8vw] primary:h-[12.123rem] mobile:h-[25.9vw] h-[44.4vw] ">
                   <CustomImage
-                    src="/assets/icons/our_service_ellipse.svg"
+                    src="/assets/icons/our_service_eclipse.svg"
                     alt="와이리 원형 로고"
                     w="primary:w-[24.213rem] mobile:w-[51.74vw] w-[88.8vw]"
                     h="primary:h-[12.123rem] mobile:h-[25.9vw] h-[44.4vw]"

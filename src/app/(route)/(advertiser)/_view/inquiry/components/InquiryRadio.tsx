@@ -21,7 +21,7 @@ function InquiryRadio({ title, name, radioChecked, handleRadioChange }: Props) {
       {radioChecked && (
         <div className="absolute ">
           <CustomImage
-            src="/icons/plan_true_gray.svg"
+            src="/assets/icons/plan_true_gray.svg"
             w="primary:w-[0.875rem] mobile:w-[1.87vw] w-[3.89vw]"
             h="primary:h-[0.875rem] mobile:h-[1.87vw] h-[3.89vw]"
             alt="checked"

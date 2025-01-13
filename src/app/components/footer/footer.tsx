@@ -9,7 +9,7 @@ function Footer() {
           <div className={`flex flex-col primary:gap-[0.188rem] gap-[0.4vw]`}>
             <div className={`flex items-center justify-start primary:gap-3 mobile:gap-[1.6vw] gap-[2.78vw]`}>
               <CustomImage
-                src="/images/footerlogo.png"
+                src="/assets/images/footerlogo.png"
                 alt="Logo"
                 w="primary:w-[3.75rem] mobile:w-[8vw] w-[15.56vw]"
                 h="primary:h-[1.625rem] mobile:h-[3.47vw] h-[8.33vw]"

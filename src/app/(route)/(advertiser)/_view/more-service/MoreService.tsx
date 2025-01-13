@@ -9,24 +9,24 @@ function MoreService() {
         <div className="flex flex-col primary:gap-[2.813rem] mobile:gap-[6vw] gap-[5vw] justify-center items-center primary:pt-[1.125rem] mobile:pt-[2.4vw] pt-[5.56vw]">
           <div className="flex mobile:flex-row flex-col primary:gap-2 mobile:gap-[1.07vw] gap-[5vw]">
             <ServiceCard
-              img="/images/advertiser/more-service/more_service_0.png"
+              img="/assets/images/more-service/more_service_0.png"
               title="매크로 유튜버 서비스"
               desc={`믿을 수 있는 와이리 유튜버를 통해 PPL에서\n브랜디드 콘텐츠까지 원하는 영상을 제작해보세요.`}
             />
             <ServiceCard
-              img="/images/advertiser/more-service/more_service_1.png"
+              img="/assets/images/more-service/more_service_1.png"
               title="실속 패키지"
               desc={`객실 혹은 상품 제공 없이 저렴한 금액으로\n빠르게 마케팅을 진행해보세요.`}
             />
           </div>
           <div className="flex mobile:flex-row flex-col primary:gap-2 mobile:gap-[1.07vw] gap-[5vw]">
             <ServiceCard
-              img="/images/advertiser/more-service/more_service_2.png"
+              img="/assets/images/more-service/more_service_2.png"
               title="세일즈 마케팅 (구매제)"
               desc={`유휴객실을 적극적으로 활용하여 세일즈를 통한\n매출 증대와 마케팅을 동시에 진행해보세요.`}
             />
             <ServiceCard
-              img="/images/advertiser/more-service/more_service_3.png"
+              img="/assets/images/more-service/more_service_3.png"
               title="블랙 인플루언서"
               desc={`보다 확실한 홍보 방법! 와이리 인플루언서 중\n가장 영향력이 높은 50인이 마케팅을 진행합니다.`}
             />
