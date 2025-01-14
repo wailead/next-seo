@@ -53,7 +53,7 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      style={{ transform: `translateY(${position.y - slideHeight / 4}px)` }}>
+      style={{ transform: `translateY(${position.y - slideHeight / 8}px)` }}>
       {selectTitle === 'more' ? (
         <div
           className="flex flex-col-reverse items-center gap-0 hover:pause-animation animate-slide-bottom-more "
