@@ -37,9 +37,9 @@ function Mainheader() {
                 <span className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw]  text-gray-600">
                   여행 인플루언서{' '}
                 </span>
-                <span className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw] text-gray-600">
+                <h1 className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw] text-gray-600">
                   마케팅의 시작, 와이리{' '}
-                </span>
+                </h1>
               </div>
             </div>
           </section>

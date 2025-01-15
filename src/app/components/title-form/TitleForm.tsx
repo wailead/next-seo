@@ -40,7 +40,7 @@ function TitleForm({
           )}>
           {subtitle}
         </h4>
-        <h1
+        <h2
           className={twMerge(
             `font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.67vw] text-gray-600 whitespace-pre-line `,
             subTitleColor
