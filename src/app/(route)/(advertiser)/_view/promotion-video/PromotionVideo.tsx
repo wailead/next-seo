@@ -1,3 +1,4 @@
+'use client'
 import { SectionLayout } from '@/components'
 
 import dynamic from 'next/dynamic'
@@ -5,7 +6,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const YoutubePlayer = dynamic(() => import('@/components/youtube-player/YoutubePlayer'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <div className="relative w-full bg-white-default" style={{ paddingBottom: '56.3%' }} />,
+  ssr: false,
 })
 
 function PromotionVideo() {

@@ -2,12 +2,17 @@
 
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import AppStoreButtons from '../join-banner/components/app-store-buttons'
 import QrCode from './components/qr-code'
 
 const YoutubePlayer = dynamic(() => import('@/components/youtube-player/YoutubePlayer'), {
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <div
+      className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw]  bg-black pointer-events-none`}
+    />
+  ),
+  ssr: false,
 })
 
 function Mainheader() {
@@ -21,12 +26,27 @@ function Mainheader() {
         setIsLoaded(true)
       }
       handleResize()
-      window.addEventListener('resize', handleResize)
+
+      // 디바운스 적용
+      let timeoutId: NodeJS.Timeout
+      const debouncedResize = () => {
+        clearTimeout(timeoutId)
+        timeoutId = setTimeout(handleResize, 200)
+      }
+
+      window.addEventListener('resize', debouncedResize)
       return () => {
-        window.removeEventListener('resize', handleResize)
+        window.removeEventListener('resize', debouncedResize)
+        clearTimeout(timeoutId)
       }
     }
   }, [])
+
+  // 메모이제이션된 컴포넌트
+  const renderStoreButtons = useMemo(() => {
+    if (!isLoaded) return <div className="primary:h-[8.125rem] mobile:h-[17.33vw] h-[8.89vw]" />
+    return screenWidth! < 500 ? <AppStoreButtons flexCol="flex-row" iconSize={30} /> : <QrCode />
+  }, [isLoaded, screenWidth])
 
   return (
     <div className="flex w-full justify-center items-center relative">
@@ -35,7 +55,7 @@ function Mainheader() {
         alt="배경 이미지"
         fill
         quality={75}
-        priority={true}
+        loading="lazy"
         sizes="100vw"
         className="object-cover object-center mobile:object-contain"
       />
@@ -58,17 +78,8 @@ function Mainheader() {
               </div>
             </div>
           </section>
-          {isLoaded ? (
-            screenWidth! < 500 ? (
-              <AppStoreButtons flexCol="flex-row" iconSize={30} />
-            ) : (
-              <QrCode />
-            )
-          ) : (
-            <div className="primary:h-[8.125rem] mobile:h-[17.33vw] h-[8.89vw]"></div>
-          )}
+          {renderStoreButtons}
         </div>
-        {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
         <div
           className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw]  bg-black pointer-events-none`}>
           <YoutubePlayer
