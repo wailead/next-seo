@@ -59,6 +59,11 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 
 ![image](https://github.com/user-attachments/assets/fd0caf49-111a-4e81-87cf-39dc242abbae)
 
+#### 최적화 후 (Desktop)
+
+![image](https://github.com/user-attachments/assets/6bfcfe1b-00f7-429a-8d14-677f1d2eb42e)
+
+
 
 - 메타 데이터
 
