@@ -1,7 +1,7 @@
 'use client'
 
-import { useRef, useEffect, useState } from 'react'
 import Chevron from '@/public/assets/icons/chevron.svg'
+import { useEffect, useRef, useState } from 'react'
 
 interface QuestionBoxProps {
   question: string
@@ -29,7 +29,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
         <h3 className="font-pretendard font-semibold primary:text-[0.91rem] mobile:text-[1.94vw] text-[3.89vw] leading-[1.365rem] text-gray-600">
           Q. {question}
         </h3>
-        <button className="cursor-pointer" onClick={onToggle}>
+        <button className="cursor-pointer" aria-label="펼치기" onClick={onToggle}>
           <Chevron
             style={{
               transform: `rotate(${isOpen ? 180 : 0}deg)`,
