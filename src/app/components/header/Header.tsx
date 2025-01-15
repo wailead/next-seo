@@ -1,13 +1,13 @@
 'use client'
 
+import CloseIcon from '@/public/assets/icons/close.svg'
+import ListIcon from '@/public/assets/icons/list.svg'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import CustomImage from '../custom-image/CustomImage'
-import Link from 'next/link'
 import LinkButton from '../button/LinkButton'
+import CustomImage from '../custom-image/CustomImage'
 import SectionLayout from '../section-layout/SectionLayout'
-import ListIcon from '@/public/assets/icons/list.svg'
-import CloseIcon from '@/public/assets/icons/close.svg'
 
 function Header() {
   const pathname = usePathname()
@@ -20,6 +20,14 @@ function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number) => {
+    let timeout: NodeJS.Timeout
+    return (...args: Parameters<T>) => {
+      clearTimeout(timeout)
+      timeout = setTimeout(() => func(...args), wait)
+    }
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 500) {
@@ -27,11 +35,13 @@ function Header() {
       }
     }
 
-    window.addEventListener('resize', handleResize)
+    const debouncedHandleResize = debounce(handleResize, 200)
+
+    window.addEventListener('resize', debouncedHandleResize)
     handleResize()
 
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', debouncedHandleResize)
     }
   }, [])
 
@@ -167,9 +177,9 @@ function Header() {
                 />
                 <button className="block mobile:hidden" onClick={toggleMenu}>
                   {isMenuOpen ? (
-                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" />
+                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" loading="lazy" quality={75} />
                   ) : (
-                    <ListIcon className="w-[6.67vw] h-[6.67vw]" />
+                    <ListIcon className="w-[6.67vw] h-[6.67vw]" loading="lazy" quality={75} />
                   )}
                 </button>
               </>
