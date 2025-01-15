@@ -1,10 +1,10 @@
 'use client'
 import { SectionLayout } from '@/components'
-import { useEffect, useState } from 'react'
-import InquiryRadio from './components/InquiryRadio'
-import InquiryInput from './components/InquiryInput'
-import { useEmailCheck, usePhoneCheck } from '@/hooks'
 import CustomImage from '@/components/custom-image/CustomImage'
+import { useEmailCheck, usePhoneCheck } from '@/hooks'
+import { useEffect, useState } from 'react'
+import InquiryInput from './components/InquiryInput'
+import InquiryRadio from './components/InquiryRadio'
 
 function Inquiry() {
   const { checkPhone } = usePhoneCheck()
@@ -67,9 +67,9 @@ function Inquiry() {
       <SectionLayout>
         <div className=" flex flex-col items-center primary:pt-[3.125rem] mobile:pt-[6.67vw] pt-[15.56vw] primary:pb-[3.75rem] mobile:pb-[8vw] pb-[16.67vw] primary:px-[3.25rem] mobile:px-[6.93vw] px-[6.94vw]  primary:gap-[1.625rem] mobile:gap-[3.47vw] gap-[6.67vw]">
           <div className="flex flex-col text-center primary:gap-[0.375rem] mobile:gap-[0.8vw] gap-[3.89vw] ">
-            <h1 className="text-white-default primary:text-[1.531rem] mobile:text-[3.27vw] text-[6.67vw] primary:leading-[2rem] leading-[4.27vw]">
+            <h2 className="text-white-default primary:text-[1.531rem] mobile:text-[3.27vw] text-[6.67vw] primary:leading-[2rem] leading-[4.27vw]">
               문의하기
-            </h1>
+            </h2>
             <span className="primary:text-[0.875rem] mobile:text-[1.87vw] text-[3.89vw] text-gray-100 whitespace-pre-line">
               {`저희 와이리를 찾아주셔서 감사합니다.${screenWidth! < 500 ? `\n` : ``} 연락처와 함께 아래 항목 작성해주시면,\n담당자 확인 후 상담 도와드리도록 하겠습니다.`}
             </span>

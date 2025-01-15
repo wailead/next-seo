@@ -7,9 +7,9 @@ function GovermentBanner() {
       <div className="flex py-[4vw] primary:py-[2rem] mobile:flex-row flex-col mobile:gap-6 gap-1 w-full items-center justify-center">
         <div>
           <p className="mobile:text-[2.65vw] text-[5.3vw] primary:text-[20px]">문화체육관광부 한국관광공사 주관</p>
-          <h1 className="mobile:text-[2.65vw] text-[5.3vw] primary:text-[20px] text-center">
+          <h2 className="mobile:text-[2.65vw] text-[5.3vw] primary:text-[20px] text-center">
             올해의 관광벤처 우수기업 선정
-          </h1>
+          </h2>
         </div>
         <div className="flex items-center gap-[0.5rem]">
           <CustomImage
