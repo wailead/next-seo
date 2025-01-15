@@ -1,8 +1,13 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import AppStoreButtons from '../join-banner/components/app-store-buttons'
 import QrCode from './components/qr-code'
+
+const YoutubePlayer = dynamic(() => import('@/components/youtube-player/YoutubePlayer'), {
+  loading: () => <p>Loading...</p>,
+})
 
 function Mainheader() {
   const [screenWidth, setScreenWidth] = useState<number | null>(null)
@@ -56,10 +61,10 @@ function Mainheader() {
         {/** 유튜브 자리 확인을 하기 위해 색상을 넣었습니다. */}
         <div
           className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw]  bg-black pointer-events-none`}>
-          <object
-            type="text/html"
-            data="https://youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E"
-            className="relative w-full h-full"></object>
+          <YoutubePlayer
+            data="https://www.youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E"
+            className="relative w-full h-full"
+          />
         </div>
       </div>
     </div>

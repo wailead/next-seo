@@ -1,4 +1,9 @@
 import { SectionLayout, TitleForm } from '@/components'
+import dynamic from 'next/dynamic'
+
+const YoutubePlayer = dynamic(() => import('@/components/youtube-player/YoutubePlayer'), {
+  loading: () => <p>Loading...</p>,
+})
 
 function Partners() {
   return (
@@ -52,10 +57,10 @@ function Partners() {
             </div>
           </div>
           <div className="primary:w-[40.375rem] mobile:w-[86.13vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[47.5vw] ">
-            <object
-              type="text/html"
+            <YoutubePlayer
               data="https://www.youtube.com/embed/mL5BoE_2Q5A?si=rx6o8I3mXyx-7jYT"
-              className="relative w-full h-full rounded-[1rem] "></object>
+              className="relative w-full h-full rounded-[1rem]"
+            />
           </div>
         </div>
       </TitleForm>
