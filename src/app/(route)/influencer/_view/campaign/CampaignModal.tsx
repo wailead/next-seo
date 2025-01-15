@@ -8,24 +8,34 @@ interface Props {
   handleModalOpen: () => void
 }
 
+const RenderStoreButtons = () => {
+  return (
+    <div>
+      <div className="block mobile:hidden">
+        <AppStoreButtons flexCol="flex-row" iconSize={30} />
+      </div>
+      <div className="hidden mobile:block">
+        <CampaignQrCode />
+      </div>
+    </div>
+  )
+}
+
+const RenderDownloadOrQrCode = () => {
+  return (
+    <div>
+      <span className="primary:text-[0.781rem] mobile:text-[1.67vw] text-[3.33vw] text-[#757575] block mobile:hidden">
+        지금 바로 다운로드 해보세요
+      </span>
+      <span className="primary:text-[0.781rem] mobile:text-[1.67vw] text-[2.78vw] text-gray-300 hidden mobile:block">
+        휴대폰으로 QR 코드를 스캔해서 설치해보세요
+      </span>
+    </div>
+  )
+}
+
 function CampaignModal({ handleModalOpen, showModal }: Props) {
   const [animation, setAnimation] = useState(false)
-  const [screenWidth, setScreenWidth] = useState<number | null>(null)
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        setScreenWidth(window.innerWidth)
-        setIsLoaded(true)
-      }
-      handleResize()
-      window.addEventListener('resize', handleResize)
-      return () => {
-        window.removeEventListener('resize', handleResize)
-      }
-    }
-  }, [])
 
   useEffect(() => {
     setAnimation(showModal)
@@ -51,9 +61,16 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
         }}>
         <div className="flex flex-col w-full items-center">
           <div className="flex w-full justify-end">
-            <button onClick={handleModalClose}>
+            <button onClick={handleModalClose} aria-label="닫기">
               {/* svg파일은 반응형 작업 안해도 되는듯 합니다.*/}
-              <CustomImage src={'/assets/icons/close.svg'} alt="close" w="w-[1.469rem]" h="h-[1.469rem]" />
+              <CustomImage
+                src={'/assets/icons/close.svg'}
+                alt="close"
+                w="w-[1.469rem]"
+                h="h-[1.469rem]"
+                loading="lazy"
+                quality={75}
+              />
             </button>
           </div>
           <header>
@@ -67,6 +84,8 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
                 alt="polygon"
                 w="mobile:w-[0.6rem] w-[2.78vw]"
                 h="mobile:h-[0.35rem] h-[1.67vw]"
+                loading="lazy"
+                quality={75}
               />
             </div>
           </header>
@@ -74,25 +93,9 @@ function CampaignModal({ handleModalOpen, showModal }: Props) {
         <section>
           <div className="flex primary:gap-[0.625rem] gap-[1.33vw]">
             <div className="flex flex-col w-fit primary:gap-3 mobile:gap-[1.6vw] gap-[2.78vw] primary:pl-[1.4375rem] mobile:pl-[3.07vw] pl-0">
-              {isLoaded ? (
-                screenWidth! < 500 ? (
-                  <AppStoreButtons flexCol="flex-col" py="py-[1.625rem]" width="w-[63.89vw]" iconSize={32} />
-                ) : (
-                  <CampaignQrCode />
-                )
-              ) : (
-                <div></div>
-              )}
+              <RenderStoreButtons />
 
-              {screenWidth! < 500 ? (
-                <span className="primary:text-[0.781rem] mobile:text-[1.67vw] text-[3.33vw] text-[#757575]">
-                  지금 바로 다운로드 해보세요
-                </span>
-              ) : (
-                <span className="primary:text-[0.781rem] mobile:text-[1.67vw] text-[2.78vw] text-gray-300">
-                  휴대폰으로 QR 코드를 스캔해서 설치해보세요
-                </span>
-              )}
+              <RenderDownloadOrQrCode />
             </div>
             <div className="mobile:flex hidden">
               <CustomImage

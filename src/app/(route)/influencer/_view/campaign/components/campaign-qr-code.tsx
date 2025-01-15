@@ -9,6 +9,8 @@ function CampaignQrCode() {
           alt="appleQR"
           w="primary:w-[5.5625rem] w-[11.87vw]"
           h="primary:h-[5.5625rem] h-[11.87vw]"
+          loading="lazy"
+          quality={75}
         />
         <div className="flex items-center primary:gap-[0.438rem] gap-[0.93vw]">
           <CustomImage
@@ -16,6 +18,8 @@ function CampaignQrCode() {
             alt="applelogo"
             w="primary:w-[0.78125rem] w-[1.67vw]"
             h="primary:h-[0.78125rem] h-[1.67vw]"
+            loading="lazy"
+            quality={75}
           />
           <span className="font-normal primary:text-[0.625rem] text-[1.33vw] primary:leading-[0.5rem] leading-[1.07vw]">
             APP Store
@@ -28,6 +32,8 @@ function CampaignQrCode() {
           alt="googleQR"
           w="primary:w-[5.5625rem] w-[11.87vw]"
           h="primary:h-[5.5625rem] h-[11.87vw]"
+          loading="lazy"
+          quality={75}
         />
         <div className="flex items-center primary:gap-[0.438rem] gap-[0.93vw]">
           <CustomImage
@@ -35,6 +41,8 @@ function CampaignQrCode() {
             alt="applelogo"
             w="primary:w-[0.8125rem] w-[1.73vw]"
             h="primary:h-[0.8125rem] w-[1.73vw]"
+            loading="lazy"
+            quality={75}
           />
           <span className="font-normal primary:text-[0.625rem] text-[1.33vw] primary:leading-[0.5rem] leading-[1.07vw]">
             Google Play

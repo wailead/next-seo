@@ -19,7 +19,9 @@ function ServiceCard({ img, title, desc }: Props) {
               w="primary:w-[17.875rem] mobile:w-[38.13vw] w-[76.39vw]"
               h="primary:h-[11.938rem] mobile:h-[25.47vw] h-[55.56vw]"
               fill
-              className="rounded-[0.938rem] "
+              className="rounded-[0.938rem]"
+              loading="lazy"
+              quality={75}
             />
           </div>
           <div className="flex flex-col justify-start primary:gap-1.5 mobile:gap-[0.8vw] gap-[2.22vw]">

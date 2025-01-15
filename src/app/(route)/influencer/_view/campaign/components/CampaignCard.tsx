@@ -18,8 +18,10 @@ function CampaignCard({ img, title, price, sale, mobile }: Props) {
           src={img}
           alt={img}
           w="primary:w-[12.33rem] mobile:w-[26.3vw] w-[40vw]"
-          h="primary:h-[9.68rem] mobile:h-[20.65vw] h-[31.11vw]"
+          h="primary:h-[9.60rem] mobile:h-[20.4vw] h-[31.11vw]"
           rounded="mobile:rounded-[1.125rem] rounded-[3.89vw]"
+          loading="lazy"
+          quality={75}
         />
       </div>
       <div className="flex flex-col text-start primary:gap-[0.29rem] mobile:gap-[0.62vw] gap-[2.22vw]">

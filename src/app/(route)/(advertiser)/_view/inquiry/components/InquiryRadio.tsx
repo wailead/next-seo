@@ -27,6 +27,8 @@ function InquiryRadio({ title, name, radioChecked, handleRadioChange }: Props) {
             alt="checked"
             rounded="rounded-[0.125rem]"
             bgColor="bg-white-default"
+            loading="lazy"
+            quality={75}
           />
         </div>
       )}

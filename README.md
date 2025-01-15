@@ -2,7 +2,7 @@
 
 
 ## 배포
-https://next-seo-ebon.vercel.app/
+[https://next-seo-ebon.vercel.app/](https://wairi.vercel.app/)
 
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/9ed4a8b4-b4fc-423a-911e-afc91bfc5150" />
@@ -28,10 +28,10 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 - [x] 시맨틱 태그
 - [x] 네이버 웹마스터 도구
 - [x] 모바일 반응형 디자인
-- [ ] 코드 최적화
-- [ ] 메타 데이터
-- [ ] sitemap.xml
-- [ ] robots.txt
+- [x] 코드 최적화
+- [x] 메타 데이터
+- [x] sitemap.xml
+- [x] robots.txt
 
 - 시맨틱 태그
 
@@ -42,10 +42,34 @@ Next.js 로 마이그레이션을 통해 이를 해결하고자 합니다.
 
 <img width="280" alt="image" src="https://github.com/user-attachments/assets/b1baf82e-1174-45c5-ad7b-1ce5b1dbfde5" />
 <img width="280" alt="image" src="https://github.com/user-attachments/assets/08a341dc-2df0-48c6-8b5a-ccc88c9f3885" />
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/56186028-70bd-49c7-bb7a-9fdc382e677b" />
+
 
 - 모바일 반응형 디자인
 
 <img width="280" alt="image" src="https://github.com/user-attachments/assets/f3af5905-5ac4-4639-aae8-9b5655625ce6" />
+
+- 코드 최적화
+
+#### 최적화 전
+
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/d95838a3-d999-4555-96a7-052fae9b2082" />
+
+#### 최적화 후
+
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/c2fe0067-b12c-412c-97fa-ea76c00bf5c1" />
+
+- 메타 데이터
+
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/536beb40-6d3d-4735-af99-db3a5cc40285" />
+
+<img width="260" alt="image" src="https://github.com/user-attachments/assets/e323e592-2829-4e84-b9e9-b75939987c5f" />
+
+
+
+
+
+
 
 
 

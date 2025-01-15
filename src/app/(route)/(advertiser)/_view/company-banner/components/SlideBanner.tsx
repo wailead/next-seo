@@ -1,7 +1,7 @@
 'use client'
 
 import Image, { StaticImageData } from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface Props {
@@ -17,8 +17,37 @@ interface Position {
 function SlideBanner({ logos, direction }: Props) {
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 })
   const [dragging, setDragging] = useState<boolean>(false)
+  const [isVisible, setIsVisible] = useState<boolean>(false)
   const lastMousePosition = useRef<Position>({ x: 0, y: 0 })
   const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+          } else {
+            setIsVisible(false)
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+      }
+    )
+
+    const element = containerRef.current
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element)
+      }
+    }
+  }, [])
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!containerRef.current) return
@@ -53,7 +82,7 @@ function SlideBanner({ logos, direction }: Props) {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}>
         <div
-          className={twMerge('flex gap-4 hover:pause-animation', !dragging && slideDirection)}
+          className={twMerge('flex gap-4 hover:pause-animation', !dragging && isVisible && slideDirection)}
           style={{
             transform: `translateX(${position.x}px)`,
             cursor: dragging ? 'grabbing' : 'grab',
@@ -71,6 +100,8 @@ function SlideBanner({ logos, direction }: Props) {
                   alt={`Logo ${index + 1}`}
                   width={130}
                   height={38}
+                  loading="lazy"
+                  quality={75}
                 />
               </li>
             ))}
@@ -88,6 +119,8 @@ function SlideBanner({ logos, direction }: Props) {
                   alt={`Logo ${index + 1}`}
                   width={130}
                   height={38}
+                  loading="lazy"
+                  quality={75}
                 />
               </li>
             ))}

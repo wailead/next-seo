@@ -29,7 +29,7 @@ function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, iconSiz
             <LinkButton
               name={item.name}
               href={item.href}
-              icon={<Image src={item.icon} alt={'store icon'} width={iconSize} height={iconSize} />}
+              icon={<Image src={item.icon} alt={'store icon'} width={iconSize} height={iconSize} quality={75} />}
               fontColor="white"
               buttonColor="primary-default"
               width={width}

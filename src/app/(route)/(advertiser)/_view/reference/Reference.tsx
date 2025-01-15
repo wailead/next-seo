@@ -1,15 +1,15 @@
 'use client'
 
 import { SectionLayout, TitleForm } from '@/components'
+import city from '@/public/assets/images/reference/city'
+import east from '@/public/assets/images/reference/east'
+import more from '@/public/assets/images/reference/more'
+import pyeongchang from '@/public/assets/images/reference/pyeongchang'
+import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import ReferenceCard from './components/ReferenceCard'
-import pyeongchang from '@/public/assets/images/reference/pyeongchang'
-import city from '@/public/assets/images/reference/city'
-import more from '@/public/assets/images/reference/more'
-import east from '@/public/assets/images/reference/east'
-import Image, { StaticImageData } from 'next/image'
-import ReferenceSlideY from './components/ReferenceSlideY'
 import ReferenceSlideX from './components/ReferenceSlideX'
+import ReferenceSlideY from './components/ReferenceSlideY'
 
 function Reference() {
   const [selectTitle, setSelectTitle] = useState('pyeongchang')
@@ -77,7 +77,7 @@ function Reference() {
                   descNum=""
                 />
               </div>
-              <div>
+              <div className="block mobile:hidden">
                 <ReferenceSlideX images={slideTitle} selectTitle={selectTitle} />
               </div>
               <div className="relative flex primary:w-[23.75rem] mobile:w-[50.67vw] w-[102.78vw] primary:h-[16.563rem] mobile:h-[35.33vw] h-[71.39vw] items-end ">
@@ -85,15 +85,19 @@ function Reference() {
                   <Image
                     src={`/assets/images/reference/${selectTitle}/${selectTitle}_main.png`}
                     alt={`${selectTitle}`}
-                    width={600} // 380
-                    height={500} // 264
+                    width={600}
+                    height={500}
+                    loading="lazy"
+                    quality={75}
                     className="absolute primary:left-[-1.125rem] mobile:left-[-2.4vw] left-[-13.61vw] primary:bottom-[0.875rem] mobile:bottom-[1.86vw]"
                   />
                 )}
               </div>
             </div>
           </TitleForm>
-          <ReferenceSlideY images={slideTitle} selectTitle={selectTitle} />
+          <div className="hidden mobile:block">
+            <ReferenceSlideY images={slideTitle} selectTitle={selectTitle} />
+          </div>
         </div>
       </SectionLayout>
     </div>
