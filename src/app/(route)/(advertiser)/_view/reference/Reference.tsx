@@ -3,10 +3,10 @@
 import { SectionLayout, TitleForm } from '@/components'
 import { useState } from 'react'
 import ReferenceCard from './components/ReferenceCard'
-import pyeongchang from '@/public/images/advertiser/peference/pyeongchang'
-import city from '@/public/images/advertiser/peference/city'
-import more from '@/public/images/advertiser/peference/more'
-import east from '@/public/images/advertiser/peference/east'
+import pyeongchang from '@/public/assets/images/reference/pyeongchang'
+import city from '@/public/assets/images/reference/city'
+import more from '@/public/assets/images/reference/more'
+import east from '@/public/assets/images/reference/east'
 import Image, { StaticImageData } from 'next/image'
 import ReferenceSlideY from './components/ReferenceSlideY'
 import ReferenceSlideX from './components/ReferenceSlideX'
@@ -83,7 +83,7 @@ function Reference() {
               <div className="relative flex primary:w-[23.75rem] mobile:w-[50.67vw] w-[102.78vw] primary:h-[16.563rem] mobile:h-[35.33vw] h-[71.39vw] items-end ">
                 {selectTitle !== 'more' && (
                   <Image
-                    src={`/images/advertiser/peference/${selectTitle}/${selectTitle}_main.png`}
+                    src={`/assets/images/reference/${selectTitle}/${selectTitle}_main.png`}
                     alt={`${selectTitle}`}
                     width={600} // 380
                     height={500} // 264

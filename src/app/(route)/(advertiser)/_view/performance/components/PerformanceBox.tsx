@@ -7,7 +7,7 @@ interface PerformanceBoxProps {
 
 function PerformanceBox({ title, count, unit, className }: PerformanceBoxProps) {
   return (
-    <div
+    <article
       className={`${className} border-t-[1.5px] border-t-gray-200 mobile:pt-[0.52rem] pt-[3.33vw] flex-col primary:gap-[0.26rem] mobile:gap-[0.56vw] gap-[1.11vw] mobile:w-auto w-[35.56vw] inline-block text-left`}>
       <h4 className="font-pretendard font-normal primary:text-[0.91rem] mobile:text-[1.94vw] text-[4.44vw] primary:leading-[1.365rem] mobile:leading-[2.92vw] leading-[6.67vw] tracking-[-0.005rem] text-gray-300">
         {title}
@@ -18,7 +18,7 @@ function PerformanceBox({ title, count, unit, className }: PerformanceBoxProps) 
           {unit}
         </span>
       </h4>
-    </div>
+    </article>
   )
 }
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CustomImage from '../custom-image/CustomImage'
 import Link from 'next/link'
 import LinkButton from '../button/LinkButton'
@@ -9,7 +9,7 @@ import SectionLayout from '../section-layout/SectionLayout'
 import ListIcon from '@/public/assets/icons/list.svg'
 import CloseIcon from '@/public/assets/icons/close.svg'
 
-function PcHeader() {
+function Header() {
   const pathname = usePathname()
 
   const isAdvertiserPage = pathname === '/' || pathname === '/advertiser'
@@ -19,6 +19,21 @@ function PcHeader() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 500) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <SectionLayout>
@@ -39,7 +54,7 @@ function PcHeader() {
             h="h-[6.67vw]"
           />
         </div>
-        <div className="flex items-center primary:gap-[1.43rem] gap-[3.06vw]">
+        <nav className="flex items-center primary:gap-[1.43rem] gap-[3.06vw]">
           <div className="hidden mobile:block">
             {isInfluencerPage && (
               <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] leading-[1.17rem] text-gray-300">
@@ -48,28 +63,36 @@ function PcHeader() {
             )}
           </div>
           {isAdvertiserPage && (
-            <div className="mobile:flex justify-between items-center hidden">
-              <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#serviceIntroduction">
-                서비스 소개
-              </Link>
-              <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#reference">
-                진행사례
-              </Link>
-              <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#moreService">
-                서비스 종류
-              </Link>
-              <Link
-                className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#question">
-                FAQ
-              </Link>
-            </div>
+            <ul className="mobile:flex justify-between items-center hidden">
+              <li>
+                <Link
+                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                  href="#serviceIntroduction">
+                  서비스 소개
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                  href="#reference">
+                  진행사례
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                  href="#moreService">
+                  서비스 종류
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                  href="#question">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
           )}
           <div className="flex gap-[0.425rem] items-center">
             {isInfluencerPage && (
@@ -81,7 +104,7 @@ function PcHeader() {
                   buttonColor="primary-default"
                   icon={
                     <CustomImage
-                      src="/icons/apple.svg"
+                      src="/assets/icons/apple.svg"
                       alt="애플스토어 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
@@ -99,7 +122,7 @@ function PcHeader() {
                   buttonColor="white-default"
                   icon={
                     <CustomImage
-                      src="/icons/google_play.svg"
+                      src="/assets/icons/google_play.svg"
                       alt="구글플레이 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
@@ -152,34 +175,44 @@ function PcHeader() {
               </>
             )}
           </div>
-        </div>
+        </nav>
       </header>
       {isAdvertiserPage && isMenuOpen && (
-        <div className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default">
-          <Link
-            className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-            href="#serviceIntroduction">
-            서비스 소개
-          </Link>
-          <Link
-            className="font-pretendard font-normal text-[3.89vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-            href="#reference">
-            진행사례
-          </Link>
-          <Link
-            className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-            href="#moreService">
-            서비스 종류
-          </Link>
-          <Link
-            className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-            href="#question">
-            FAQ
-          </Link>
-        </div>
+        <nav className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default">
+          <ul>
+            <li>
+              <Link
+                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                href="#serviceIntroduction">
+                서비스 소개
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-pretendard font-normal text-[3.89vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                href="#reference">
+                진행사례
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                href="#moreService">
+                서비스 종류
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
+                href="#question">
+                FAQ
+              </Link>
+            </li>
+          </ul>
+        </nav>
       )}
     </SectionLayout>
   )
 }
 
-export default PcHeader
+export default Header

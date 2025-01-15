@@ -11,8 +11,10 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
   const [dragging, setDragging] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [startPosition, setStartPosition] = useState({ x: 0, y: 0 })
+  const [slideHeight, setSlideHeight] = useState(0)
 
   const containerRef = useRef<HTMLDivElement | null>(null)
+  const slideRef = useRef<HTMLDivElement | null>(null)
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setDragging(true)
@@ -23,7 +25,7 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
     if (!dragging) return
 
     const newY = e.clientY - startPosition.y
-    const newPositionY = Math.max(newY)
+    const newPositionY = Math.max(newY % (slideHeight / 4))
     setPosition({ x: position.x, y: newPositionY })
   }
 
@@ -32,8 +34,14 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
   }
 
   useEffect(() => {
+    if (slideRef.current) {
+      const height = slideRef.current.offsetHeight
+      setSlideHeight(height)
+    }
     setPosition({ x: 0, y: 0 })
   }, [selectTitle])
+
+  console.log(slideHeight)
   return (
     <div
       className={twMerge(
@@ -45,9 +53,11 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      style={{ transform: `translateY(${position.y}px)` }}>
+      style={{ transform: `translateY(${position.y - slideHeight / 8}px)` }}>
       {selectTitle === 'more' ? (
-        <div className="flex flex-col-reverse gap-0 hover:pause-animation animate-slide-bottom-more">
+        <div
+          className="flex flex-col-reverse items-center gap-0 hover:pause-animation animate-slide-bottom-more "
+          ref={slideRef}>
           {images.map((image, index) => (
             <Image
               src={image}
@@ -68,14 +78,14 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
           ))}
         </div>
       ) : (
-        <div className="flex flex-col-reverse gap-0  hover:pause-animation animate-slide-bottom">
+        <div className="flex flex-col-reverse gap-0 hover:pause-animation animate-slide-bottom" ref={slideRef}>
           {images.map((image, index) => (
             <Image
               src={image}
               key={index}
               alt={`Logo ${index + 1}`}
               width={210}
-              className="select-none-reverse pointer-events-none"
+              className="select-none pointer-events-none"
             />
           ))}
           {images.map((image, index) => (
@@ -84,7 +94,7 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
               key={index}
               alt={`Logo ${index + 1}`}
               width={210}
-              className="select-none-reverse pointer-events-none"
+              className="select-none pointer-events-none"
             />
           ))}
         </div>

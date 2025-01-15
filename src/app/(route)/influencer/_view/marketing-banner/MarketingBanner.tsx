@@ -11,7 +11,7 @@ function MarketingBanner() {
           <h1 className="text-primary-default mobile:text-[2.65vw] text-[4.8vw] primary:text-[20px] font-semibold flex items-center">
             무료로 하는 와이리 마케팅 알아보기
             <CustomImage
-              src="/icons/icon_arrow_back.svg"
+              src="/assets/icons/icon_arrow_back.svg"
               alt="marketing 화살표 아이콘"
               w="w-[1.3rem] primary:w-[1.65rem] mobile:w-[3vw]"
               h="h-[1.3rem] primary:h-[2rem] mobile:h-[4vw]"

@@ -7,10 +7,10 @@ function Review() {
       <TitleForm subtitle="REVIEW" title="이용후기">
         <div className="flex mobile:flex-row flex-col  primary:gap-[1.5rem] mobile:gap-[3.15vw] gap-[4vw]">
           {/* 첫 번째 카드 레이아웃 */}
-          <div className="relative primary:w-[24rem] mobile:w-[50.4vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[52.2vw] bg-[url('/images/influencer/blog4.png')] bg-cover rounded-[1rem]  primary:pb-[2.1rem] mobile:pb-[3.822vw] pb-[3vw]  primary:px-[1.82rem] mobile:px-[3.822vw] px-[5vw] flex justify-center items-end">
+          <div className="relative primary:w-[24rem] mobile:w-[50.4vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[52.2vw] bg-[url('/assets/images/blog4.png')] bg-cover rounded-[1rem]  primary:pb-[2.1rem] mobile:pb-[3.822vw] pb-[3vw]  primary:px-[1.82rem] mobile:px-[3.822vw] px-[5vw] flex justify-center items-end">
             <div className="flex flex-col primary:gap-[0.25rem] mobile:gap-[0.525vw] gap-[0.924vw] ">
               <CustomImage
-                src="./assets/icons/quote.svg"
+                src="/assets/icons/quote.svg"
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"
                 h="primary:h-[1rem] mobile:h-[2.1vw] h-[4.5vw]"
                 alt="quote.svg"
@@ -30,7 +30,7 @@ function Review() {
             {/* 두 번째 카드 레이아웃 */}
             <div className="flex flex-col primary:gap-[0.25rem] mobile:gap-[0.5325vw] gap-[0.924vw] primary:w-[15.6rem] mobile:w-[32.76vw] w-[83.8vw] primary:h-[11rem] mobile:h-[23.1vw] h-[52.2vw] bg-[#4D4D4D] rounded-[1rem]  primary:pb-[1rem] mobile:pb-[3.822vw] pb-[3vw] primary:px-[1.04rem] mobile:px-[2.12vw] px-[5vw] justify-end">
               <CustomImage
-                src="./assets/icons/quote.svg"
+                src="/assets/icons/quote.svg"
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"
                 h="primary:h-[1rem] mobile:h-[2.1vw] h-[4.5vw]"
                 alt="quote.svg"
@@ -47,7 +47,7 @@ function Review() {
             {/* 세 번째 카드 레이아웃 */}
             <div className="flex flex-col primary:gap-[0.25rem] mobile:gap-[0.5325vw] gap-[0.924vw] primary:w-[15.6rem] mobile:w-[32.76vw] w-[83.8vw] primary:h-[11rem] mobile:h-[23.1vw] h-[52.2vw] bg-[#4D4D4D] rounded-[1rem]  primary:pb-[1rem] mobile:pb-[3.822vw] pb-[3vw] primary:px-[1.04rem] mobile:px-[2.12vw] px-[5vw] justify-end">
               <CustomImage
-                src="./assets/icons/quote.svg"
+                src="/assets/icons/quote.svg"
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"
                 h="primary:h-[1rem] mobile:h-[2.1vw] h-[4.5vw]"
                 alt="quote.svg"

@@ -23,24 +23,26 @@ function Mainheader() {
   }, [])
 
   return (
-    <div className="flex w-full  justify-center items-center bg-[url('/images/influencer/background.png')]  mobile:bg-contain bg-cover bg-center ">
+    <div className="flex w-full  justify-center items-center bg-[url('/assets/images/background.png')]  mobile:bg-contain bg-cover bg-center ">
       <div className="flex mobile:flex-row flex-col w-primary h-full justify-between ">
         <div className="flex flex-col primary:pt-[3.125rem] mobile:pt-[6.66vw] pt-[14.44vw] primary:pl-[3.219rem] mobile:pl-[6.86vw] primary:pb-[3.438rem] mobile:pb-[7.33vw] pb-[11.11vw]  primary:gap-[3.938rem] mobile:gap-[8.4vw] gap-[16.67vw] items-center mobile:items-start">
-          <div
-            className={`flex flex-col primary:w-[19.656rem] mobile:w-[41.9333vw] primary:gap-[1.063rem] mobile:gap-[2.26vw] gap-[8.33vw] mobile:items-start items-center`}>
-            <span
-              className={`font-normal primary:text-[0.975rem] mobile:text-[2.08vw] text-[4.17vw] primary:leading-[1.188rem] leading-[2.53vw]  text-gray-600`}>
-              인플루언서 마케팅 NO.1
-            </span>
-            <div className="flex flex-col mobile:items-start items-center  primary:gap-[0.531rem] mobile:gap-[1.13vw] gap-[7.78vw]">
-              <span className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw]  text-gray-600">
-                여행 인플루언서{' '}
+          <section>
+            <div
+              className={`flex flex-col primary:w-[19.656rem] mobile:w-[41.9333vw] primary:gap-[1.063rem] mobile:gap-[2.26vw] gap-[8.33vw] mobile:items-start items-center`}>
+              <span
+                className={`font-normal primary:text-[0.975rem] mobile:text-[2.08vw] text-[4.17vw] primary:leading-[1.188rem] leading-[2.53vw]  text-gray-600`}>
+                인플루언서 마케팅 NO.1
               </span>
-              <span className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw] text-gray-600">
-                마케팅의 시작, 와이리{' '}
-              </span>
+              <div className="flex flex-col mobile:items-start items-center  primary:gap-[0.531rem] mobile:gap-[1.13vw] gap-[7.78vw]">
+                <span className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw]  text-gray-600">
+                  여행 인플루언서{' '}
+                </span>
+                <span className="font-bold primary:text-[2.088rem] mobile:text-[4.45vw] text-[8.89vw] primary:leading-[2.375rem] leading-[5.06vw] text-gray-600">
+                  마케팅의 시작, 와이리{' '}
+                </span>
+              </div>
             </div>
-          </div>
+          </section>
           {isLoaded ? (
             screenWidth! < 500 ? (
               <AppStoreButtons flexCol="flex-row" iconSize={30} />
