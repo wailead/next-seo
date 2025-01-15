@@ -1,9 +1,36 @@
 import { SectionLayout, TitleForm } from '@/components'
 import CustomImage from '@/components/custom-image/CustomImage'
-import IntroductionBox from './components/IntroductionBox'
 import Image from 'next/image'
+import IntroductionBox from './components/IntroductionBox'
 
 function Introduction() {
+  const channelIcons = [
+    { src: '/assets/icons/channel_icon_0.svg', alt: '네이버 로고' },
+    { src: '/assets/icons/channel_icon_1.svg', alt: '인스타그램 로고' },
+    { src: '/assets/icons/channel_icon_2.svg', alt: '유튜브 로고' },
+    { src: '/assets/icons/channel_icon_3.svg', alt: '틱톡 로고' },
+    { src: '/assets/icons/channel_icon_4.svg', alt: '티스토리 로고' },
+    { src: '/assets/icons/channel_icon_5.svg', alt: 'Spring Global 로고' },
+  ]
+
+  const gradeIcons = [
+    {
+      src: '/assets/icons/introduction_grade_silver.svg',
+      alt: 'introduction 실버 등급 아이콘',
+      height: 'primary:h-[8.779rem] mobile:h-[18.76vw] h-[24.44vw]',
+    },
+    {
+      src: '/assets/icons/introduction_grade_gold.svg',
+      alt: 'introduction 골드 등급 아이콘',
+      height: 'primary:h-[9.82rem] mobile:h-[20.98vw] h-[27.22vw]',
+    },
+    {
+      src: '/assets/icons/introduction_grade_black.svg',
+      alt: 'introduction 블랙 등급 아이콘',
+      height: 'primary:h-[10.862rem] mobile:h-[23.21vw] h-[30.69vw]',
+    },
+  ]
+
   return (
     <SectionLayout>
       <TitleForm title="와이리 인플루언서가 되어야 하는 이유!" subtitle="INTRODUCTION">
@@ -13,42 +40,17 @@ function Introduction() {
             title="SNS 채널만 가지고 있다면!"
             description="와이리에서는 타 체험단 사이트와 비교하여<br/>가장 많은 SNS 종류를 승인해드리고 있어요!">
             <div className="flex items-center justify-between bg-gradient-to-r from-white-default to-white-default/0 primary:py-[1.2rem] primary:px-[2.6rem] primary:mt-[1.5275rem] primary:mb-[2.34rem] py-[2.56vw] px-[5.56vw] mt-[3.26vw] mb-[5vw] box-border">
-              <CustomImage
-                src="/assets/icons/channel_icon_0.svg"
-                alt="네이버 로고"
-                w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
-                h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
-              />
-              <CustomImage
-                src="/assets/icons/channel_icon_1.svg"
-                alt="인스타그램 로고"
-                w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
-                h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
-              />
-              <CustomImage
-                src="/assets/icons/channel_icon_2.svg"
-                alt="유튜브 로고"
-                w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
-                h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
-              />
-              <CustomImage
-                src="/assets/icons/channel_icon_3.svg"
-                alt="틱톡 로고"
-                w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
-                h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
-              />
-              <CustomImage
-                src="/assets/icons/channel_icon_4.svg"
-                alt="티스토리 로고"
-                w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
-                h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
-              />
-              <CustomImage
-                src="/assets/icons/channel_icon_5.svg"
-                alt="Spring Global 로고"
-                w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
-                h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
-              />
+              {channelIcons.map((icon, index) => (
+                <CustomImage
+                  key={index}
+                  src={icon.src}
+                  alt={icon.alt}
+                  w="primary:w-[2rem] mobile:w-[4.02vw] w-[6.67vw]"
+                  h="primary:h-[2rem] mobile:h-[4.02vw] h-[6.67vw]"
+                  loading="lazy"
+                  quality={75}
+                />
+              ))}
             </div>
           </IntroductionBox>
           <IntroductionBox
@@ -61,6 +63,8 @@ function Introduction() {
                 alt="introduction 캘린더 아이콘"
                 w="primary:w-[12.5rem] mobile:w-[26.67vw] w-[43.33vw]"
                 h="primary:h-[12.5rem] mobile:h-[26.67vw] h-[43.33vw]"
+                loading="lazy"
+                quality={75}
               />
             </div>
           </IntroductionBox>
@@ -74,6 +78,8 @@ function Introduction() {
                 alt="introduction 체크 아이콘"
                 w="primary:w-[12.5rem] mobile:w-[26.67vw] w-[43.33vw]"
                 h="primary:h-[12.5rem] mobile:h-[26.67vw] h-[43.33vw]"
+                loading="lazy"
+                quality={75}
               />
             </div>
           </IntroductionBox>
@@ -87,15 +93,13 @@ function Introduction() {
               </p>
             }>
             <div className="flex items-end justify-center primary:gap-[2.077rem] mobile:gap-[4.44vw] gap-[5.54vw]">
-              <div className="relative primary:w-[5.906rem] mobile:w-[12.62vw] w-[15.75vw] primary:h-[8.779rem] mobile:h-[18.76vw] h-[24.44vw]">
-                <Image src="/assets/icons/introduction_grade_silver.svg" alt="introduction 실버 등급 아이콘" fill />
-              </div>
-              <div className="relative primary:w-[5.906rem] mobile:w-[12.62vw] w-[15.75vw] primary:h-[9.82rem] mobile:h-[20.98vw] h-[27.22vw]">
-                <Image src="/assets/icons/introduction_grade_gold.svg" alt="introduction 골드 등급 아이콘" fill />
-              </div>
-              <div className="relative primary:w-[5.906rem] mobile:w-[12.62vw] w-[15.75vw] primary:h-[10.862rem] mobile:h-[23.21vw] h-[30.69vw]">
-                <Image src="/assets/icons/introduction_grade_black.svg" alt="introduction 블랙 등급 아이콘" fill />
-              </div>
+              {gradeIcons.map((icon, index) => (
+                <div
+                  key={index}
+                  className={`relative primary:w-[5.906rem] mobile:w-[12.62vw] w-[15.75vw] ${icon.height}`}>
+                  <Image src={icon.src} alt={icon.alt} fill loading="lazy" quality={75} />
+                </div>
+              ))}
             </div>
           </IntroductionBox>
         </div>

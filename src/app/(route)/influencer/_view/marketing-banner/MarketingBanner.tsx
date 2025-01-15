@@ -15,6 +15,8 @@ function MarketingBanner() {
               alt="marketing 화살표 아이콘"
               w="w-[1.3rem] primary:w-[1.65rem] mobile:w-[3vw]"
               h="h-[1.3rem] primary:h-[2rem] mobile:h-[4vw]"
+              loading="lazy"
+              quality={75}
             />
           </h2>
         </Link>
@@ -24,6 +26,8 @@ function MarketingBanner() {
         alt="배너 인플루언서 이미지"
         w="w-[40vw] primary:w-[18rem] hidden mobile:block"
         h="h-[18vw] primary:h-[9rem]"
+        loading="lazy"
+        quality={75}
       />
     </BannerLayout>
   )

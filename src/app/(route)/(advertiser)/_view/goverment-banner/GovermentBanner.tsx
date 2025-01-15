@@ -17,12 +17,16 @@ function GovermentBanner() {
             alt="배너 인플루언서 이미지"
             w="primary:w-[7.8rem] mobile:w-[16vw] w-[7.8rem]"
             h="primary:h-[1.5rem] mobile:h-[3vh] h-[1.5rem]"
+            loading="lazy"
+            quality={75}
           />
           <CustomImage
             src={'/assets/images/goverment_banner_1.png'}
             alt="배너 인플루언서 이미지"
             w="primary:w-[7rem] mobile:w-[15vw] w-[7rem]"
             h="primary:h-[4rem] mobile:h-[7vh] h-[4rem]"
+            loading="lazy"
+            quality={75}
           />
         </div>
       </div>

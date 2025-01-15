@@ -2,7 +2,7 @@
 import { SectionLayout } from '@/components'
 import CustomImage from '@/components/custom-image/CustomImage'
 import { useEmailCheck, usePhoneCheck } from '@/hooks'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import InquiryInput from './components/InquiryInput'
 import InquiryRadio from './components/InquiryRadio'
 
@@ -15,7 +15,6 @@ function Inquiry() {
   const [email, setEmail] = useState('')
   const [radioChecked, setRadioChecked] = useState<string | null>(null)
   const [agreeChecked, setAgreeChecked] = useState(false)
-  const [screenWidth, setScreenWidth] = useState<number | null>(null)
 
   const isButtonDisabled = !company || !name || !phone || !email || !radioChecked || !agreeChecked
   const handleRadioChange = (name: string) => {
@@ -40,19 +39,6 @@ function Inquiry() {
     setAgreeChecked(false)
   }
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        setScreenWidth(window.innerWidth)
-      }
-      handleResize()
-      window.addEventListener('resize', handleResize)
-      return () => {
-        window.removeEventListener('resize', handleResize)
-      }
-    }
-  }, [])
-
   const radioBox = [
     { name: 'naver', title: '네이버 검색' },
     { name: 'instar', title: '인스타그램 광고' },
@@ -70,9 +56,13 @@ function Inquiry() {
             <h2 className="text-white-default primary:text-[1.531rem] mobile:text-[3.27vw] text-[6.67vw] primary:leading-[2rem] leading-[4.27vw]">
               문의하기
             </h2>
-            <span className="primary:text-[0.875rem] mobile:text-[1.87vw] text-[3.89vw] text-gray-100 whitespace-pre-line">
-              {`저희 와이리를 찾아주셔서 감사합니다.${screenWidth! < 500 ? `\n` : ``} 연락처와 함께 아래 항목 작성해주시면,\n담당자 확인 후 상담 도와드리도록 하겠습니다.`}
-            </span>
+            <div>
+              <span className="primary:text-[0.875rem] mobile:text-[1.87vw] text-[3.89vw] text-gray-100 whitespace-pre-line">
+                {`저희 와이리를 찾아주셔서 감사합니다. `}
+              </span>
+              <br className="block mobile:hidden" />
+              <span className="primary:text-[0.875rem] mobile:text-[1.87vw] text-[3.89vw] text-gray-100 whitespace-pre-line">{`연락처와 함께 아래 항목 작성해주시면,\n담당자 확인 후 상담 도와드리도록 하겠습니다.`}</span>
+            </div>
           </div>
           <div className="flex flex-col w-full  items-center primary:gap-[1.875rem] mobile:gap-[4vw] gap-[8.33vw]">
             <div className="mobile:grid mobile:grid-cols-2 flex flex-col w-full primary:gap-x-[1.563rem] mobile:gap-x-[3.33vw] primary:gap-y-[2.5rem] mobile:gap-y-[5.33vw] gap-[2.22vw] ">
@@ -104,6 +94,7 @@ function Inquiry() {
                 type="checkbox"
                 className="appearance-none primary:w-[0.875rem] mobile:w-[1.87vw] w-[3.89vw] primary:h-[0.875rem] mobile:h-[1.87vw] h-[3.89vw] rounded-[50%] bg-gray-300 cursor-pointer"
                 defaultChecked={agreeChecked}
+                aria-label="동의"
               />
               {agreeChecked && (
                 <div className="absolute ">
@@ -114,6 +105,8 @@ function Inquiry() {
                     alt="checked"
                     bgColor="bg-primary-default"
                     rounded="rounded-[50%]"
+                    loading="lazy"
+                    quality={75}
                   />
                 </div>
               )}

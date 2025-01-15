@@ -31,82 +31,35 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 폰트 */
 @font-face {
   font-family: 'Pretendard';
-  font-weight: 100;
+  font-weight: 400 700;
   font-style: normal;
-  src: url('../fonts/Pretendard-Thin.woff') format('woff');
+  src:
+    local('Pretendard'),
+    url('../fonts/Pretendard-Regular.woff') format('woff') font-weight(400),
+    url('../fonts/Pretendard-Medium.woff') format('woff') font-weight(500),
+    url('../fonts/Pretendard-Bold.woff') format('woff') font-weight(700);
   font-display: swap;
 }
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 200;
-  font-style: normal;
-  src: url('../fonts/Pretendard-ExtraLight.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 300;
-  font-style: normal;
-  src: url('../fonts/Pretendard-Light.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/Pretendard-Regular.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 500;
-  font-style: normal;
-  src: url('../fonts/Pretendard-Medium.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 600;
-  font-style: normal;
-  src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/Pretendard-Bold.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 800;
-  font-style: normal;
-  src: url('../fonts/Pretendard-ExtraBold.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pretendard';
-  font-weight: 900;
-  font-style: normal;
-  src: url('../fonts/Pretendard-Black.woff') format('woff');
-  font-display: swap;
-}
+
 @font-face {
   font-family: 'Montserrat';
-  font-weight: 400;
+  font-weight: 100 900;
   font-style: normal;
-  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
+  src:
+    local('Montserrat'),
+    url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype') tech(variations);
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Montserrat';
-  font-weight: 400;
+  font-weight: 100 900;
   font-style: italic;
-  src: url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('ttf');
+  src:
+    local('Montserrat'),
+    url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype') tech(variations);
   font-display: swap;
 }
 

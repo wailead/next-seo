@@ -25,14 +25,15 @@ function ItemCarousel({ totalItems, children, className }: ItemCarouselProps) {
     return Math.round(scrollLeft / itemWidth)
   }
 
-  const handleNext = () => {
+  const handleScroll = (direction: 'next' | 'prev') => {
     const container = scrollContainerRef.current
     if (!container) return
 
-    if (currentIndex >= totalItems - 1) return
+    if (direction === 'next' && currentIndex >= totalItems - 1) return
+    if (direction === 'prev' && currentIndex <= 0) return
 
     const itemWidth = container.scrollWidth / totalItems
-    container.scrollLeft += itemWidth
+    container.scrollLeft += direction === 'next' ? itemWidth : -itemWidth
 
     const newIndex = calculateCurrentIndex()
     if (newIndex !== currentIndex) {
@@ -40,42 +41,36 @@ function ItemCarousel({ totalItems, children, className }: ItemCarouselProps) {
     }
   }
 
-  const handlePrev = () => {
-    const container = scrollContainerRef.current
-    if (!container) return
-
-    if (currentIndex <= 0) return
-
-    const itemWidth = container.scrollWidth / totalItems
-    container.scrollLeft -= itemWidth
-
+  const handleScrollUpdate = () => {
     const newIndex = calculateCurrentIndex()
     if (newIndex !== currentIndex) {
       setCurrentIndex(newIndex)
     }
   }
 
-  const handleScroll = () => {
-    const container = scrollContainerRef.current
-    if (!container) return
-
-    const newIndex = calculateCurrentIndex()
-    if (newIndex !== currentIndex) {
-      setCurrentIndex(newIndex)
-    }
+  const renderCircles = () => {
+    return Array.from({ length: totalItems }).map((_, index) => (
+      <div key={index} className="flex items-center">
+        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === index ? '#2EC8C8' : '#D9D9D9'} />
+        {index < totalItems - 1 && <div className="flex-grow h-[0.28vw] bg-gray-100" />}
+      </div>
+    ))
   }
 
   return (
     <div className="primary:pl-[2.503rem] mobile:pl-[5.35vw]">
       <div className="relative">
         <div className={`flex gap-[0.26rem] ${className}`}>
-          <button onClick={handlePrev} disabled={currentIndex === 0}>
+          <button onClick={() => handleScroll('prev')} disabled={currentIndex === 0} aria-label="이전 아이템 보기">
             <ArrowIcon
               className="primary:w-[1.365rem] mobile:w-[2.92vw] w-[6.67vw] primary:h-[1.365rem] mobile:h-[2.92vw] h-[6.67vw]"
               fill={currentIndex === 0 ? '#D9D9D9' : '#2EC8C8'}
             />
           </button>
-          <button onClick={handleNext} disabled={currentIndex === totalItems - 1}>
+          <button
+            onClick={() => handleScroll('next')}
+            disabled={currentIndex === totalItems - 1}
+            aria-label="다음 아이템 보기">
             <ArrowIcon
               className="primary:w-[1.365rem] mobile:w-[2.92vw] w-[6.67vw] primary:h-[1.365rem] mobile:h-[2.92vw] h-[6.67vw]"
               transform="rotate(180)"
@@ -86,23 +81,11 @@ function ItemCarousel({ totalItems, children, className }: ItemCarouselProps) {
       </div>
       <div
         className="overflow-x-auto [&::-webkit-scrollbar]:hidden snap-x snap-mandatory w-full scroll-smooth"
-        onScroll={handleScroll}
+        onScroll={handleScrollUpdate}
         ref={scrollContainerRef}>
-        <div className="flex">{children}</div>
+        <ul className="flex">{children}</ul>
       </div>
-      <div className="mobile:hidden flex items-center pt-[5.56vw]">
-        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === 0 ? '#2EC8C8' : '#D9D9D9'} />
-        <div className="flex-grow h-[0.28vw] bg-gray-100" />
-        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === 1 ? '#2EC8C8' : '#D9D9D9'} />
-        <div className="flex-grow h-[0.28vw] bg-gray-100" />
-        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === 2 ? '#2EC8C8' : '#D9D9D9'} />
-        <div className="flex-grow h-[0.28vw] bg-gray-100" />
-        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === 3 ? '#2EC8C8' : '#D9D9D9'} />
-        <div className="flex-grow h-[0.28vw] bg-gray-100" />
-        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === 4 ? '#2EC8C8' : '#D9D9D9'} />
-        <div className="flex-grow h-[0.28vw] bg-gray-100" />
-        <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === 5 ? '#2EC8C8' : '#D9D9D9'} />
-      </div>
+      <div className="mobile:hidden flex items-center pt-[5.56vw]">{renderCircles()}</div>
     </div>
   )
 }

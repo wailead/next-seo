@@ -1,13 +1,13 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import CustomImage from '../custom-image/CustomImage'
-import Link from 'next/link'
-import LinkButton from '../button/LinkButton'
-import SectionLayout from '../section-layout/SectionLayout'
-import ListIcon from '@/public/assets/icons/list.svg'
 import CloseIcon from '@/public/assets/icons/close.svg'
+import ListIcon from '@/public/assets/icons/list.svg'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+import LinkButton from '../button/LinkButton'
+import CustomImage from '../custom-image/CustomImage'
+import SectionLayout from '../section-layout/SectionLayout'
 
 function Header() {
   const pathname = usePathname()
@@ -20,20 +20,25 @@ function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 500) {
-        setIsMenuOpen(false)
-      }
-    }
+  const menuItems = [
+    { href: '#serviceIntroduction', text: '서비스 소개' },
+    { href: '#reference', text: '진행사례' },
+    { href: '#moreService', text: '서비스 종류' },
+    { href: '#question', text: 'FAQ' },
+  ]
 
-    window.addEventListener('resize', handleResize)
-    handleResize()
+  const commonLinkClasses =
+    'font-pretendard font-normal text-gray-300 hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out'
+  const desktopLinkClasses = `${commonLinkClasses} primary:text-[0.78rem] text-[1.67vw] primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center`
+  const mobileLinkClasses = `${commonLinkClasses} text-[3.89vw] leading-[4.80vw] w-[24.24vw] p-[2.4vw] flex justify-center items-center`
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+  const renderMenuItem = (item: { href: string; text: string }, classes: string) => (
+    <li key={item.href}>
+      <Link className={classes} href={item.href}>
+        {item.text}
+      </Link>
+    </li>
+  )
 
   return (
     <SectionLayout>
@@ -44,6 +49,7 @@ function Header() {
             alt="와이리(PC) 로고"
             w="primary:w-[5rem] w-[10.7vw]"
             h="primary:h-[2.2rem] h-[4.69vw]"
+            quality={75}
           />
         </div>
         <div className="block mobile:hidden">
@@ -52,6 +58,7 @@ function Header() {
             alt="와이리(Mobile) 로고"
             w="w-[6.67vw]"
             h="h-[6.67vw]"
+            quality={75}
           />
         </div>
         <nav className="flex items-center primary:gap-[1.43rem] gap-[3.06vw]">
@@ -64,34 +71,7 @@ function Header() {
           </div>
           {isAdvertiserPage && (
             <ul className="mobile:flex justify-between items-center hidden">
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#serviceIntroduction">
-                  서비스 소개
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#reference">
-                  진행사례
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#moreService">
-                  서비스 종류
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#question">
-                  FAQ
-                </Link>
-              </li>
+              {menuItems.map(item => renderMenuItem(item, desktopLinkClasses))}
             </ul>
           )}
           <div className="flex gap-[0.425rem] items-center">
@@ -108,6 +88,7 @@ function Header() {
                       alt="애플스토어 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
+                      quality={75}
                     />
                   }
                   target="_blank"
@@ -126,6 +107,7 @@ function Header() {
                       alt="구글플레이 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
+                      quality={75}
                     />
                   }
                   target="_blank"
@@ -165,11 +147,11 @@ function Header() {
                   px="primary:px-[1.04rem] mobile:px-[2.22vw] px-[3.2vw]"
                   py="primary:py-[0.39rem] mobile:py-[0.83vw] py-[2.8vw]"
                 />
-                <button className="block mobile:hidden" onClick={toggleMenu}>
+                <button className="block mobile:hidden" aria-label="메뉴" onClick={toggleMenu}>
                   {isMenuOpen ? (
-                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" />
+                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" quality={75} />
                   ) : (
-                    <ListIcon className="w-[6.67vw] h-[6.67vw]" />
+                    <ListIcon className="w-[6.67vw] h-[6.67vw]" quality={75} />
                   )}
                 </button>
               </>
@@ -178,37 +160,8 @@ function Header() {
         </nav>
       </header>
       {isAdvertiserPage && isMenuOpen && (
-        <nav className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default">
-          <ul>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#serviceIntroduction">
-                서비스 소개
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#reference">
-                진행사례
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#moreService">
-                서비스 종류
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#question">
-                FAQ
-              </Link>
-            </li>
-          </ul>
+        <nav className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default mobile:hidden">
+          <ul>{menuItems.map(item => renderMenuItem(item, mobileLinkClasses))}</ul>
         </nav>
       )}
     </SectionLayout>

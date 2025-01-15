@@ -132,6 +132,8 @@ function AgencyService() {
                             alt="plan false 아이콘"
                             w="primary:w-[1.365rem] w-[2.92vw]"
                             h="primary:h-[1.365rem] h-[2.92vw]"
+                            loading="lazy"
+                            quality={75}
                           />
                         </div>
                         {service.planCheck.map((check, i) => (
@@ -141,6 +143,8 @@ function AgencyService() {
                               alt={`plan ${check} 아이콘`}
                               w="primary:w-[1.365rem] w-[2.92vw]"
                               h="primary:h-[1.365rem] h-[2.92vw]"
+                              loading="lazy"
+                              quality={75}
                             />
                           </div>
                         ))}
@@ -208,6 +212,8 @@ function AgencyService() {
                           alt="plan false 아이콘"
                           w="w-[8.61vw]"
                           h="h-[8.61vw]"
+                          loading="lazy"
+                          quality={75}
                         />
                       )}
                       {isClicked === 1 && (
@@ -216,6 +222,8 @@ function AgencyService() {
                           alt={`plan ${service.planCheck[0]} 아이콘`}
                           w="w-[8.61vw]"
                           h="h-[8.61vw]"
+                          loading="lazy"
+                          quality={75}
                         />
                       )}
                       {isClicked === 2 && (
@@ -224,6 +232,8 @@ function AgencyService() {
                           alt={`plan ${service.planCheck[1]} 아이콘`}
                           w="w-[8.61vw]"
                           h="h-[8.61vw]"
+                          loading="lazy"
+                          quality={75}
                         />
                       )}
                     </div>
