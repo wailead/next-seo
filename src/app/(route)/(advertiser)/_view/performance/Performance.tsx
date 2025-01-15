@@ -10,11 +10,11 @@ function Performance() {
             PERFORMANCE
           </h4>
           <div className="flex mobile:flex-row flex-col mobile:justify-between mobile:gap-0 gap-[11.11vw]">
-            <h1 className="font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.67vw] text-gray-600">
+            <h2 className="font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.67vw] text-gray-600">
               와이리를 통해 캠페인을
               <br />
               진행 해보세요
-            </h1>
+            </h2>
             <section>
               <div className="flex mobile:justify-center">
                 <div className="w-full grid grid-cols-2 grid-rows-2 primary:gap-y-[2.34rem] mobile:gap-y-[5vw] gap-y-[6.67vw] primary:gap-x-[3.413rem] mobile:gap-x-[7.29vw] justify-between text-center">
