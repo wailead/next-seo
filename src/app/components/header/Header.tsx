@@ -4,7 +4,7 @@ import CloseIcon from '@/public/assets/icons/close.svg'
 import ListIcon from '@/public/assets/icons/list.svg'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import LinkButton from '../button/LinkButton'
 import CustomImage from '../custom-image/CustomImage'
 import SectionLayout from '../section-layout/SectionLayout'
@@ -19,31 +19,6 @@ function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
-  const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number) => {
-    let timeout: NodeJS.Timeout
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout)
-      timeout = setTimeout(() => func(...args), wait)
-    }
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 500) {
-        setIsMenuOpen(false)
-      }
-    }
-
-    const debouncedHandleResize = debounce(handleResize, 300)
-
-    window.addEventListener('resize', debouncedHandleResize)
-    handleResize()
-
-    return () => {
-      window.removeEventListener('resize', debouncedHandleResize)
-    }
-  }, [])
 
   const menuItems = [
     { href: '#serviceIntroduction', text: '서비스 소개' },
@@ -74,7 +49,6 @@ function Header() {
             alt="와이리(PC) 로고"
             w="primary:w-[5rem] w-[10.7vw]"
             h="primary:h-[2.2rem] h-[4.69vw]"
-            priority
             quality={75}
           />
         </div>
@@ -84,7 +58,6 @@ function Header() {
             alt="와이리(Mobile) 로고"
             w="w-[6.67vw]"
             h="h-[6.67vw]"
-            priority
             quality={75}
           />
         </div>
@@ -115,7 +88,6 @@ function Header() {
                       alt="애플스토어 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
-                      priority
                       quality={75}
                     />
                   }
@@ -135,7 +107,6 @@ function Header() {
                       alt="구글플레이 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
-                      priority
                       quality={75}
                     />
                   }
@@ -176,11 +147,11 @@ function Header() {
                   px="primary:px-[1.04rem] mobile:px-[2.22vw] px-[3.2vw]"
                   py="primary:py-[0.39rem] mobile:py-[0.83vw] py-[2.8vw]"
                 />
-                <button className="block mobile:hidden" onClick={toggleMenu}>
+                <button className="block mobile:hidden" aria-label="메뉴" onClick={toggleMenu}>
                   {isMenuOpen ? (
-                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" priority quality={75} />
+                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" quality={75} />
                   ) : (
-                    <ListIcon className="w-[6.67vw] h-[6.67vw]" priority quality={75} />
+                    <ListIcon className="w-[6.67vw] h-[6.67vw]" quality={75} />
                   )}
                 </button>
               </>
@@ -189,7 +160,7 @@ function Header() {
         </nav>
       </header>
       {isAdvertiserPage && isMenuOpen && (
-        <nav className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default">
+        <nav className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default mobile:hidden">
           <ul>{menuItems.map(item => renderMenuItem(item, mobileLinkClasses))}</ul>
         </nav>
       )}

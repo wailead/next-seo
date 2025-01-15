@@ -2,51 +2,32 @@
 
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { useEffect, useMemo, useState } from 'react'
 import AppStoreButtons from '../join-banner/components/app-store-buttons'
 import QrCode from './components/qr-code'
+
+const RenderStoreButtons = () => {
+  return (
+    <div>
+      <div className="block mobile:hidden">
+        <AppStoreButtons flexCol="flex-row" iconSize={30} />
+      </div>
+      <div className="hidden mobile:block">
+        <QrCode />
+      </div>
+    </div>
+  )
+}
 
 const YoutubePlayer = dynamic(() => import('@/components/youtube-player/YoutubePlayer'), {
   loading: () => (
     <div
-      className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw]  bg-black pointer-events-none`}
+      className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw] bg-black pointer-events-none`}
     />
   ),
   ssr: false,
 })
 
 function Mainheader() {
-  const [screenWidth, setScreenWidth] = useState<number | null>(null)
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        setScreenWidth(window.innerWidth)
-        setIsLoaded(true)
-      }
-      handleResize()
-
-      // 디바운스 적용
-      let timeoutId: NodeJS.Timeout
-      const debouncedResize = () => {
-        clearTimeout(timeoutId)
-        timeoutId = setTimeout(handleResize, 200)
-      }
-
-      window.addEventListener('resize', debouncedResize)
-      return () => {
-        window.removeEventListener('resize', debouncedResize)
-        clearTimeout(timeoutId)
-      }
-    }
-  }, [])
-
-  const renderStoreButtons = useMemo(() => {
-    if (!isLoaded) return <div className="primary:h-[8.125rem] mobile:h-[17.33vw] h-[8.89vw]" />
-    return screenWidth! < 500 ? <AppStoreButtons flexCol="flex-row" iconSize={30} /> : <QrCode />
-  }, [isLoaded, screenWidth])
-
   return (
     <div className="flex w-full justify-center items-center relative">
       <Image
@@ -54,9 +35,8 @@ function Mainheader() {
         alt="배경 이미지"
         fill
         quality={75}
-        priority={true}
-        sizes="100vw"
-        className="object-cover object-center mobile:object-contain"
+        priority
+        className="mobile:object-center object-cover bg-repeat-x"
       />
       <div className="flex mobile:flex-row flex-col w-primary h-full justify-between relative">
         <div className="flex flex-col primary:pt-[3.125rem] mobile:pt-[6.66vw] pt-[14.44vw] primary:pl-[3.219rem] mobile:pl-[6.86vw] primary:pb-[3.438rem] mobile:pb-[7.33vw] pb-[11.11vw]  primary:gap-[3.938rem] mobile:gap-[8.4vw] gap-[16.67vw] items-center mobile:items-start">
@@ -77,7 +57,7 @@ function Mainheader() {
               </div>
             </div>
           </section>
-          {renderStoreButtons}
+          <RenderStoreButtons />
         </div>
         <div
           className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw]  bg-black pointer-events-none`}>
