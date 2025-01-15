@@ -42,7 +42,6 @@ function Mainheader() {
     }
   }, [])
 
-  // 메모이제이션된 컴포넌트
   const renderStoreButtons = useMemo(() => {
     if (!isLoaded) return <div className="primary:h-[8.125rem] mobile:h-[17.33vw] h-[8.89vw]" />
     return screenWidth! < 500 ? <AppStoreButtons flexCol="flex-row" iconSize={30} /> : <QrCode />
@@ -55,7 +54,7 @@ function Mainheader() {
         alt="배경 이미지"
         fill
         quality={75}
-        loading="lazy"
+        priority={true}
         sizes="100vw"
         className="object-cover object-center mobile:object-contain"
       />

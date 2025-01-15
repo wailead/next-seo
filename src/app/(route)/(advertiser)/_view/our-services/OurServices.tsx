@@ -1,15 +1,22 @@
 'use client'
 
-import { useState } from 'react'
 import { SectionLayout, TitleForm } from '@/components'
 import CustomImage from '@/components/custom-image/CustomImage'
 import Chevron from '@/public/assets/icons/chevron.svg'
+import { useState } from 'react'
 import AgencyService from './components/AgencyService'
 
 interface ourServicesData {
   src: string
   alt: string
   description: string
+  position?: {
+    left?: string
+    right?: string
+    top?: string
+    bottom?: string
+  }
+  descriptionText?: string
 }
 
 const ourservices: ourServicesData[] = [
@@ -17,23 +24,43 @@ const ourservices: ourServicesData[] = [
     src: '/assets/icons/our_service_calendar.svg',
     alt: '캘린더 아이콘',
     description: '날짜/재고 설정 가능',
+    position: { top: '10%', left: '32%' },
+    descriptionText: '원하는 날짜 / 재고 설정\n자유롭게 가능',
   },
   {
     src: '/assets/icons/our_service_medal.svg',
     alt: '메달 아이콘',
     description: '콘텐츠 2차 활용 가능',
+    position: { top: '10%', right: '32%' },
+    descriptionText: '콘텐츠 2차 활용',
   },
-  { src: '/assets/icons/our_service_search.svg', alt: '검색 아이콘', description: '콘텐츠 실시간 보고' },
-  { src: '/assets/icons/our_service_doc.svg', alt: '문서 아이콘', description: '무제한 캠페인 세팅' },
+  {
+    src: '/assets/icons/our_service_search.svg',
+    alt: '검색 아이콘',
+    description: '콘텐츠 실시간 보고',
+    position: { left: '15%', bottom: '43%' },
+    descriptionText: '콘텐츠 실시간 보고\n및 초안 검수',
+  },
+  {
+    src: '/assets/icons/our_service_doc.svg',
+    alt: '문서 아이콘',
+    description: '무제한 캠페인 세팅',
+    position: { bottom: '43%', right: '15%' },
+    descriptionText: '횟수 제한 없는\n캠페인 세팅',
+  },
   {
     src: '/assets/icons/our_service_computer.svg',
     alt: '컴퓨터 아이콘',
     description: '파트너 관리 페이지',
+    position: { left: '6%', bottom: '10%' },
+    descriptionText: '편리한 파트너\n전용 관리 페이지',
   },
   {
     src: '/assets/icons/our_service_humans.svg',
     alt: '사람 아이콘',
     description: '무제한 인플루언서 모집',
+    position: { right: '6%', bottom: '10%' },
+    descriptionText: '인플루언서 무제한\n모집 및 선정',
   },
 ]
 
@@ -43,6 +70,22 @@ function OurServices() {
   const toggleAccordion = () => {
     setIsVisible(prev => !prev)
   }
+
+  const ServiceIcon = ({ item }: { item: ourServicesData }) => (
+    <div className="flex flex-col items-center primary:gap-[0.52rem] gap-[1.11vw]">
+      <CustomImage
+        src={item.src}
+        alt={item.alt}
+        w="primary:w-[3.218rem] w-[6.73vw]"
+        h="primary:h-[3.218rem] h-[6.73vw]"
+        loading="lazy"
+        quality={75}
+      />
+      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] tracking-[-0.005rem] text-gray-300 text-center whitespace-pre-line">
+        {item.descriptionText}
+      </p>
+    </div>
+  )
 
   return (
     <>
@@ -69,95 +112,16 @@ function OurServices() {
                     alt="와이리 원형 로고"
                     w="primary:w-[24.213rem] mobile:w-[51.74vw] w-[88.8vw]"
                     h="primary:h-[12.123rem] mobile:h-[25.9vw] h-[44.4vw]"
+                    loading="lazy"
+                    quality={75}
                   />
                 </div>
                 <div className="hidden mobile:block">
-                  <div className="absolute left-[6%] bottom-[10%]">
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] gap-[1.11vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_computer.svg"
-                        alt="컴퓨터 아이콘"
-                        w="primary:w-[3.218rem] w-[6.73vw]"
-                        h="primary:h-[3.218rem] h-[6.73vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw]tracking-[-0.005rem] text-gray-300 text-center">
-                        편리한 파트너 <br />
-                        전용 관리 페이지
-                      </p>
+                  {ourservices.map((item, index) => (
+                    <div key={index} className="absolute" style={item.position}>
+                      <ServiceIcon item={item} />
                     </div>
-                  </div>
-                  <div className="absolute left-[15%] bottom-[43%]">
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] gap-[1.11vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_search.svg"
-                        alt="검색 아이콘"
-                        w="primary:w-[3.218rem] w-[6.73vw]"
-                        h="primary:h-[3.218rem] h-[6.73vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        콘텐츠 실시간 보고
-                        <br />및 초안 검수
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute top-[10%] left-[32%]">
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] gap-[1.11vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_calendar.svg"
-                        alt="캘린더 아이콘"
-                        w="primary:w-[3.218rem] w-[6.73vw]"
-                        h="primary:h-[3.218rem] h-[6.73vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        원하는 날짜 / 재고 설정
-                        <br />
-                        자유롭게 가능
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute top-[10%] right-[32%]">
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] gap-[1.11vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_medal.svg"
-                        alt="메달 아이콘"
-                        w="primary:w-[3.218rem] w-[6.73vw]"
-                        h="primary:h-[3.218rem] h-[6.73vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        콘텐츠 2차 활용
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-[43%] right-[15%]">
-                    <div className="flex flex-col items-center primary:gap-[0.52rem] gap-[1.11vw]">
-                      <CustomImage
-                        src="/assets/icons/our_service_doc.svg"
-                        alt="문서 아이콘"
-                        w="primary:w-[3.218rem] w-[6.73vw]"
-                        h="primary:h-[3.218rem] h-[6.73vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        횟수 제한 없는
-                        <br />
-                        캠페인 세팅
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute right-[6%] bottom-[10%]">
-                    <div className="flex flex-col items-center gap-[0.52rem]">
-                      <CustomImage
-                        src="/assets/icons/our_service_humans.svg"
-                        alt="사람 아이콘"
-                        w="primary:w-[3.218rem] w-[6.73vw]"
-                        h="primary:h-[3.218rem] h-[6.73vw]"
-                      />
-                      <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] tracking-[-0.005rem] text-gray-300 text-center">
-                        인플루언서 무제한
-                        <br />
-                        모집 및 선정
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>

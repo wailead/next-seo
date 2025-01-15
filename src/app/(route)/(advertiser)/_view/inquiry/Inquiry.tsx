@@ -114,6 +114,8 @@ function Inquiry() {
                     alt="checked"
                     bgColor="bg-primary-default"
                     rounded="rounded-[50%]"
+                    loading="lazy"
+                    quality={75}
                   />
                 </div>
               )}

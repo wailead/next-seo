@@ -9,6 +9,8 @@ function PhoneImageBox() {
           alt="스마트폰 이미지"
           w="w-[39vw] primary:w-[18.2rem]"
           h="h-[37vw] primary:h-[17.5rem]"
+          loading="lazy"
+          quality={75}
         />
       </div>
     </div>

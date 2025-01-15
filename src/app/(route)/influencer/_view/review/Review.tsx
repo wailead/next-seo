@@ -17,7 +17,6 @@ function Review() {
               sizes="(min-width: 1024px) 24rem, (min-width: 768px) 50.4vw, 83.8vw"
               loading="lazy"
               quality={75}
-              priority={false}
             />
             <div className="flex flex-col primary:gap-[0.25rem] mobile:gap-[0.525vw] gap-[0.924vw] relative z-10">
               <CustomImage
@@ -25,6 +24,8 @@ function Review() {
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"
                 h="primary:h-[1rem] mobile:h-[2.1vw] h-[4.5vw]"
                 alt="quote.svg"
+                loading="lazy"
+                quality={75}
               />
               <p className="font-pretendard font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                 네이버 블로거 B님
@@ -45,6 +46,8 @@ function Review() {
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"
                 h="primary:h-[1rem] mobile:h-[2.1vw] h-[4.5vw]"
                 alt="quote.svg"
+                loading="lazy"
+                quality={75}
               />
               <p className="font-pretendard font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                 인스타그래머 J님
@@ -62,6 +65,8 @@ function Review() {
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"
                 h="primary:h-[1rem] mobile:h-[2.1vw] h-[4.5vw]"
                 alt="quote.svg"
+                loading="lazy"
+                quality={75}
               />
               <p className="font-pretendard font-bold primary:text-[1.1rem] mobile:text-[1.9vw] text-[3.4vw] text-white-default">
                 유튜버 B님

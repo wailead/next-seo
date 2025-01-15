@@ -35,7 +35,7 @@ function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, iconSiz
                   alt={'store icon'}
                   width={iconSize}
                   height={iconSize}
-                  loading="lazy"
+                  priority={true}
                   quality={75}
                 />
               }

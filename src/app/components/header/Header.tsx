@@ -45,6 +45,26 @@ function Header() {
     }
   }, [])
 
+  const menuItems = [
+    { href: '#serviceIntroduction', text: '서비스 소개' },
+    { href: '#reference', text: '진행사례' },
+    { href: '#moreService', text: '서비스 종류' },
+    { href: '#question', text: 'FAQ' },
+  ]
+
+  const commonLinkClasses =
+    'font-pretendard font-normal text-gray-300 hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out'
+  const desktopLinkClasses = `${commonLinkClasses} primary:text-[0.78rem] text-[1.67vw] primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center`
+  const mobileLinkClasses = `${commonLinkClasses} text-[3.89vw] leading-[4.80vw] w-[24.24vw] p-[2.4vw] flex justify-center items-center`
+
+  const renderMenuItem = (item: { href: string; text: string }, classes: string) => (
+    <li key={item.href}>
+      <Link className={classes} href={item.href}>
+        {item.text}
+      </Link>
+    </li>
+  )
+
   return (
     <SectionLayout>
       <header className="w-screen flex justify-between px-[0.65rem] primary:py-[0.65rem] mobile:py-[1.39vw] py-[3.20vw] bg-white-default h-[3.315rem] fixed top-0 left-0 right-0 z-30 items-center border-b-[1px]">
@@ -54,6 +74,8 @@ function Header() {
             alt="와이리(PC) 로고"
             w="primary:w-[5rem] w-[10.7vw]"
             h="primary:h-[2.2rem] h-[4.69vw]"
+            priority
+            quality={75}
           />
         </div>
         <div className="block mobile:hidden">
@@ -62,6 +84,8 @@ function Header() {
             alt="와이리(Mobile) 로고"
             w="w-[6.67vw]"
             h="h-[6.67vw]"
+            priority
+            quality={75}
           />
         </div>
         <nav className="flex items-center primary:gap-[1.43rem] gap-[3.06vw]">
@@ -74,34 +98,7 @@ function Header() {
           </div>
           {isAdvertiserPage && (
             <ul className="mobile:flex justify-between items-center hidden">
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#serviceIntroduction">
-                  서비스 소개
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#reference">
-                  진행사례
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#moreService">
-                  서비스 종류
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] text-gray-300 primary:py-[0.65rem] py-[1.39vw] primary:px-[1.063rem] px-[2.4vw] flex text-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                  href="#question">
-                  FAQ
-                </Link>
-              </li>
+              {menuItems.map(item => renderMenuItem(item, desktopLinkClasses))}
             </ul>
           )}
           <div className="flex gap-[0.425rem] items-center">
@@ -118,6 +115,8 @@ function Header() {
                       alt="애플스토어 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
+                      priority
+                      quality={75}
                     />
                   }
                   target="_blank"
@@ -136,6 +135,8 @@ function Header() {
                       alt="구글플레이 로고"
                       w="primary:w-[0.78rem] mobile:w-[1.67vw] w-[4.53vw]"
                       h="primary:h-[0.78rem] mobile:h-[1.67vw] h-[4.53vw]"
+                      priority
+                      quality={75}
                     />
                   }
                   target="_blank"
@@ -177,9 +178,9 @@ function Header() {
                 />
                 <button className="block mobile:hidden" onClick={toggleMenu}>
                   {isMenuOpen ? (
-                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" loading="lazy" quality={75} />
+                    <CloseIcon className="w-[6.67vw] h-[6.67vw]" priority quality={75} />
                   ) : (
-                    <ListIcon className="w-[6.67vw] h-[6.67vw]" loading="lazy" quality={75} />
+                    <ListIcon className="w-[6.67vw] h-[6.67vw]" priority quality={75} />
                   )}
                 </button>
               </>
@@ -189,36 +190,7 @@ function Header() {
       </header>
       {isAdvertiserPage && isMenuOpen && (
         <nav className="fixed top-[3.315rem] left-0 flex flex-col items-center w-full shadow-gray-100 shadow-md z-10 bg-white-default">
-          <ul>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#serviceIntroduction">
-                서비스 소개
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#reference">
-                진행사례
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#moreService">
-                서비스 종류
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="font-pretendard font-normal text-[3.89vw] leading-[4.80vw] text-gray-300 w-[24.24vw] p-[2.4vw] flex justify-center items-center hover:bg-[#f6fbff] active:bg-[#cce7fd] transition-all duration-300 ease-out"
-                href="#question">
-                FAQ
-              </Link>
-            </li>
-          </ul>
+          <ul>{menuItems.map(item => renderMenuItem(item, mobileLinkClasses))}</ul>
         </nav>
       )}
     </SectionLayout>

@@ -24,6 +24,7 @@ function ServiceIntroduction() {
                   alt="코인들 사진"
                   w="primary:w-[5.33rem] mobile:w-[11.39vw] w-[22.22vw]"
                   h="primary:h-[6.793rem] mobile:h-[14.51vw] h-[22.22vw]"
+                  priority={true}
                 />
                 <div className="flex flex-col items-center primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[3.33vw] text-center">
                   <div className="hidden mobile:block text-center">
@@ -50,6 +51,7 @@ function ServiceIntroduction() {
                 alt="화살표 사진"
                 w="primary:w-[3.25rem] mobile:w-[6.94vw] w-[12.22vw]"
                 h="primary:h-[2.015rem] mobile:h-[4.31vw] h-[7.78vw]"
+                priority={true}
               />
               <div className="flex flex-col items-center gap-[1.3rem] mobile:w-auto w-[33.33vw]">
                 <CustomImage
@@ -57,6 +59,7 @@ function ServiceIntroduction() {
                   alt="코인 사진"
                   w="primary:w-[4.615rem] mobile:w-[9.86vw] w-[14.72vw]"
                   h="primary:h-[4.615rem] mobile:h-[9.86vw] h-[14.72vw]"
+                  priority={true}
                 />
                 <div className="flex flex-col items-center mobile:gap-0 gap-[3.33vw]">
                   <h2 className="font-montserrat font-semibold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.67vw] primary:leading-[2.34rem] leading-[5vw] tracking-[-0.005rem] text-primary-default">
