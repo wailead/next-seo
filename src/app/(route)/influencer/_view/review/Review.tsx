@@ -1,5 +1,6 @@
 import { SectionLayout, TitleForm } from '@/components'
 import CustomImage from '@/components/custom-image/CustomImage'
+import Image from 'next/image'
 
 function Review() {
   return (
@@ -7,8 +8,18 @@ function Review() {
       <TitleForm subtitle="REVIEW" title="이용후기">
         <div className="flex mobile:flex-row flex-col  primary:gap-[1.5rem] mobile:gap-[3.15vw] gap-[4vw]">
           {/* 첫 번째 카드 레이아웃 */}
-          <div className="relative primary:w-[24rem] mobile:w-[50.4vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[52.2vw] bg-[url('/assets/images/blog4.png')] bg-cover rounded-[1rem]  primary:pb-[2.1rem] mobile:pb-[3.822vw] pb-[3vw]  primary:px-[1.82rem] mobile:px-[3.822vw] px-[5vw] flex justify-center items-end">
-            <div className="flex flex-col primary:gap-[0.25rem] mobile:gap-[0.525vw] gap-[0.924vw] ">
+          <div className="relative primary:w-[24rem] mobile:w-[50.4vw] w-[83.8vw] primary:h-[23.27rem] mobile:h-[48.867vw] h-[52.2vw] rounded-[1rem] primary:pb-[2.1rem] mobile:pb-[3.822vw] pb-[3vw] primary:px-[1.82rem] mobile:px-[3.822vw] px-[5vw] flex justify-center items-end overflow-hidden">
+            <Image
+              src="/assets/images/blog4.png"
+              alt="블로그 이미지"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 24rem, (min-width: 768px) 50.4vw, 83.8vw"
+              loading="lazy"
+              quality={75}
+              priority={false}
+            />
+            <div className="flex flex-col primary:gap-[0.25rem] mobile:gap-[0.525vw] gap-[0.924vw] relative z-10">
               <CustomImage
                 src="/assets/icons/quote.svg"
                 w="primary:w-[1.25rem] mobile:w-[2.625vw] w-[5.1vw]"

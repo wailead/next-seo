@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import AppStoreButtons from '../join-banner/components/app-store-buttons'
 import QrCode from './components/qr-code'
@@ -28,8 +29,17 @@ function Mainheader() {
   }, [])
 
   return (
-    <div className="flex w-full  justify-center items-center bg-[url('/assets/images/background.png')]  mobile:bg-contain bg-cover bg-center ">
-      <div className="flex mobile:flex-row flex-col w-primary h-full justify-between ">
+    <div className="flex w-full justify-center items-center relative">
+      <Image
+        src="/assets/images/background.png"
+        alt="배경 이미지"
+        fill
+        quality={75}
+        priority={true}
+        sizes="100vw"
+        className="object-cover object-center mobile:object-contain"
+      />
+      <div className="flex mobile:flex-row flex-col w-primary h-full justify-between relative">
         <div className="flex flex-col primary:pt-[3.125rem] mobile:pt-[6.66vw] pt-[14.44vw] primary:pl-[3.219rem] mobile:pl-[6.86vw] primary:pb-[3.438rem] mobile:pb-[7.33vw] pb-[11.11vw]  primary:gap-[3.938rem] mobile:gap-[8.4vw] gap-[16.67vw] items-center mobile:items-start">
           <section>
             <div
@@ -62,7 +72,7 @@ function Mainheader() {
         <div
           className={`primary:w-[14.688rem] mobile:w-[31.33vw] w-full mobile:h-auto h-[177.76vw]  bg-black pointer-events-none`}>
           <YoutubePlayer
-            data="https://www.youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E"
+            data="https://www.youtube.com/embed/8bBoGxyY48E?autoplay=1&mute=1&controls=0&loop=1&playlist=8bBoGxyY48E&rel=0&modestbranding=1&playsinline=1"
             className="relative w-full h-full"
           />
         </div>
