@@ -41,6 +41,7 @@ html {
     url('../fonts/Pretendard-Medium.woff') format('woff') font-weight(500),
     url('../fonts/Pretendard-Bold.woff') format('woff') font-weight(700);
   font-display: swap;
+  preload: true;
 }
 
 @font-face {
@@ -51,6 +52,7 @@ html {
     local('Montserrat'),
     url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype') tech(variations);
   font-display: swap;
+  preload: true;
 }
 
 @font-face {
@@ -61,6 +63,7 @@ html {
     local('Montserrat'),
     url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype') tech(variations);
   font-display: swap;
+  preload: true;
 }
 
 /* hover 시 애니메이션 일시 정지 */

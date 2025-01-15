@@ -41,7 +41,6 @@ function ReferenceSlideY({ images, selectTitle }: Props) {
     setPosition({ x: 0, y: 0 })
   }, [selectTitle])
 
-  console.log(slideHeight)
   return (
     <div
       className={twMerge(
