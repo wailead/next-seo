@@ -71,6 +71,8 @@ function SlideBanner({ logos, direction }: Props) {
                   alt={`Logo ${index + 1}`}
                   width={130}
                   height={38}
+                  loading="lazy"
+                  quality={75}
                 />
               </li>
             ))}
@@ -88,6 +90,8 @@ function SlideBanner({ logos, direction }: Props) {
                   alt={`Logo ${index + 1}`}
                   width={130}
                   height={38}
+                  loading="lazy"
+                  quality={75}
                 />
               </li>
             ))}

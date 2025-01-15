@@ -12,7 +12,15 @@ type Props = {
 function CustomImage({ src, alt, w, h, rounded, bgColor, ...ImgaeProps }: Props) {
   return (
     <div className={twMerge(`relative`, w, h)}>
-      <Image src={src} alt={alt} fill {...ImgaeProps} className={twMerge(`object-contain ${bgColor} ${rounded}`)} />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        loading="lazy"
+        quality={75}
+        {...ImgaeProps}
+        className={twMerge(`object-contain ${bgColor} ${rounded}`)}
+      />
     </div>
   )
 }
