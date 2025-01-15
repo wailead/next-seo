@@ -10,7 +10,6 @@ function JoinBanner() {
         alt="배경 이미지"
         fill
         quality={75}
-        priority={false}
         sizes="100vw"
         className="object-cover object-center"
       />
