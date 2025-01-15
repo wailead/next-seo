@@ -35,7 +35,7 @@ function Header() {
       }
     }
 
-    const debouncedHandleResize = debounce(handleResize, 200)
+    const debouncedHandleResize = debounce(handleResize, 300)
 
     window.addEventListener('resize', debouncedHandleResize)
     handleResize()

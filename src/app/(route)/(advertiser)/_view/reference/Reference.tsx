@@ -77,7 +77,7 @@ function Reference() {
                   descNum=""
                 />
               </div>
-              <div>
+              <div className="block mobile:hidden">
                 <ReferenceSlideX images={slideTitle} selectTitle={selectTitle} />
               </div>
               <div className="relative flex primary:w-[23.75rem] mobile:w-[50.67vw] w-[102.78vw] primary:h-[16.563rem] mobile:h-[35.33vw] h-[71.39vw] items-end ">
@@ -95,7 +95,9 @@ function Reference() {
               </div>
             </div>
           </TitleForm>
-          <ReferenceSlideY images={slideTitle} selectTitle={selectTitle} />
+          <div className="hidden mobile:block">
+            <ReferenceSlideY images={slideTitle} selectTitle={selectTitle} />
+          </div>
         </div>
       </SectionLayout>
     </div>
