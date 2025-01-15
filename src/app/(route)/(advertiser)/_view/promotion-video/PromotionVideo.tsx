@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const YoutubePlayer = dynamic(() => import('@/components/youtube-player/YoutubePlayer'), {
-  loading: () => <div className="relative w-full bg-white-default" style={{ paddingBottom: '56.3%' }} />,
+  loading: () => <div className="relative w-full bg-white-default" />,
   ssr: false,
 })
 
@@ -14,10 +14,10 @@ function PromotionVideo() {
   return (
     <SectionLayout>
       <div className="flex flex-col gap-2 bg-white-default w-full">
-        <div className="relative w-full" style={{ paddingBottom: '56.3%' }}>
+        <div className="relative w-full border-[1px] border-gray-100" style={{ paddingBottom: '56.3%' }}>
           <YoutubePlayer
             data="https://www.youtube.com/embed/ipYckn3E_lY?autoplay=1&loop=1&controls=0&mute=1&playlist=ipYckn3E_lY"
-            className="absolute top-0 left-0 w-full h-full border-[1px] border-gray-100"
+            className="absolute top-0 left-0 w-full h-full "
           />
         </div>
         <div className="flex items-center justify-center flex-col gap-2">
