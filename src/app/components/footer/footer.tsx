@@ -26,7 +26,7 @@ function Footer() {
 
   return (
     <>
-      <div className="flex w-full primary:h-[8.375rem] mobile:h-[17.87vw] bg-gray-600 items-end justify-center border-t-2 border-gray-300 ">
+      <div className="flex w-full primary:h-[8.375rem] mobile:h-[17.87vw] bg-gray-600 items-end justify-center border-t-2 border-gray-300 font-pretendard">
         <div className="flex mobile:flex-row flex-col w-primary mobile:items-end justify-center primary:pt-[1.688rem] mobile:pt-[3.6vw] pt-[5.56vw] primary:pb-[1.5rem] mobile:pb-[3.2vw] pb-[5.56vw] primary:px-[7.5rem] mobile:px-[16vw] px-[13.89vw] primary:gap-[3rem] mobile:gap-[6.4vw] gap-[2.78vw]">
           <div className="flex flex-col primary:gap-[0.188rem] gap-[0.4vw]">
             <div className="flex items-center justify-start primary:gap-3 mobile:gap-[1.6vw] gap-[2.78vw]">

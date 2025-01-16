@@ -4,7 +4,7 @@ import MarketingBanner from './_view/marketing-banner/MarketingBanner'
 
 function InfluencerPage() {
   return (
-    <div className="mt-[3.315rem]">
+    <div className="mt-[3.315rem] font-pretendard">
       <Mainheader />
       <Campaign />
       <Introduction />
