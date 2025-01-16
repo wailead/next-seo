@@ -14,8 +14,7 @@ const abouts: AboutData[] = [
   {
     pageNum: '01',
     title: '신뢰성 있는 인플루언서',
-    description:
-      '와이리는 신뢰성 있는 인플루언서만을 모집하여 귀사의<br/>브랜드 이미지를 높이는 데 최선을 다하고 있습니다.',
+    description: `와이리는 신뢰성 있는 인플루언서만을 모집하여 귀사의\n브랜드 이미지를 높이는 데 최선을 다하고 있습니다.`,
   },
   {
     pageNum: '02',
@@ -54,7 +53,7 @@ function About() {
     <div className="bg-white-100">
       <SectionLayout>
         <TitleForm
-          title="와이리 인플루언서 마케팅은<br/>어떤 장점이 있나요?"
+          title={`와이리 인플루언서 마케팅은\n어떤 장점이 있나요?`}
           subtitle="ABOUT"
           gap="primary:gap-[3.023rem] gap-[6.46vw]"
           px="px-[6.67vw]">

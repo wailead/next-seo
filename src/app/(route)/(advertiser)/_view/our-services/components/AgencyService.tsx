@@ -38,7 +38,7 @@ const services: AgencyServiceData[] = [
     planCheck: ['false', 'true'],
   },
   {
-    serviceName: '배포된 콘텐츠 내<br/>사용된 사진 원본 전달',
+    serviceName: `배포된 콘텐츠 내\n사용된 사진 원본 전달`,
     planCheck: ['false', 'true'],
   },
   {
@@ -123,7 +123,7 @@ function AgencyService() {
                   <li key={index} className="flex flex-col primary:gap-[0.65rem] gap-[1.32vw] list-none">
                     <div className="flex primary:gap-[0.65rem] gap-[1.67vw] primary:px-[0.78rem] px-[1.67vw]">
                       <p className="font-pretendard font-normal primary:text-[0.78rem] text-[1.67vw] primary:leading-[1.17rem] leading-[2.50vw] text-white-default primary:w-[12.5rem] w-[26.71vw]">
-                        <span dangerouslySetInnerHTML={{ __html: service.serviceName }} />
+                        <span>{service.serviceName}</span>
                       </p>
                       <div className="flex w-full justify-end primary:gap-[3.9rem] gap-[8.33vw]">
                         <div className="primary:w-[6.24rem] w-[13.33vw] flex items-center justify-center">
@@ -204,7 +204,7 @@ function AgencyService() {
                   <li key={index} className="flex flex-col gap-[1.32vw] list-none">
                     <div className="flex items-center justify-between pl-[5.56vw] pr-[6.67vw]">
                       <p className="font-pretendard font-normal text-[3.89vw] leading-[6.67vw] text-white-default w-[46.67vw]">
-                        <span dangerouslySetInnerHTML={{ __html: service.serviceName }} />
+                        <span>{service.serviceName}</span>
                       </p>
                       {isClicked === 0 && (
                         <CustomImage
