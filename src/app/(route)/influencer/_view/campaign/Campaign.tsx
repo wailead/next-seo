@@ -1,8 +1,8 @@
 'use client'
 
-import CampaignCard from './components/CampaignCard'
 import { useState } from 'react'
 import CampaignModal from './CampaignModal'
+import CampaignCard from './components/CampaignCard'
 
 type CampaignCardData = {
   img: string
@@ -102,7 +102,7 @@ function Campaign() {
               </article>
             ))}
             {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
-            <div className="absolute primary:w-primary w-[100vw] primary:h-[19rem] mobile:h-[40.53vw] h-[70vw] bg-gradient-to-t primary:top-[72.1875rem] mobile:top-[154vw] top-[488vw] from-white-default from-40% z-10"></div>
+            <div className="absolute w-primary primary:h-[19rem] mobile:h-[40.53vw] h-[70vw] bg-gradient-to-t primary:top-[72.1875rem] mobile:top-[154vw] top-[488vw] from-white-default from-40% z-10"></div>
             {/** header height가 변경 될 경우 top 수치 조정 해서 맞춰야 합니다. */}
             <button
               className="absolute primary:top-[86.875rem] mobile:top-[185.33vw] top-[541.67vw] bg-gray-300 primary:px-[1.9375rem] mobile:px-[4.13vw] px-[8.33vw] primary:py-[0.21rem] mobile:py-[0.45vw] py-[1.11vw] rounded-[1.82rem] hover:shadow-md hover:bg-[#6d6d6d] z-20"
