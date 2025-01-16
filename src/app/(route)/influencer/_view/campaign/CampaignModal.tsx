@@ -12,7 +12,7 @@ const RenderStoreButtons = () => {
   return (
     <div>
       <div className="block mobile:hidden">
-        <AppStoreButtons flexCol="flex-row" iconSize={30} />
+        <AppStoreButtons flexCol="flex-col" py="py-[1.5rem]" width="w-[64vw]" iconSize={30} />
       </div>
       <div className="hidden mobile:block">
         <CampaignQrCode />
