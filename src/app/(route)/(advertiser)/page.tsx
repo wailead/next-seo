@@ -13,7 +13,7 @@ import ServiceIntroduction from './_view/service-introduction/ServiceIntroductio
 
 function Advertiser() {
   return (
-    <div className="mt-[3.315rem]">
+    <div className="mt-[3.315rem] font-pretendard">
       <PromotionVideo />
       <div id="serviceIntroduction" className="scroll-mt-[3.315rem]">
         <ServiceIntroduction />
