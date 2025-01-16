@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       },
     ],
     type: 'website',
-    url: 'https://next-seo-ebon.vercel.app/ ',
+    url: 'https://wairi.vercel.app/',
   },
 }
 
