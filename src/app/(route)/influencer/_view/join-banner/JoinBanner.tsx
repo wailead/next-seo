@@ -11,7 +11,7 @@ function JoinBanner() {
         fill
         quality={75}
         sizes="100vw"
-        className="object-cover object-center"
+        className="object-cover"
       />
       <div className="relative w-primary h-full flex justify-center items-center gap-2">
         <JoinBox />

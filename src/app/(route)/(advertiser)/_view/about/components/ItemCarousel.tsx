@@ -72,8 +72,7 @@ function ItemCarousel({ totalItems, children, className }: ItemCarouselProps) {
             disabled={currentIndex === totalItems - 1}
             aria-label="다음 아이템 보기">
             <ArrowIcon
-              className="primary:w-[1.365rem] mobile:w-[2.92vw] w-[6.67vw] primary:h-[1.365rem] mobile:h-[2.92vw] h-[6.67vw]"
-              transform="rotate(180)"
+              className="primary:w-[1.365rem] mobile:w-[2.92vw] w-[6.67vw] primary:h-[1.365rem] mobile:h-[2.92vw] h-[6.67vw] rotate-180"
               fill={currentIndex === totalItems - 1 ? '#D9D9D9' : '#2EC8C8'}
             />
           </button>
