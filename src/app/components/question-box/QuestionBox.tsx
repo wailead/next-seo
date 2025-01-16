@@ -49,7 +49,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
           ref={contentRef}
           className="flex flex-col praimary:gap-[0.78rem] mobile:gap-[1.67vw] gap-[3.33vw] primary:pb-[0.78rem] mobile:pb-[1.67vw] pb-[2.22vw]">
           <hr className="border-0 bg-white-500 primary:h-[0.13rem] h-[0.14vw]" />
-          <p className="font-pretendard font-medium text-[#757575] primary:text-[0.748rem] mobile:text-[1.63vw] text-[3.1vw] tracking-[-0.005rem]">
+          <div className="font-pretendard font-medium text-[#757575] primary:text-[0.748rem] mobile:text-[1.63vw] text-[3.1vw] tracking-[-0.005rem]">
             {typeof answer === 'string' ? (
               <span>{answer}</span>
             ) : (
@@ -77,7 +77,7 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
                 )}
               </>
             )}
-          </p>
+          </div>
         </div>
       </div>
     </article>
