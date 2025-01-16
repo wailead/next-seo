@@ -4,12 +4,13 @@ import Image from 'next/image'
 type Flex = {
   flexCol: string
   width?: string
+  px?: string
   py?: string
   iconSize?: number
   textSize?: string
 }
 
-function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, iconSize = 24, textSize }: Flex) {
+function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, px, iconSize = 24, textSize }: Flex) {
   const appStores = [
     {
       name: 'APP Store',
@@ -35,6 +36,7 @@ function AppStoreButtons({ flexCol, width = 'mobile:w-fit w-[39vw]', py, iconSiz
               buttonColor="primary-default"
               width={width}
               py={py}
+              px={px}
               textSize={textSize}
             />
           </li>
