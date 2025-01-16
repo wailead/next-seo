@@ -50,9 +50,9 @@ function ItemCarousel({ totalItems, children, className }: ItemCarouselProps) {
 
   const renderCircles = () => {
     return Array.from({ length: totalItems }).map((_, index) => (
-      <div key={index} className="flex items-center">
+      <div key={index} className={`flex items-center ${index < totalItems - 1 ? 'w-full' : ''}`}>
         <CircleIcon className="w-[1.67vw] h-[1.67vw]" fill={currentIndex === index ? '#2EC8C8' : '#D9D9D9'} />
-        {index < totalItems - 1 && <div className="flex-grow h-[0.28vw] bg-gray-100" />}
+        {index < totalItems - 1 && <div className="w-full h-[0.28vw] bg-gray-100 flex-grow" />}
       </div>
     ))
   }
