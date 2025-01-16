@@ -54,13 +54,7 @@ function LinkButton({
         activeColor
       )}>
       {icon && <div className="flex items-center">{icon}</div>}
-      <p
-        className={twMerge(
-          `font-pretendard ${textSize} font-semibold leading-none flex items-center justify-center`,
-          textColor
-        )}>
-        {name}
-      </p>
+      <p className={twMerge(`font-pretendard ${textSize} font-semibold leading-none `, textColor)}>{name}</p>
     </Link>
   )
 }
