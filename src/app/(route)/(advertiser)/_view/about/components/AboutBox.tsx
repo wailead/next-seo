@@ -18,7 +18,6 @@ function AboutBox({ about }: AboutBoxProps) {
         alt={`about 아이콘 ${about.pageNum}`}
         w="mobile:w-[9.75rem] w-[61.11vw]"
         h="mobile:h-[9.75rem] h-[61.11vw]"
-        loading="lazy"
         quality={75}
       />
       <div className="flex flex-col primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[2.22vw] mobile:w-[63%] w-full">
