@@ -19,7 +19,7 @@ function CustomImage({ src, alt, w, h, rounded, bgColor, priority, ...ImgaeProps
         fill
         {...ImgaeProps}
         priority={priority}
-        className={twMerge(`${bgColor} ${rounded}`)}
+        className={twMerge(`${bgColor} ${rounded}`, 'object-contain')}
       />
     </div>
   )

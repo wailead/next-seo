@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { TitleForm, SectionLayout } from '@/components'
+import { SectionLayout, TitleForm } from '@/components'
 import QuestionBox from '@/components/question-box/QuestionBox'
+import { useState } from 'react'
 
 interface QuestionData {
   question: string
@@ -19,7 +19,7 @@ const questions: QuestionData[] = [
   {
     question: '아무나 와이리 인플루언서가 될 수 있나요?',
     answer: {
-      text: '아니요. 아무나 와이리 인플루언서가 될 수 있는 것은 아닙니다. 회원이 등록한 채널에 대해 와이리 운영팀이 직접 검수하는 작업을 통해 와이리에서 설정한 최소 승인 기준을 통과한 인플루언서만 활동할 수 있습니다.<br/><br/>자세한 최소 승인 기준은 아래 링크를 통해 확인해 주세요.',
+      text: `아니요. 아무나 와이리 인플루언서가 될 수 있는 것은 아닙니다. 회원이 등록한 채널에 대해 와이리 운영팀이 직접 검수하는 작업을 통해 와이리에서 설정한 최소 승인 기준을 통과한 인플루언서만 활동할 수 있습니다. \n 자세한 최소 승인 기준은 아래 링크를 통해 확인해 주세요.`,
       link: 'www.wairi.co.kr/influencer/board/view/notice/108/',
     },
     isLinkFirst: false,

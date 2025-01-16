@@ -38,7 +38,7 @@ function Introduction() {
           <IntroductionBox
             className="bg-[#FFF9ED]"
             title="SNS 채널만 가지고 있다면!"
-            description="와이리에서는 타 체험단 사이트와 비교하여<br/>가장 많은 SNS 종류를 승인해드리고 있어요!">
+            description={`와이리에서는 타 체험단 사이트와 비교하여\n가장 많은 SNS 종류를 승인해드리고 있어요!`}>
             <div className="flex items-center justify-between bg-gradient-to-r from-white-default to-white-default/0 primary:py-[1.2rem] primary:px-[2.6rem] primary:mt-[1.5275rem] primary:mb-[2.34rem] py-[2.56vw] px-[5.56vw] mt-[3.26vw] mb-[5vw] box-border">
               {channelIcons.map((icon, index) => (
                 <CustomImage
@@ -56,7 +56,7 @@ function Introduction() {
           <IntroductionBox
             className="bg-white-100 relative primary:pb-[3.7375rem] pb-[7.99vw]"
             title="원하는 날짜에 신청가능"
-            description="정해진 날짜가 아닌, 원하는 시기에 캠페인을 신청할 수 있습니다. <br/ >이제 본인이 원하는 시기에 체험하세요!">
+            description={`정해진 날짜가 아닌, 원하는 시기에 캠페인을 신청할 수 있습니다.\n이제 본인이 원하는 시기에 체험하세요!`}>
             <div className="absolute primary:-bottom-[1.1rem] mobile:-bottom-[2.3vw] -bottom-[3.85vw] right-0 -z-10">
               <CustomImage
                 src="/assets/icons/introduction_calendar.svg"
@@ -85,8 +85,8 @@ function Introduction() {
           </IntroductionBox>
           <IntroductionBox
             className="bg-white-200 flex flex-col"
-            title="와이리가 인증하는 영향력<br/>등급을 받아보세요"
-            description="와이리는 채널에 따라 예상 영향력에 따라서 등급을 부여하고 있습니다.<br/>와이리에서 인증하는 인플루언서가 되어보세요."
+            title={`와이리가 인증하는 영향력\n등급을 받아보세요`}
+            description={`와이리는 채널에 따라 예상 영향력에 따라서 등급을 부여하고 있습니다.\n와이리에서 인증하는 인플루언서가 되어보세요.`}
             text={
               <p className="font-pretendard font-light text-gray-100 primary:text-[0.91rem] mobile:text-[1.94vw] text-[3.89vw]">
                 *채널 승급은 매월말에 신청을 받고 있습니다.
