@@ -13,12 +13,15 @@ function ServiceIntroduction() {
                 언제까지 인플루언서 마케팅에 많은 비용을 쓰실건가요?
               </span>
               <h1 className="font-pretendard font-bold primary:text-[1.56rem] mobile:text-[3.33vw] text-[6.11vw] primary:leading-[2.34rem] mobile:leading-[5vw] leading-[9.17vw] tracking-[-0.005rem] text-gray-default text-center whitespace-pre-wrap">
-                <span className="text-primary-default">무료로 검증된 인플루언서</span>를 통해 마케팅을 진행해보세요
+                <div>
+                  <span className="text-primary-default">무료로 검증된 인플루언서</span>를 통해
+                </div>{' '}
+                마케팅을 진행해보세요
               </h1>
             </div>
             <div className="flex items-center mobile:gap-[1.95rem] gap-[3.33vw]">
               <div className="flex flex-col items-center gap-[0.78rem] mobile:w-auto w-[31.11vw]">
-                <div className="relative primary:w-[5.33rem] mobile:w-[11.39vw] w-[22.22vw] primary:h-[5.33rem] mobile:h-[11.39vw] h-[22.22vw]">
+                <div className="relative primary:w-[6rem] mobile:w-[13vw] w-[22.22vw] primary:h-[6rem] mobile:h-[13vw] h-[22.22vw]">
                   <Image src={'/assets/images/coins.png'} alt="코인들 사진" fill quality={75} loading="lazy" />
                 </div>
                 <div className="flex flex-col items-center primary:gap-[0.39rem] mobile:gap-[0.83vw] gap-[3.33vw] text-center">

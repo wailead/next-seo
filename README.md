@@ -1,9 +1,6 @@
 # 와이리드 (Wailead)
 
-
-## 배포
-[https://next-seo-ebon.vercel.app/](https://wairi.vercel.app/)
-
+[배포](https://wairi.vercel.app/)
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/9ed4a8b4-b4fc-423a-911e-afc91bfc5150" />
 

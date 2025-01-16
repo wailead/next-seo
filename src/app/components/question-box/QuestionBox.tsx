@@ -1,6 +1,7 @@
 'use client'
 
 import Chevron from '@/public/assets/icons/chevron.svg'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 interface QuestionBoxProps {
@@ -50,26 +51,29 @@ function QuestionBox({ question, answer, isOpen, onToggle, isLinkFirst = true }:
           <hr className="border-0 bg-white-500 primary:h-[0.13rem] h-[0.14vw]" />
           <p className="font-pretendard font-medium text-[#757575] primary:text-[0.748rem] mobile:text-[1.63vw] text-[3.1vw] tracking-[-0.005rem]">
             {typeof answer === 'string' ? (
-              <span dangerouslySetInnerHTML={{ __html: answer }} />
+              <span>{answer}</span>
             ) : (
               <>
                 {isLinkFirst && answer.link && (
-                  <a href={answer.link} target="_blank" rel="noopener noreferrer" className="text-[#2EC8C8] underline">
+                  <Link
+                    href={answer.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2EC8C8] underline">
                     {answer.link}
-                  </a>
+                  </Link>
                 )}
-                <span dangerouslySetInnerHTML={{ __html: answer.text }} />
+                {answer.text.split('\n').map((text, index) => (
+                  <div key={index}>{text}</div>
+                ))}
                 {!isLinkFirst && answer.link && (
-                  <>
-                    <br />
-                    <a
-                      href={answer.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#2EC8C8] underline">
-                      {answer.link}
-                    </a>
-                  </>
+                  <Link
+                    href={answer.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2EC8C8] underline">
+                    {answer.link}
+                  </Link>
                 )}
               </>
             )}

@@ -46,7 +46,7 @@ html {
 
 @font-face {
   font-family: 'Montserrat';
-  font-weight: 100 900;
+  font-weight: 400 700;
   font-style: normal;
   src:
     local('Montserrat'),
@@ -57,7 +57,7 @@ html {
 
 @font-face {
   font-family: 'Montserrat';
-  font-weight: 100 900;
+  font-weight: 400 700;
   font-style: italic;
   src:
     local('Montserrat'),

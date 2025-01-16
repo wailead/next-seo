@@ -20,7 +20,6 @@ function LinkButton({
   buttonColor,
   border,
   textSize = 'mobile:text-[0.85rem] text-[3.33vw]',
-
   px = 'px-[1.04rem]',
   py = 'py-[0.39rem]',
   width,
@@ -54,8 +53,14 @@ function LinkButton({
         hoverColor,
         activeColor
       )}>
-      {icon ? icon : null}
-      <p className={twMerge(`font-pretendard ${textSize} font-semibold`, textColor)}>{name}</p>
+      {icon && <div className="flex items-center">{icon}</div>}
+      <p
+        className={twMerge(
+          `font-pretendard ${textSize} font-semibold leading-none flex items-center justify-center`,
+          textColor
+        )}>
+        {name}
+      </p>
     </Link>
   )
 }
