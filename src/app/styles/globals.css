@@ -33,13 +33,33 @@ html {
 
 @font-face {
   font-family: 'Pretendard';
-  font-weight: 400 700;
+  font-weight: 400;
   font-style: normal;
-  src:
-    local('Pretendard'),
-    url('../fonts/Pretendard-Regular.woff') format('woff') font-weight(400),
-    url('../fonts/Pretendard-Medium.woff') format('woff') font-weight(500),
-    url('../fonts/Pretendard-Bold.woff') format('woff') font-weight(700);
+  src: url('../fonts/Pretendard-Regular.woff') format('woff');
+  font-display: swap;
+  preload: true;
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/Pretendard-Medium.woff') format('woff');
+  font-display: swap;
+  preload: true;
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
+  font-display: swap;
+  preload: true;
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Pretendard-Bold.woff') format('woff');
   font-display: swap;
   preload: true;
 }
